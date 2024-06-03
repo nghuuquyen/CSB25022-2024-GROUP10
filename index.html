@@ -98,7 +98,7 @@
     </div>
     <!--Header top /.-->
 
-    <footer>
+    <!-- footer -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -107,7 +107,7 @@
         }
         .footer {
             background-color: #000;
-            color: #fff;
+            color: #fff5ec;
             padding: 70px 0;
         }
         .footer-content {
@@ -130,7 +130,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #f8cfcf;
+            background-color: #fff5ec;
             padding: 5px;
             border-radius: 5px;
         }
@@ -138,18 +138,20 @@
             border: none;
             padding: 10px;
             flex: 1;
+            color:#333;
         }
         .subscribe-form button {
-            background-color: #e02b2b;
+            background-color: #eb9501;
             border: none;
-            color: #fff;
+            color: #FFF5EC;
             padding: 10px 20px;
+            margin-left: 5px;
             cursor: pointer;
         }
         .footer-links {
             display: flex;
             justify-content: space-around;
-            background-color: #fff;
+            background-color: #FFF5EC;
             color: #000;
             padding: 20px;
         }
@@ -157,20 +159,65 @@
             width: 20%;
             text-align: center;
         }
+        .footer-links-title{
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .subscribe-title{
+          font-size: 25px; 
+          font-weight: bold !important;
+          text-decoration: underline;
+          margin-bottom: 10px;
+        }
+        .footer-column {
+            flex: 1;
+            margin: 0 20px;
+        }
+        .footer-column h3 {
+            margin-bottom: 10px;
+        }
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 5px;
+        }
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer .payments img {
+            margin: 5px;
+        }
+        .social-icons img {
+            width: 24px;
+            margin: 0 10px;
+        }
+        .app-store img {
+            width: 150px;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
     </style>
-</head>
-<body>
-    
+
+
         <div class="footer">
-            <div class="footer-content">
+            <div class="footer-content" style="display:flex;align-items:start;">
                 <div class="about">
-                    <h3>About us</h3>
-                    <p>Two worms Bakery offers a delightful experience with its warm, inviting atmosphere and cute décor. The bakery excels in food quality, offering a variety of high-quality, delicious baked goods, including must-try items like their signature cookies and buttery croissants. Though slightly pricier, the taste and portion sizes justify the cost. it can be said that, Two worms is a great destination if you are in need of delicious, freshly baked cakes</p>
+                    <h2 class="subscribe-title"> About us</h2>
+                    <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting atmosphere and cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious baked goods, including must-try items like their signature cookies and buttery croissants. Though slightly pricier, the taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great destination if you are in need of delicious, freshly baked cakes.</p>
                 </div>
-                <img src="img/Logo.png" alt="Logo" style="width: 200px; height: 200px;">
+                <img src="img/Logo.png" alt="Logo" style="width: 200px; height: 200px;margin-top: 2%;">
                 <div class="subscribe">
-                    <h3>Subscribe email</h3>
-                    <p>Short text</p>
+                    <h2 class="subscribe-title">Subscribe email</h2>
+                    <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
                     <div class="subscribe-form">
                         <input type="email" placeholder="Type your email">
                         <button>Subscribe</button>
@@ -179,20 +226,54 @@
             </div>
         </div>
         <div class="footer-links">
-            <div>
-                <h4>Payment methods</h4>
+            <div class="footer-column">
+                <h3 class="footer-links-title">Payment methods</h3>
+                <img src="https://via.placeholder.com/50x30?text=VISA" alt="Cash">
+                <img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png" alt="MoMo">
+                <img src="https://via.placeholder.com/50x30?text=American+Express" alt="Internet Banking">
             </div>
-            <div>
-                <h4>Working time</h4>
+            <div class="footer-column">
+                <h3 class="footer-links-title">Working time</h3>
+                
+                <p>Monday - Friday</p>
+                <p>8:00 am - 8:30 pm</p>
+                <p>Saturday - Sunday</p>
+                <p>10:00 am - 16:30 pm</p>
             </div>
-            <div>
-                <h4>Orders and Returns</h4>
+            <div class="footer-column">
+                <h3 class="footer-links-title">Orders and Returns</h3>
+                  <ul>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Policy Return Policy</a></li>
+                    <li><a href="#">Payments</a></li>
+                </ul>
             </div>
-            <div>
-                <h4>Connect us</h4>
+            <div class="footer-column">
+                <h3 class="footer-links-title">Connect us</h3>
+             <footer class=" py-8 flex flex-row justify-center items-center">
+                <div class="w-[60%] flex flex-col justify-center items-center">
+                  <ul class="flex flex-row">
+                    <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+                      <!-- <a href="https://twitter.com/nghuuquyen" target="_blank"> -->
+                        <img class="w-10 grayscale hover:grayscale-0" src="img/zalo_logo.png" />
+                      </a>
+                    </li>
+                    <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+                      <!-- <a href="https://www.linkedin.com/in/nghuuquyen" target="_blank"> -->
+                        <img class="w-10 grayscale hover:grayscale-0" src="img/ins_logo.png" />
+                      </a>
+                    </li>
+                    <li class="pl-4 pr-4 cursor-pointer hover:-translate-y-2">
+                      <!-- <a href="https://github.com/nghuuquyen" target="_blank"> -->
+                        <img class="w-10 grayscale hover:grayscale-0" src="/img/phone_logo.pn" />
+                      </a>
+                    </li>
+                  </ul>    
             </div>
         </div>
     </footer>
+    <!-- footer -->
 
 
   </header>
