@@ -5,8 +5,14 @@ export default {
       "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-      extend: {},
+      extend: {
+        colors: {
+          seashell: '#fff5ec',
+          metalic_bronze: '#A96942',
+        },
+      },
     },
+    variants: {},
     plugins: [],
   }
   
