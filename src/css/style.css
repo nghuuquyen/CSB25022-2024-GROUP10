@@ -10,3 +10,19 @@ html {
     margin-left: 80px;
     margin-right: 50px;
 }
+
+.carousel-container .carousel,
+.carousel-container .carousel img {
+  height: 500px; 
+  object-fit: cover; 
+}
+
+.carousel-container .carousel-item {
+  height: 100%;
+}
+
+.carousel-container .carousel-caption {
+  bottom: 20px; 
+}
+
+  
