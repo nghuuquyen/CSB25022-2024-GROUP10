@@ -11,18 +11,20 @@ html {
     margin-right: 50px;
 }
 
-.carousel-container .carousel,
+.carousel-container {
+  max-height: 400px; /* Điều chỉnh chiều cao theo ý bạn */
+  overflow: hidden;
+  margin: 0 auto; /* Căn giữa carousel */
+}
+
 .carousel-container .carousel img {
-  height: 500px; 
-  object-fit: cover; 
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Đảm bảo hình ảnh không vượt quá chiều cao này */
 }
 
-.carousel-container .carousel-item {
+.carousel-container .carousel {
   height: 100%;
-}
-
-.carousel-container .carousel-caption {
-  bottom: 20px; 
 }
 
   
