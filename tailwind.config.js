@@ -9,6 +9,7 @@ export default {
         colors: {
           seashell: '#fff5ec',
           metalic_bronze: '#A96942',
+          melon: '#FBC4B5',
         },
       },
     },
