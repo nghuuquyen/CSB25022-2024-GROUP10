@@ -11,4 +11,24 @@ html {
   margin-right: 50px;
 }
 
+<<<<<<< HEAD
 
+=======
+
+
+.carousel-container {
+  max-height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel-container .carousel img {
+  width: 100%;
+  min-height: 300px;
+  max-height: 400px;
+}
+
+.carousel-container .carousel {
+  height: 100%;
+}
+>>>>>>> 762dfe0 (Slide show)
