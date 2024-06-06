@@ -19,6 +19,7 @@ html {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .carousel-container .carousel img {
   width: 100%;
   min-height: 300px;
@@ -28,3 +29,22 @@ html {
 .carousel-container .carousel {
   height: 100%;
 }
+=======
+.carousel-container {
+  max-height: 400px; /* Điều chỉnh chiều cao theo ý bạn */
+  overflow: hidden;
+  margin: 0 auto; /* Căn giữa carousel */
+}
+
+.carousel-container .carousel img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Đảm bảo hình ảnh không vượt quá chiều cao này */
+}
+
+.carousel-container .carousel {
+  height: 100%;
+}
+
+  
+>>>>>>> 0274721 (Fix nav bar)
