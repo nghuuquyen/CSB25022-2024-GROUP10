@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-.content{
-    margin-left: 80px;
-    margin-right: 50px;
+.content {
+  margin-left: 80px;
+  margin-right: 50px;
 }
+
+
 
 .carousel-container {
-  max-height: 400px; /* Điều chỉnh chiều cao theo ý bạn */
+  max-height: 400px;
   overflow: hidden;
-  margin: 0 auto; /* Căn giữa carousel */
+  margin: 0 auto;
 }
 
 .carousel-container .carousel img {
   width: 100%;
-  height: auto;
-  max-height: 400px; /* Đảm bảo hình ảnh không vượt quá chiều cao này */
+  min-height: 300px;
+  max-height: 400px;
 }
 
 .carousel-container .carousel {
   height: 100%;
 }
-
-  
