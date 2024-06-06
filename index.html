@@ -41,6 +41,7 @@
       </div>
     </div>
   </div>
+
   <!-- Header top end -->
 
   <!-- Banner -->
@@ -95,17 +96,22 @@
       </div>
 
       <!-- Next and previous buttons -->
-      <a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r" onclick="plusSlides(-1)">❮</a>
-      <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l" onclick="plusSlides(1)">❯</a>
-    
+      <a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
+        onclick="plusSlides(-1)">❮</a>
+      <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
+        onclick="plusSlides(1)">❯</a>
+
       <!-- Dots/bullets/indicators -->
       <div class="dots absolute bottom-2 w-full flex justify-center space-x-2">
-        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500" onclick="currentSlide(1)"></span> 
-        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500" onclick="currentSlide(2)"></span> 
-        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500" onclick="currentSlide(3)"></span> 
-      </div>
+        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
+          onclick="currentSlide(1)"></span>
+        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
+          onclick="currentSlide(2)"></span>
+        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
+          onclick="currentSlide(3)"></span>
       </div>
     </div>
+  </div>
   </div>
   <!-- Banner end -->
 </header>
@@ -136,7 +142,7 @@
         <div class="space-y-8">
           <!-- Cake Item -->
           <div class="flex items-start space-x-4">
-            <img src="img/Logo.png" alt="Cake 1" class="w-36 h-36 object-cover rounded">
+            <img src="img/hot_cake_1.png" alt="Cake 1" class="w-36 h-36 object-cover rounded">
             <div>
               <h3 class="text-xl font-bold text-red-500">AMAZIN' GLAZIN'</h3>
               <p class="text-gray-700 mb-2">Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
@@ -316,48 +322,59 @@
   </footer>
 
   <!-- Search icon-->
-  <!-- <div id="search-overlay"
-    class="fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center bg-black bg-opacity-50 z-50">
-    <div class="bg-white p-8 rounded-lg max-w-4xl w-full overflow-y-auto">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-bold text-gray-800">Enter your keywords:</h2>
-        <button id="close-overlay" class="text-gray-800 text-3xl">&times;</button>
+  <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden">
+    <div
+      class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-full">
+      <div class="flex justify-between items-center mb-4 sm:mb-6">
+        <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
+        <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
       </div>
-      <input type="text" class="w-full p-4 border border-gray-300 rounded-md mb-6" placeholder="Search...">
-      <div class="grid grid-cols-2 gap-6">
-
-        <div class="bg-gray-200 p-4 rounded-lg">
-          <img src="image1.jpg" alt="Image 1" class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold">Amazin' Glazin'</h3>
-          <p class="text-gray-600">Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
-          <p class="text-red-500 font-bold mt-2">£15.00</p>
-          <button class="bg-red-500 text-white px-4 py-2 rounded mt-4">Order Now</button>
+      <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6"
+        placeholder="Search...">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg">
+          <img src="image1.jpg" alt="Image 1" class="w-full h-24 sm:h-32 object-cover mb-2 sm:mb-4">
+          <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
+          <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
+            chocolate.</p>
+          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
+          <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
+            Now</button>
         </div>
-        <div class="bg-gray-200 p-4 rounded-lg">
-          <img src="image2.jpg" alt="Image 2" class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold">Amazin' Glazin'</h3>
-          <p class="text-gray-600">Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
-          <p class="text-red-500 font-bold mt-2">£15.00</p>
-          <button class="bg-red-500 text-white px-4 py-2 rounded mt-4">Order Now</button>
+        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg">
+          <img src="image2.jpg" alt="Image 2" class="w-full h-24 sm:h-32 object-cover mb-2 sm:mb-4">
+          <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
+          <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
+            chocolate.</p>
+          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
+          <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
+            Now</button>
         </div>
-        <div class="bg-gray-200 p-4 rounded-lg">
-          <img src="image3.jpg" alt="Image 3" class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold">Amazin' Glazin'</h3>
-          <p class="text-gray-600">Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
-          <p class="text-red-500 font-bold mt-2">£15.00</p>
-          <button class="bg-red-500 text-white px-4 py-2 rounded mt-4">Order Now</button>
+        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg">
+          <img src="image3.jpg" alt="Image 3" class="w-full h-24 sm:h-32 object-cover mb-2 sm:mb-4">
+          <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
+          <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
+            chocolate.</p>
+          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
+          <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
+            Now</button>
         </div>
-        <div class="bg-gray-200 p-4 rounded-lg">
-          <img src="image4.jpg" alt="Image 4" class="w-full h-32 object-cover mb-4">
-          <h3 class="text-lg font-bold">Amazin' Glazin'</h3>
-          <p class="text-gray-600">Lollipop dessert donut marzipan cookie bonbon sesame snaps chocolate.</p>
-          <p class="text-red-500 font-bold mt-2">£15.00</p>
-          <button class="bg-red-500 text-white px-4 py-2 rounded mt-4">Order Now</button>
+        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg">
+          <img src="image4.jpg" alt="Image 4" class="w-full h-24 sm:h-32 object-cover mb-2 sm:mb-4">
+          <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
+          <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
+            chocolate.</p>
+          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
+          <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
+            Now</button>
         </div>
       </div>
-      <button class="bg-gray-800 text-white px-4 py-2 rounded mt-6 mx-auto block">View All Results</button>
+      <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All
+        Results</button>
     </div>
-  </div> -->
+  </div>
+
+
   <!--Search icon ./ -->
 
 
@@ -366,15 +383,8 @@
 
   <script type="module" src="/src/scripts/application.js"></script>
   <script src="/src/scripts/carousel.js"></script>
-  <!-- <script>
-    document.getElementById('search-icon').addEventListener('click', function () {
-      document.getElementById('search-overlay').classList.add('active');
-    });
+  <script src="/src/scripts/icon_search_hover.js"></script>
 
-    document.getElementById('close-overlay').addEventListener('click', function () {
-      document.getElementById('search-overlay').classList.remove('active');
-    });
-  </script> -->
 
 
 </body>
