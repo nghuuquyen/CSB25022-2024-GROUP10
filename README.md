@@ -46,7 +46,7 @@ We decided to seprate each page in to half to do:
 
     + **About us:**
         * Thu Hương: Customer's review, map,contact us
-        * Vân Nhi: rest of the page
+        * Vân Nhi: Content, img, and UI of the rest of page
 
     + **Menu:**
         * Thu Hương: Header, banner, filters
