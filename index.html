@@ -77,22 +77,24 @@
 
     <div class="slideshow-container relative w-1200 h-400 mx-auto">
       <!-- Slides -->
-      <div class="mySlides fade hidden w-full h-full">
-        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">1</div>
+      <div class="mySlides fade w-full h-full">
+        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">1 / 3</div>
         <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
       </div>
       <div class="mySlides fade hidden w-full h-full">
-        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">2</div>
+        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">2 / 3</div>
         <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2">
       </div>
       <div class="mySlides fade hidden w-full h-full">
-        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">3</div>
+        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">3 / 3</div>
         <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3">
       </div>
       <!-- Next and previous buttons for Slideshow -->
-      <button class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
+      <button
+        class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
         onclick="plusSlides(-1)">❮</button>
-      <button class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
+      <button
+        class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
         onclick="plusSlides(1)">❯</button>
       <!-- Dots/bullets/indicators -->
       <div class="dots absolute bottom-2 w-full flex justify-center space-x-2">
@@ -105,7 +107,6 @@
       </div>
     </div>
   </div>
-  </div>
   <!-- Banner end -->
 </header>
 <!-- Header end -->
@@ -113,23 +114,28 @@
 <body>
 
   <!--Best seller-->
-  <div class="container mx-auto py-12">
-    <h2 class="text-center text-red-500 text-2xl font-bold mb-4">Delicious cake</h2>
+  <div class="bg-seashell mx-auto pt-12">
+    <h2 class="text-center text-red-500 text-2xl font-bold mb-4">Delicious Cake</h2>
     <h3 class="text-center text-3xl font-bold mb-8">BEST SELLER</h3>
     <div class="relative">
       <!-- Best Seller Slideshow -->
-      <div class="best-seller-slides flex overflow-hidden">
-        <div class="best-seller-slide flex w-full">
+      <div class="best-seller-slides content flex overflow-hidden relative">
+        <div class="best-seller-slide flex w-full mb-5">
           <div class="relative w-1/3 p-2">
             <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
             <div class="w-full h-48 bg-gray-300 flex items-center justify-center">Image of cake</div>
             <div class="text-center mt-2">
               <p>Information of cake</p>
-              <p>Cake’s price</p>
+              <p>Cake's price</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2">🔍</button>
-              <button class="add-cart p-2">🛒</button>
+              <button class="view-detail p-2 w-10 h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                  alt="View detail">
+              </button>
+              <button class="add-cart p-2 w-10 h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
             </div>
           </div>
           <div class="relative w-1/3 p-2">
@@ -137,11 +143,16 @@
             <div class="w-full h-48 bg-gray-300 flex items-center justify-center">Image of cake</div>
             <div class="text-center mt-2">
               <p>Information of cake</p>
-              <p>Cake’s price</p>
+              <p>Cake's price</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2">🔍</button>
-              <button class="add-cart p-2">🛒</button>
+              <button class="view-detail p-2 w-10 h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                  alt="View detail">
+              </button>
+              <button class="add-cart p-2 w-10 h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
             </div>
           </div>
           <div class="relative w-1/3 p-2">
@@ -149,15 +160,20 @@
             <div class="w-full h-48 bg-gray-300 flex items-center justify-center">Image of cake</div>
             <div class="text-center mt-2">
               <p>Information of cake</p>
-              <p>Cake’s price</p>
+              <p>Cake's price</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2">🔍</button>
-              <button class="add-cart p-2">🛒</button>
+              <button class="view-detail p-2 w-10 h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                  alt="View detail">
+              </button>
+              <button class="add-cart p-2 w-10 h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
             </div>
           </div>
         </div>
-        <div class="best-seller-slide flex w-full hidden">
+        <div class="best-seller-slide flex w-full mb-5 hidden">
           <div class="relative w-1/3 p-2">
             <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
             <div class="w-full h-48 bg-gray-300 flex items-center justify-center">Image of cake</div>
@@ -166,8 +182,13 @@
               <p>Cake’s price</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2">🔍</button>
-              <button class="add-cart p-2">🛒</button>
+              <button class="view-detail p-2 w-10 h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                  alt="View detail">
+              </button>
+              <button class="add-cart p-2 w-10 h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
             </div>
           </div>
           <div class="relative w-1/3 p-2">
@@ -178,8 +199,13 @@
               <p>Cake’s price</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2">🔍</button>
-              <button class="add-cart p-2">🛒</button>
+              <button class="view-detail p-2 w-10 h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                  alt="View detail">
+              </button>
+              <button class="add-cart p-2 w-10 h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
             </div>
           </div>
           <div class="relative w-1/3 p-2">
@@ -190,30 +216,35 @@
               <p>Cake’s price</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2">🔍</button>
-              <button class="add-cart p-2">🛒</button>
+              <button class="view-detail p-2 w-10 h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                  alt="View detail">
+              </button>
+              <button class="add-cart p-2 w-10 h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
             </div>
           </div>
         </div>
       </div>
       <!-- Next and previous buttons for Slideshow -->
-      <button class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
+      <button
+        class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
         onclick="plusBestSellerSlides(-1)">❮</button>
-      <button class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
+      <button
+        class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
         onclick="plusBestSellerSlides(1)">❯</button>
       <!-- Dots/bullets/indicators -->
-      <div class="best_seller_dots absolute bottom-2 w-full flex justify-center space-x-2">
-        <span class="best_seller_dot h-2 w-2 bg-gray-700 rounded-full inline-block cursor-pointer transition-colors duration-500"
+      <div class="best_seller_dots absolute bottom-2 w-full flex items-center justify-center space-x-2">
+        <span
+          class="best_seller_dot h-2 w-2 bg-gray-700 rounded-full inline-block cursor-pointer transition-colors duration-500"
           onclick="currentBestSellerSlide(1)"></span>
-        <span class="best_seller_dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
+        <span
+          class="best_seller_dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
           onclick="currentBestSellerSlide(2)"></span>
       </div>
     </div>
   </div>
-  
-  
-
-
 
   <!--Best seller ./-->
 
@@ -339,7 +370,6 @@
         </div>
       </div>
     </div>
-    </div>
   </section>
 
 
@@ -462,7 +492,7 @@
     </div>
   </footer>
 
-  <!-- Search icon-->
+  <!-- Search icon hover-->
   <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden">
     <div
       class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-full">
@@ -514,11 +544,56 @@
         Results</button>
     </div>
   </div>
-  <!--Search icon ./ -->
+  <!--Search icon hover ./ -->
+
+  <!-- View cake detail hover -->
+  <div id="cakeDetailOverlay" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div id="cakeDetail" class="bg-white p-8 rounded-lg w-full max-w-4xl relative">
+        <div class="flex justify-center items-center mb-4">
+            <h2 class="text-red-500 text-2xl font-bold">Delicious Cake</h2>
+            <button id="closeButton" class="absolute right-4 top-4">
+                <img src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/cancel_close_delete_remove_reject-512.png" alt="Close" class="w-10 h-10">
+            </button>
+        </div>
+        <div class="flex">
+            <div class="w-1/2 flex flex-col items-center">
+                <div class="w-full h-64 bg-gray-300 flex items-center justify-center">Image of cake</div>
+            </div>
+            <div class="w-1/2 pl-4">
+                <div class="mb-4">
+                    <p>Name of cake</p>
+                    <p>Rate</p>
+                    <p>Available</p>
+                    <p>Category</p>
+                    <p>Price</p>
+                </div>
+                <div class="mb-4 flex items-center">
+                    <p>Size</p>
+                    <div class="flex items-center justify-center ml-4">
+                        <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(-1)">-</button>
+                        <input id="quantity" class="mx-4 text-center w-12 border rounded" value="01">
+                        <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(1)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="p-2 bg-red-500 text-white rounded w-full">Purchase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+  <!--View cake detail hover ./-->
 
   <script type="module" src="/src/scripts/application.js"></script>
   <script src="/src/scripts/carousel.js"></script>
   <script src="/src/scripts/icon_search_hover.js"></script>
+  <script src="/src/scripts/cake_information_hover.js"></script>
 </body>
 
 
