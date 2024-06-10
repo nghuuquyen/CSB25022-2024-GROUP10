@@ -36,44 +36,118 @@ We will have 6 main pages:
     + Form to send customer's ideas
 
 ## Planning
-
-We decided to seprate each page in to half to do:
-
-- *Task*:
-    + **Homepage:**
-        * Thu Hương: Header, banner, best seller, map, contact us
-        * Vân Nhi: Footer, limited, hot cake, new cake, our baker
-
-    + **About us:**
-        * Thu Hương: Customer's review, map,contact us
-        * Vân Nhi: Content, img, and UI of the rest of page
-
-    + **Menu:**
-        * Thu Hương: Header, banner, filters
-        * Vân Nhi: Footer, discount slideshow, sort, list of product
-
-    + **Cart:**
-        * Thu Hương: Javascript
-        * Vân Nhi: UI
-
-    + **Checkout:**
-        * Thu Hương: UI
-        * Vân Nhi: Javascript
-
-    + **Thank you page:**
-        * Vân Nhi
-
-    + **Contact us:**
-        * Thu Hương: Embaded map
-        * Vân Nhi: Form
-- *Process:*
-    + We decided to complete **Homepage** first. Because it have all the basic function
-        * But leave the autocalculation part when click cart icon. We will do that when doing **Cart**
-    + Then we will do **About us**
-    + After that we will do **Menu**
-        * But leave calculate quantity of the product. We will do that when doing **Cart**
-    + Then **Cart**
-        * Finish the rest of **Homepage** and **Menu**
-    + **Thank you page** will be made right after finishing **Cart**
-    + Final page will be **Contact us**
-    
+<div class="container mx-auto p-4">
+    <table class="min-w-full border-collapse border border-gray-400">
+        <thead>
+            <tr>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Name page</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Week</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Task</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Detail</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Process</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Assign to<b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">Week 1</td>
+                <td class="border border-gray-400 px-4 py-2">Create Figma</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong & Van Nhi</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2" rowspan="2">Set up</td>
+                <td class="border border-gray-400 px-4 py-2">Week 1</td>
+                <td class="border border-gray-400 px-4 py-2">Setup NPM and Vite</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Set up</td>
+                <td class="border border-gray-400 px-4 py-2">Week 1</td>
+                <td class="border border-gray-400 px-4 py-2">Setup Tailwind CSS</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2" rowspan="10">Homepage</td>
+                <td class="border border-gray-400 px-4 py-2">Week 1</td>
+                <td class="border border-gray-400 px-4 py-2">Heading top and pop hover search icon</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">Footer</td>
+                <td class="border border-gray-400 px-4 py-2">
+              - Add links for About us, Subscribe to email, Payment methods, Working time, Orders and returns, Connect us.
+              - Include a logo in the footer.
+              - Implement an email subscription form with a button.
+                 </td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">Footer</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
