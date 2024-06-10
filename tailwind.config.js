@@ -10,7 +10,12 @@ export default {
           seashell: '#fff5ec',
           metalic_bronze: '#A96942',
           melon: '#FBC4B5',
+
         },
+        fontFamily:{
+          serif: ['Libre Baskerville', 'serif'],
+          cursive: ['Pacifico', 'cursive'],
+        }
       },
     },
     variants: {},
