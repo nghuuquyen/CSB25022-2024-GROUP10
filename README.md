@@ -7,8 +7,6 @@
 
 ## Wireframe: 
 
-<img src="img_for_Readme/Homepage.png" alt="Homepage"/>
-
 We will have 6 main pages:
 
 - **Homepage:** Include all basic information about the bakery
