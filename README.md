@@ -287,6 +287,64 @@ We will have 6 main pages:
                 <td class="border border-gray-400 px-4 py-2">In progress</td>
                 <td class="border border-gray-400 px-4 py-2">Thu Huong and Van Nhi</td>
             </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2" rowspan="2">Checkout</td>
+                <td class="border border-gray-400 px-4 py-2" rowspan="5">Week 3</td>
+                <td class="border border-gray-400 px-4 py-2">Form collect iniormation</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <br>Form for customer to collect shipping information</br>
+                </td>
+                 <td class="border border-gray-400 px-4 py-2">
+                    <img src="img_for_Readme/Detail_checkout/form.png">
+                 </td>
+                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Billing</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <br>Show customer's bill after add voucher, shipping,etc</br>
+                </td>
+                 <td class="border border-gray-400 px-4 py-2">
+                    <img src="img_for_Readme/Detail_checkout/billing.png">
+                 </td>
+                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2" rowspan="3">About us</td>
+                <td class="border border-gray-400 px-4 py-2">Map</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <br>Embeded map</br>
+                </td>
+                 <td class="border border-gray-400 px-4 py-2">
+                    <img src="img_for_Readme/Detail_contact/map.png">
+                 </td>
+                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Form</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <br>Form to collect customer's message</br>
+                </td>
+                 <td class="border border-gray-400 px-4 py-2">
+                    <img src="img_for_Readme/Detail_contact/form_message.png">
+                 </td>
+                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Some information box</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <br>Maybe some images to advertise</br>
+                </td>
+                 <td class="border border-gray-400 px-4 py-2">
+                    <img src="img_for_Readme/Detail_contact/box_information.png">
+                 </td>
+                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+            </tr>   
         </tbody>
     </table>
 </div>
