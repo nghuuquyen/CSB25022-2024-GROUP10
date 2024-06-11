@@ -415,7 +415,46 @@
     </div>
     </div>
   </section>
-
+<!--Contact us and map-->
+<div class="relative h-screen flex">
+  <!-- Map section -->
+  <div class="absolute inset-0 z-0 w-full h-full">
+    <iframe class="w-full h-full"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8932923783746!2d108.21766391168802!3d16.07102618454454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218314984c6bd%3A0xb53a043f246ab8cb!2zMTU4YSBMw6ogTOG7o2ksIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1717721377642!5m2!1sen!2s"
+      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <!-- Form section -->
+  <div
+    class="relative z-10 bg-melon bg-opacity-75 p-6 w-1/2 h-1/2+300px ml-auto my-auto mr-6 rounded-lg shadow-lg items-center">
+    <h2 class="text-2xl font-bold mb-4 text-center">Contact us</h2>
+    <form action="#" method="POST" id="contactForm">
+      <div class="mb-4">
+        <label id="name" class="block text-sm font-medium mb-2" for="name">Name <span
+            class="text-red-500">*</span></label>
+        <input class="w-full p-2 border border-gray-300 rounded" type="text" id="name" name="name" required>
+      </div>
+      <div class="mb-4">
+        <label id="email" class="block text-sm font-medium mb-2" for="email">Email <span
+            class="text-red-500">*</span></label>
+        <input class="w-full p-2 border border-gray-300 rounded" type="email" id="email" name="email" required>
+      </div>
+      <div class="mb-4">
+        <label id="phone" class="block text-sm font-medium mb-2" for="phone">Phone</label>
+        <input class="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" name="phone">
+      </div>
+      <div class="mb-4">
+        <label id="message" class="block text-sm font-medium mb-2" for="message">Your message <span
+            class="text-red-500">*</span></label>
+        <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message" required></textarea>
+      </div>
+      <div class="flex justify-center mt-4">
+        <button onclick="sendThankyouCUEmail(); return false;"
+          class="bg-pink-400 text-white p-2 rounded hover:bg-pink-500 transition duration-300">Send message</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!--Contact us and map ./-->
 
   <footer>
     <div class="footer bg-black text-seashell py-16">
