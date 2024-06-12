@@ -5,7 +5,12 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">  
-      
+  <script type="module" src="/src/scripts/application.js"></script>
+  <script src="/src/scripts/carousel.js"></script>
+  <script src="/src/scripts/review.js"></script>
+  <script src="/src/scripts/icon_search_hover.js"></script>
+  <script src="/src/scripts/cake_information_hover.js"></script>
+  
 </head>
 <!-- Header -->
 <header class="header">
@@ -126,7 +131,7 @@
             <div class="grid grid-cols-3 gap-8">
                 <!-- Award Card -->
                  <div class="text-center">
-                    <img src="img/award1.png" alt="BAKERY OF THE YEAR" class="w-52 mx-auto mb-4">       
+                    <img src="img/award1.png" alt="BAKERY OF THE YEAR" class="w-52 mx-auto mb-4">      
                     <h3 class="text-xl font-serif">BAKERY OF THE YEAR</h3>
                     <p class="text-gray-600 font-serif italic text-lg">2023</p>
                     <p class="mt-4 text-gray-500 text-center">In 2023, the small Two Worms Bakery was named "Bakery of the Year" by the Artisanal Bakers Association, recognizing its use of quality local ingredients to make delicious breads and pastries. The 3-year-old bakery's products, including their signature banana loaves and cupcakes, were especially praised for their excellent taste and texture. </p>
@@ -150,11 +155,61 @@
     </section>
     
     <!--Review section-->
+    <div class="bg-seashell mx-auto py-12">
+      <h2 class="text-center text-red-500 text-2xl font-bold mb-4">Sweet Record</h2>
+      <h3 class="text-center text-3xl font-bold mb-8">OUR CUSTOMER</h3>
+      <div class="relative">
+     <!-- Review Section Slideshow -->
+     <div id="review-container" class="review-slides content justify-center">
+      <div class="review-slide-1 flex w-full">
+        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+          <img src="img/review_1.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
+            alt="Review 1">
+          <p class="text-center mt-2 h-40">
+            "We have used almost all the bakery products of delicacy. It is so delicious in taste that you cant stop eating. I like the tiramisu, cupcake and pastries the most. It is soft, spongy and yummmmy".</p>
+        </div>
+        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+          <img src="img/review_2.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
+            alt="Review 2">
+          <p class="text-center mt-2 h-40">
+            "Bakery items of imperial is awesome d best! cakes r yummmmm.... love its cake d most..... cakes r really soft n creamy.</p>
+        </div>
+        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+          <img src="img/review_3.jpg" class="w-52 h-52 bg-gray-300 flex items-center mx-auto justify-center"
+            alt="Reiview 3">
+          <p class="text-center mt-2 h-40">
+            "It is considered to be one of the best bakeries of Da Nang city in Vietnam! It is most famous for its Breads & cupcakes! They even customize the order according to your choice of flavour, size & shape & taste! A must visit place!</p>
+        </div>
+      </div>
+      <div class="review-slide-2 flex w-full hidden">
+        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+          <img src="img/review_4.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
+            alt="Review 4">
+          <p class="text-center mt-2 h-40">
+            I was not disappointed. Thank you so much. Having eaten my way through many gluten free breads/rolls etc over the last 20 years, and it has improved a lot over time, I can honestly say your products are delicious with ingredients I recognise. I look forward to ordering some more.</p>
+        </div>
+        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+          <img src="img/review_5.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
+            alt="Review 5">
+          <p class="text-center mt-2 h-40">
+            This loaf is really delicious. The taste is great, it toasts like a dream but most of all it has great chewability. What I think is called the 'mouth feel' is really good for a gluten free bread. I love the buckwheat but I think that this is even bether.</p>
+        </div>
+        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+          <img src="img/review_6.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
+            alt="Review 6">
+          <p class="text-center mt-2 h-40">
+            These have changed my expectations of gluten free bread! So delicious and the texture is incredible. The very best alternative - so good it would fool someone who eats gluten products!</p>
+        </div>
+      
+      </div>
+    </div>
     
+  </div>
+</div>
+             
     <!--Review section./-->
-    </body>
 
-    <!--Contact us and map-->
+   <!--Contact us and map-->
   <div class="relative h-screen flex">
     <!-- Map section -->
     <div class="absolute inset-0 z-0 w-full h-full">
@@ -194,90 +249,91 @@
     </div>
   </div>
   <!--Contact us and map ./-->
+
   <footer>
+    <!-- Footer -->
     <div class="footer bg-black text-seashell py-16">
-        <div class="footer-content flex justify-around items-start py-5">
-            <div class="content about w-1/3 mx-4">
-                <h2 class="subscribe-title text-2xl font-bold underline mb-2">About us</h2>
-                <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting
-                    atmosphere and cute decor. The bakery excels in food quality, offering a variety of
-                    high-quality, delicious baked goods, including must-try items like their signature cupcakes
-                    and
-                    buttery cookies. Though slightly pricier, the taste and portion sizes justify the cost. It
-                    can
-                    be said that, Two worms bakery is a great destination if you are in need of delicious,
-                    freshly
-                    baked cakes.</p>
-            </div>
-            <img src="img/Logo.png" alt="Logo" class="w-40 h-40 lg:w-52 lg:h-52 my-2">
-            <div class="content subscribe w-1/3 mx-4">
-                <h2 class="subscribe-title text-2xl font-bold underline mb-2">Subscribe email</h2>
-                <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
-                <div class="subscribe-form flex justify-between items-center bg-seashell p-2 rounded">
-                    <input type="email" placeholder="Type your email" class="border-none p-2 flex-1 text-gray-800"
-                        required>
-                    <button
-                        class="bg-metalic_bronze border-none text-seashell p-2 ml-2 cursor-pointer">Subscribe</button>
-                </div>
-            </div>
+      <div class="footer-content flex justify-around items-start py-5">
+        <div class="content about w-1/3 mx-4">
+          <h2 class="subscribe-title text-2xl font-bold underline mb-2">About us</h2>
+          <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting atmosphere and
+            cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious baked goods,
+            including must-try items like their signature cupcakes and buttery cookies. Though slightly pricier, the
+            taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great destination if
+            you are in need of delicious, freshly baked cakes.</p>
         </div>
+        <img src="img/Logo.png" alt="Logo" class="w-40 h-40 lg:w-52 lg:h-52 my-2">
+        <div class="content subscribe w-1/3 mx-4">
+          <h2 class="subscribe-title text-2xl font-bold underline mb-2">Subscribe email</h2>
+          <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
+          <div class="subscribe-form flex justify-between items-center bg-seashell p-2 rounded">
+            <input type="email" placeholder="Type your email" class="border-none p-2 flex-1 text-gray-800" required>
+            <button class="bg-metalic_bronze border-none text-seashell p-2 ml-2 cursor-pointer">Subscribe</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer-links flex justify-around bg-seashell text-black py-5">
-        <div class="footer-column w-1/5 text-center">
-            <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
-            <ul class="flex space-x-5">
-                <img src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
-                    alt="Cash" class="w-20 h-20">
-                <img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png"
-                    alt="MoMo" class="w-20 h-20">
-                <img src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
-                    alt="Internet Banking" class="w-20 h-20">
-            </ul>
-        </div>
-        <div class="footer-column w-100 text-left">
-            <h3 class="text center footer-links-title text-lg font-bold mb-2">Working time</h3>
-            <p class="font-bold">Monday - Friday</p>
-            <p class="text-gray-500"> 8:00 am - 8:30 pm</p>
-            <p class="font-bold">Saturday - Sunday</p>
-            <p class="text-gray-500">10:00 am - 4:30 pm</p>
-        </div>
-        <div class="footer-column w-200 text-left">
-            <h3 class="text-center footer-links-title text-lg font-bold mb-2">Orders and Returns</h3>
-            <ul class="list-none p-0">
-                <li class="text-l"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
-                <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Shipping</a></li>
-                <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Policy Return
-                        Policy</a></li>
-                <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Payments</a></li>
-            </ul>
-        </div>
-        <div class="footer-column w-1/5 text-center">
-            <h3 class="footer-links-title text-lg font-bold mb-2">Connect us</h3>
-            <ul class="flex space-x-4">
-                <li class="cursor-pointer transform hover:scale-110">
-                    <a href="https://zalo.me/0905323959/" target="_blank">
-                        <img class="w-12 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo">
-                    </a>
-                </li>
-                <li class="cursor-pointer transform hover:scale-110">
-                    <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
-                        <img class="w-12 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram">
-                    </a>
-                </li>
-                <li class="cursor-pointer transform hover:scale-110">
-                    <a href="tel:+84905323959">
-                        <img class="w-12 grayscale hover:grayscale-0" src="/img/phone_logo.png" alt="Phone">
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <div class="footer-column w-1/5 text-center">
+        <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
+        <footer class="py-2 flex justify-center items-center"></footer>
+        <ul class="flex space-x-5">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
+            alt="Cash" class="w-20 h-20">
+          <img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png" alt="MoMo"
+            class="w-20 h-20">
+          <img
+            src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
+            alt="Internet Banking" class="w-20 h-20">
+          <ul>
+            <footer>
+      </div>
+      <div class="footer-column w-100 text-left">
+        <h3 class="text center footer-links-title text-lg font-bold mb-2">Working time</h3>
+        <p class="font-bold">Monday - Friday</p>
+        <p class="text-gray-500"> 8:00 am - 8:30 pm</p>
+        <p class="font-bold">Saturday - Sunday</p>
+        <p class="text-gray-500">10:00 am - 4:30 pm</p>
+      </div>
+      <div class="footer-column w-200 text-left">
+        <h3 class="text-center footer-links-title text-lg font-bold mb-2">Orders and Returns</h3>
+        <ul class="list-none p-0">
+          <li class="text-l"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
+          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Shipping</a></li>
+          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Policy Return Policy</a></li>
+          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Payments</a></li>
+        </ul>
+      </div>
+      <div class="footer-column w-1/5 text-center">
+        <h3 class="footer-links-title text-lg font-bold mb-2">Connect us</h3>
+        <footer class="py-2 flex justify-center items-center">
+          <ul class="flex space-x-4">
+            <li class="cursor-pointer transform hover:scale-110">
+              <a href="https://zalo.me/0905323959/" target="_blank">
+                <img class="w-12 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo">
+              </a>
+            </li>
+            <li class="cursor-pointer transform hover:scale-110">
+              <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
+                <img class="w-12 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram">
+              </a>
+            </li>
+            <li class="cursor-pointer transform hover:scale-110">
+              <a href="tel:+84905323959">
+                <img class="w-12 grayscale hover:grayscale-0" src="/img/phone_logo.png" alt="Phone">
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
     </div>
     <div class="copyright w-50 text-center mt-5 pb-5 text-sm">
         &copy; 2024 Two worms Bakery. All rights reserved.
     </div>
 </footer>
 
-  <!-- Search icon-->
+  <!-- Search icon hover-->
   <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden">
     <div
       class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-full">
@@ -320,7 +376,7 @@
           <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
           <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
             chocolate.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
+          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15s.00</p>
           <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
             Now</button>
         </div>
@@ -329,10 +385,65 @@
         Results</button>
     </div>
   </div>
+  <!--Search icon hover ./ -->
 
+  <!-- View cake detail hover -->
+  <div id="cakeDetailOverlay" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div id="cakeDetail" class="bg-white p-8 rounded-lg w-full max-w-4xl relative">
+      <div class="flex justify-center items-center mb-4">
+        <h2 class="text-red-500 text-2xl font-bold">Delicious Cake</h2>
+        <button id="closeButton" class="absolute right-4 top-4">
+          <img src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/cancel_close_delete_remove_reject-512.png"
+            alt="Close" class="w-10 h-10">
+        </button>
+      </div>
+      <div class="flex">
+        <div class="w-1/2 flex flex-col items-center">
+          <div class="w-full h-64 bg-gray-300 flex items-center justify-center">Image of cake</div>
+        </div>
+        <div class="w-1/2 pl-4">
+          <div class="mb-4">
+            <p>Name of cake</p>
+            <p>Rate</p>
+            <p>Available</p>
+            <p>Category</p>
+            <p>Price</p>
+          </div>
+          <div class="mb-4 flex items-center">
+            <p>Size</p>
+            <div class="flex items-center justify-center ml-4">
+              <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(-1)">-</button>
+              <input id="quantity" class="mx-4 text-center w-12 border rounded" value="01">
+              <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(1)">+</button>
+            </div>
+          </div>
+          <div>
+            <button class="p-2 bg-red-500 text-white rounded w-full">Purchase</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--View cake detail hover ./-->
 
-  <!--Search icon ./ -->
-  <script type="module" src="/src/scripts/application.js"></script>
-  <script src="/src/scripts/carousel.js"></script>
-  <script src="/src/scripts/icon_search_hover.js"></script>
+  <div id="thankyou_subscribe_overlay"
+    class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg text-center">
+      <p>Thank you for subscribing!</p>
+      <button onclick="closeSubscribeOverlay()" class="mt-4 bg-yellow-800 text-white py-2 px-4 rounded">Close</button>
+    </div>
+  </div>
+
+  <div id="thankyou_contact_us_overlay"
+    class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg text-center">
+      <p>Thank you for contacting us!</p>
+      <button onclick="closeContactCUOverlay()" class="mt-4 bg-yellow-800 text-white py-2 px-4 rounded">Close</button>
+    </div>
+  </div>
+  
+  <script src="/src/scripts/about_us.js"></script>
+
 </body>
+
+</html>

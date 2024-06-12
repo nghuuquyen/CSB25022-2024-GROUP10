@@ -11,3 +11,10 @@ html {
     margin-right: 80px;
 }
 
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
