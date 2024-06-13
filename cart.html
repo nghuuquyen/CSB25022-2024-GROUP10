@@ -47,11 +47,11 @@
             <div class="content px-2 flex items-center justify-between">
                 <div class="flex text-center space-x-20 lg:space-x-40 flex-1">
                     <a href="index.html" class="text-lg font-semibold hover:underline">Home</a>
-                    <a href="about_us.html" class="text-lg font-semibold hover:underline">About</a>
+                    <a href="about_us.html" class="text-lg font-semibold hover:underline">About us</a>
                     <a href="#" class="text-lg font-semibold hover:underline">Menu</a>
                 </div>
                 <div class="flex text-center items-center space-x-20 lg:space-x-40 flex-1 justify-end">
-                    <a href="#" class="text-lg font-semibold hover:underline">Checkout</a>
+                    <a href="checkout.html" class="text-lg font-semibold hover:underline">Checkout</a>
                     <a href="#" class="text-lg font-semibold hover:underline">Contact</a>
                     <div class="relative" id="cartContainer">
                         <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
@@ -102,7 +102,10 @@
                     </tbody>
                 </table>
             </div>
-            <div class="flex justify-between items-center mt-6">
+            <div class="content font-semibold py-5">
+                Total Price: <span id="total-price">0 VND</span>
+            </div>
+            <div class="content flex justify-between items-center mt-6">
                 <div>
                     <input type="text" placeholder="Promotion code" class="p-2 border border-gray-300 rounded-md">
                     <button class="p-2 bg-blue-500 text-white rounded-md">Apply</button>
@@ -111,12 +114,10 @@
                     <button class="p-2 bg-gray-300 text-black rounded-md" onclick="continueShopping()">Continue
                         Shopping</button>
                 </div>
-                <div class="text-lg font-semibold">
-                    Total Price: <span id="total-price">0 VND</span>
-                </div>
-                <div>
+                
+                <a src="checkout.html">
                     <button class="p-2 bg-green-500 text-white rounded-md">Checkout</button>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -209,6 +210,8 @@
     <script type="module" src="/src/scripts/application.js"></script>
     <script src="/src/scripts/add_to_cart.js"></script>
     <script src="/src/scripts/cart_popup.js"></script>
+    <script src="/src/scripts/icon_search_hover.js"></script>
+
 
 </body>
 
