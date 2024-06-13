@@ -232,17 +232,16 @@ We will have 6 main pages:
                     <img src="img_for_Readme/Detail_Menu/banner.png">
                     <img src="img_for_Readme/Detail_homepage/footer.png">
                 </td>
-                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
                 <td class="border border-gray-400 px-4 py-2"></td>
             </tr>
             <tr>
-                <td class="border border-gray-400 px-4 py-2">Sort and Product grid</td>
+                <td class="border border-gray-400 px-4 py-2">Product grid</td>
                 <td class="border border-gray-400 px-4 py-2">
                 <br>Show product in grid list</br>
-                <br>Sort by</br>
                 </td>
                  <td class="border border-gray-400 px-4 py-2">
-                    <img src="img_for_Readme/Detail_Menu/sort_and_product_grid.png">
+                    <img src="img_for_Readme/Detail_Menu/product_grid.png">
                 </td>
                 <td class="border border-gray-400 px-4 py-2">To do</td>
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
@@ -252,11 +251,11 @@ We will have 6 main pages:
                 <td class="border border-gray-400 px-4 py-2">
                 <br>Search by keyword</br>
                 <br>Filter category</br>
-                <br>Filter price</br>
-                <br>Filter tag</br>
+                <br>Sort by price and alphabet</br>
                 </td>
                  <td class="border border-gray-400 px-4 py-2">
                     <img src="img_for_Readme/Detail_Menu/Filter_to_search.png">
+                    <img src="img_for_Readme/Detail_Menu/sort.png">
                 </td>
                 <td class="border border-gray-400 px-4 py-2">To do</td>
                 <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
@@ -266,15 +265,6 @@ We will have 6 main pages:
                 <td class="border border-gray-400 px-4 py-2"></td>
                  <td class="border border-gray-400 px-4 py-2">
                     <img src="img_for_Readme/Detail_Menu/best_seller_in_Menu.png">
-                </td>
-                <td class="border border-gray-400 px-4 py-2">To do</td>
-                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
-            </tr>
-            <tr>
-                <td class="border border-gray-400 px-4 py-2">Discount Slideshow</td>
-                <td class="border border-gray-400 px-4 py-2"></td>
-                 <td class="border border-gray-400 px-4 py-2">
-                    <img src="img_for_Readme/Detail_Menu/discount_slide.png">
                 </td>
                 <td class="border border-gray-400 px-4 py-2">To do</td>
                 <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
