@@ -219,24 +219,9 @@ We will have 6 main pages:
                 <td class="border border-gray-400 px-4 py-2">Done</td>
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
             </tr>
-            <tr>
-                <td class="border border-gray-400 px-4 py-2" rowspan="3">Menu</td>
-                <td class="border border-gray-400 px-4 py-2">Header and Footer</td>
-                <td class="border border-gray-400 px-4 py-2">
-                <br>Header top</br>
-                <br>Banner slideshow</br>
-                <br>Footer</br>
-                <br>==> Take in homepage</br>
-                </td>
-                 <td class="border border-gray-400 px-4 py-2">
-                    <img src="img_for_Readme/Detail_Menu/banner.png">
-                    <img src="img_for_Readme/Detail_homepage/footer.png">
-                </td>
-                <td class="border border-gray-400 px-4 py-2">Done</td>
-                <td class="border border-gray-400 px-4 py-2"></td>
-            </tr>
                 <td class="border border-gray-400 px-4 py-2">Thank you page</td>
                 <td class="border border-gray-400 px-4 py-2">Create complete page</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
                  <td class="border border-gray-400 px-4 py-2">
                     <img src="img_for_Readme/General_wireframe/Thank you.png">
                 </td>
@@ -275,7 +260,7 @@ We will have 6 main pages:
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
             </tr>
             <tr>
-                <td class="border border-gray-400 px-4 py-2" rowspan="3">Contact us</td>
+                <td class="border border-gray-400 px-4 py-2" rowspan="2">Contact us</td>
                 <td class="border border-gray-400 px-4 py-2">Map</td>
                 <td class="border border-gray-400 px-4 py-2">
                 <br>Embeded map</br>
@@ -296,6 +281,22 @@ We will have 6 main pages:
                  </td>
                 <td class="border border-gray-400 px-4 py-2">Done</td>
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+            </tr>
+             <tr>
+                <td class="border border-gray-400 px-4 py-2" rowspan="5">Menu</td>
+                <td class="border border-gray-400 px-4 py-2">Header and Footer</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <br>Header top</br>
+                <br>Banner slideshow</br>
+                <br>Footer</br>
+                <br>==> Take in homepage</br>
+                </td>
+                 <td class="border border-gray-400 px-4 py-2">
+                    <img src="img_for_Readme/Detail_Menu/banner.png">
+                    <img src="img_for_Readme/Detail_homepage/footer.png">
+                </td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
             </tr>
             <tr>
                 <td class="border border-gray-400 px-4 py-2">Product grid</td>
