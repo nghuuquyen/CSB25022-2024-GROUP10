@@ -173,19 +173,19 @@
      <!-- Review Section Slideshow -->
      <div id="review-container" class="review-slides content justify-center">
       <div class="review-slide-1 flex w-full">
-        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+        <div class="bg-white mx-4 rounded-lg cursor-pointer shadow-md relative w-1/3 p-2">
           <img src="img/review_1.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
             alt="Review 1">
           <p class="text-center mt-2 h-40">
             "We have used almost all the bakery products of delicacy. It is so delicious in taste that you cant stop eating. I like the tiramisu, cupcake and pastries the most. It is soft, spongy and yummmmy".</p>
         </div>
-        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+        <div class="bg-white mx-4 rounded-lg cursor-pointer shadow-md relative w-1/3 p-2">
           <img src="img/review_2.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
             alt="Review 2">
           <p class="text-center mt-2 h-40">
             "Bakery items of imperial is awesome d best! cakes r yummmmm.... love its cake d most..... cakes r really soft n creamy.</p>
         </div>
-        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+        <div class="bg-white mx-4 rounded-lg cursor-pointer shadow-md relative w-1/3 p-2">
           <img src="img/review_3.jpg" class="w-52 h-52 bg-gray-300 flex items-center mx-auto justify-center"
             alt="Reiview 3">
           <p class="text-center mt-2 h-40">
@@ -193,19 +193,19 @@
         </div>
       </div>
       <div class="review-slide-2 flex w-full hidden">
-        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+        <div class="bg-white mx-4 rounded-lg cursor-pointer shadow-md relative w-1/3 p-2">
           <img src="img/review_4.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
             alt="Review 4">
           <p class="text-center mt-2 h-40">
             I was not disappointed. Thank you so much. Having eaten my way through many gluten free breads/rolls etc over the last 20 years, and it has improved a lot over time, I can honestly say your products are delicious with ingredients I recognise. I look forward to ordering some more.</p>
         </div>
-        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+        <div class="bg-white mx-4 rounded-lg cursor-pointer shadow-md relative w-1/3 p-2">
           <img src="img/review_5.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
             alt="Review 5">
           <p class="text-center mt-2 h-40">
             This loaf is really delicious. The taste is great, it toasts like a dream but most of all it has great chewability. What I think is called the 'mouth feel' is really good for a gluten free bread. I love the buckwheat but I think that this is even bether.</p>
         </div>
-        <div class="bg-white mx-4 rounded-lg shadow-md relative w-1/3 p-2">
+        <div class="bg-white mx-4 rounded-lg cursor-pointer shadow-md relative w-1/3 p-2">
           <img src="img/review_6.jpg" class="mx-auto w-52 h-52 bg-gray-300 flex items-center justify-center"
             alt="Review 6">
           <p class="text-center mt-2 h-40">
@@ -452,38 +452,7 @@
       <button onclick="closeContactCUOverlay()" class="mt-4 bg-yellow-800 text-white py-2 px-4 rounded">Close</button>
     </div>
   </div>
-  <script>
-    function toggleSlides() {
-    const slide1 = document.querySelector('.review-slide-1');
-    const slide2 = document.querySelector('.review-slide-2');
-    
-    if (slide1.classList.contains('hidden')) {
-      slide1.classList.remove('hidden');
-      slide1.classList.add('flex');
-      slide2.classList.remove('flex');
-      slide2.classList.add('hidden');
-    } else {
-      slide1.classList.remove('flex');
-      slide1.classList.add('hidden');
-      slide2.classList.remove('hidden');
-      slide2.classList.add('flex');
-    }
-  }
-  function startSlideInterval() {
-    intervalId = setInterval(toggleSlides, 1000);
-  }
-
-  function stopSlideInterval() {
-    clearInterval(intervalId);
-  }
-
-  document.getElementById('review-container').addEventListener('mouseover', stopSlideInterval);
-  document.getElementById('review-container').addEventListener('mouseout', startSlideInterval);
-
-  // Start the interval when the page loads
-  startSlideInterval();
-  </script>
-
+<script src="/src/scripts/about_us.js"></script>
 
 </body>
 
