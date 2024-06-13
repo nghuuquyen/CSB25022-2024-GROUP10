@@ -51,7 +51,7 @@
       <div class="content px-2 flex items-center justify-between">
         <div class="flex text-center space-x-20 lg:space-x-40 flex-1">
           <a href="index.html" class="text-lg font-semibold hover:underline">Home</a>
-          <a href="about_us.html" class="text-lg font-semibold hover:underline">About</a>
+          <a href="#" class="text-lg font-semibold hover:underline">About</a>
           <a href="#" class="text-lg font-semibold hover:underline">Menu</a>
         </div>
         <div class="text-center flex-shrink-0 mx-2">
@@ -60,16 +60,9 @@
         <div class="flex text-center items-center space-x-20 lg:space-x-40 flex-1 justify-end">
           <a href="#" class="text-lg font-semibold hover:underline">Checkout</a>
           <a href="#" class="text-lg font-semibold hover:underline">Contact</a>
-          <div class="relative" id="cartContainer">
-            <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
-              <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart" class="h-6 w-6">
-            </a>
-            <div class="absolute top-8 right-0 w-72 bg-pink-100 border border-gray-300 shadow-lg hidden" id="cartPopup">
-              <div id="popup-content">
-                <!-- Cart popup content will be loaded here -->
-              </div>
-            </div>
-          </div>
+          <a href="#" class="text-lg font-semibold">
+            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart" class="h-6 w-6">
+          </a>
         </div>
       </div>
     </nav>
@@ -82,32 +75,24 @@
 
     <!-- Slideshow Container -->
 
-    <div class="slideshow-container relative mx-auto">
-
-      <!-- Slide 1 -->
-      <div class="mySlides fade hidden w-full h-full">
-        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">1</div>
-        <img src="img/Banner-1.png" class="w-full h-full object-cover">
+    <div class="slideshow-container relative w-1200 h-400 mx-auto">
+      <!-- Slides -->
+      <div class="mySlides fade w-full h-full">
+        <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
       </div>
-
-      <!-- Slide 2 -->
       <div class="mySlides fade hidden w-full h-full">
-        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">2</div>
-        <img src="img/Banner-2.png" class="w-full h-full object-cover">
+        <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2">
       </div>
-
-      <!-- Slide 3 -->
       <div class="mySlides fade hidden w-full h-full">
-        <div class="numbertext absolute top-0 left-0 text-white text-xs p-2">3</div>
-        <img src="img/Banner-3.png" class="w-full h-full object-cover">
+        <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3">
       </div>
-
-      <!-- Next and previous buttons -->
-      <a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
-        onclick="plusSlides(-1)">❮</a>
-      <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
-        onclick="plusSlides(1)">❯</a>
-
+      <!-- Next and previous buttons for Slideshow -->
+      <button
+        class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
+        onclick="plusSlides(-1)">❮</button>
+      <button
+        class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
+        onclick="plusSlides(1)">❯</button>
       <!-- Dots/bullets/indicators -->
       <div class="dots absolute bottom-2 w-full flex justify-center space-x-2">
         <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
@@ -118,7 +103,6 @@
           onclick="currentSlide(3)"></span>
       </div>
     </div>
-  </div>
   </div>
   <!-- Banner end -->
 </header>
@@ -147,7 +131,7 @@
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                   alt="View detail">
               </button>
-              <button class="add-cart p-2 w-10 h-10" id="cart_icon">
+              <button class="add-cart p-2 w-10 h-10">
                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
               </button>
             </div>
@@ -165,7 +149,7 @@
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                   alt="View detail">
               </button>
-              <button class="add-cart p-2 w-10 h-10" id="cart_icon">
+              <button class="add-cart p-2 w-10 h-10">
                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
               </button>
             </div>
@@ -184,7 +168,7 @@
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                   alt="View detail">
               </button>
-              <button class="add-cart p-2 w-10 h-10" id="cart_icon">
+              <button class="add-cart p-2 w-10 h-10">
                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
               </button>
             </div>
@@ -204,18 +188,16 @@
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                   alt="View detail">
               </button>
-              <button class="add-cart p-2 w-10 h-10" id="cart_icon">
+              <button class="add-cart p-2 w-10 h-10">
                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
               </button>
             </div>
           </div>
           <div class="relative w-1/3 p-2">
-            <div class="relative">
-              <img src="img/best_seller_cake_hp_5.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
-                alt="Macaron Cookies">
-              <div class="absolute top-0 left-0 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
-              <div class="absolute top-0 right-0 bg-red-500 text-white text-xs px-2 py-1 rounded">-10%</div>
-            </div>
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
+            <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-10%</div>
+            <img src="img/best_seller_cake_hp_5.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
+              alt="Macaron Cookies">
             <div class="text-center mt-2">
               <p class="text-2xl text-red-900"><b>Macaron Cookies</b></p>
               <p class="text-gray-500 line-through">100.000 VND box of 10</p>
@@ -226,7 +208,7 @@
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                   alt="View detail">
               </button>
-              <button class="add-cart p-2 w-10 h-10" id="cart_icon">
+              <button class="add-cart p-2 w-10 h-10">
                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
               </button>
             </div>
@@ -245,7 +227,7 @@
                 <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                   alt="View detail">
               </button>
-              <button class="add-cart p-2 w-10 h-10" id="cart_icon">
+              <button class="add-cart p-2 w-10 h-10">
                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
               </button>
             </div>
@@ -296,68 +278,68 @@
   <!-- Hot Cakes Section -->
   <section class="bg-seashell py-16">
     <div class="content mx-auto px-4">
-        <div class="flex justify-between text-center items-center mb-8">
-            <h2 class="text-3xl font-bold w-1/2">HOT CAKE</h2>
-            <h2 class="text-3xl font-bold w-1/2">NEW CAKE</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Left Column: Hot Cakes -->
-            <div class="space-y-8">
-                <!-- Cake Item -->
-                <div class="flex items-start space-x-4">
-                    <img src="img/hot_cake_1.png" alt="Cake 1" class="w-36 h-36 object-cover rounded">
-                    <div>
-                        <h3 class="text-xl font-bold text-red-500" id="cake_name">Chocolate cupcake</h3>
-                        <p class="text-gray-700 mb-2">A chocolate cupcake is a rich, single-serving chocolate cake topped with
-                            creamy chocolate frosting.</p>
-                        <p class="text-gray-500 line-through">25.000 VND</p>
-                        <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
-                        <button class="bg-red-500 text-white py-2 px-4 rounded mt-2" id="order-btn">ORDER NOW ></button>
-                    </div>
-                </div>
-                <!-- Repeat for more cakes... -->
-                <div class="flex items-start space-x-4">
-                    <img src="img/Logo.png" alt="Cake 1" class="w-36 h-36 object-cover rounded">
-                    <div>
-                        <h3 class="text-xl font-bold text-red-500">Blueberry cupcake</h3>
-                        <p class="text-gray-700 mb-2">A blueberry cupcake is a moist, single-serving cake studded with juicy
-                            blueberries and often topped with a sweet, creamy frosting.</p>
-                        <p class="text-gray-500 line-through">20.000 VND</p>
-                        <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
-                        <button class="order-btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
-                    </div>
-                </div>
+      <div class="flex justify-between text-center items-center mb-8">
+        <h2 class="text-3xl font-bold w-1/2">HOT CAKE</h2>
+        <h2 class="text-3xl font-bold w-1/2">NEW CAKE</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Left Column: Hot Cakes -->
+        <div class="space-y-8">
+          <!-- Cake Item -->
+          <div class="flex items-start space-x-4">
+            <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover rounded">
+            <div>
+              <h3 class="text-xl font-bold text-red-500">Chocolate cupcake</h3>
+              <p class="text-gray-700 mb-2">A chocolate cupcake is a rich, single-serving chocolate cake topped with
+                creamy chocolate frosting.</p>
+              <p class="text-gray-500 line-through">25.000 VND</p>
+              <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
+              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
             </div>
+          </div>
+          <!-- Repeat for more cakes... -->
+          <div class="flex items-start space-x-4">
+            <img src="img/hot_cake_2.png" alt="Blueberry cupcake" class="w-36 h-36 object-cover rounded">
+            <div>
+              <h3 class="text-xl font-bold text-red-500">Blueberry cupcake</h3>
+              <p class="text-gray-700 mb-2">A blueberry cupcake is a moist, single-serving cake studded with juicy
+                blueberries and often topped with a sweet, creamy frosting.</p>
+              <p class="text-gray-500 line-through">20.000 VND</p>
+              <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
+              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
+            </div>
+          </div>
+        </div>
 
-            <!-- Right Column: New Cakes -->
-            <div class="space-y-8">
-                <!-- Cake Item -->
-                <div class="flex items-start space-x-4">
-                    <img src="img/Logo.png" alt="Cake 2" class="w-36 h-36 object-cover rounded">
-                    <div>
-                        <h3 class="text-xl font-bold text-red-500">Tiramisu</h3>
-                        <p class="text-gray-700 mb-2">Tiramisu is incredibly delicious, with its rich, creamy layers and a perfect
-                            balance of coffee and cocoa flavors, making it a favorite among dessert lovers.</p>
-                        <p class="text-gray-500 line-through">85.000 VND</p>
-                        <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
-                        <button class="order-btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
-                    </div>
-                </div>
-                <!-- Repeat for more cakes... -->
-                <div class="flex items-start space-x-4">
-                    <img src="img/Logo.png" alt="Cake 1" class="w-36 h-36 object-cover rounded">
-                    <div>
-                        <h3 class="text-xl font-bold text-red-500">Macaron</h3>
-                        <p class="text-gray-700 mb-2">
-                            A macaron is a delicate French pastry featuring two almond meringue cookies sandwiched around a
-                            flavorful filling such as buttercream, ganache, or jam.</p>
-                        <p class="text-gray-500 line-through">100.000 VND</p>
-                        <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
-                        <button class="order-btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
-                    </div>
-                </div>
+        <!-- Right Column: New Cakes -->
+        <div class=" space-y-8">
+          <!-- Cake Item -->
+          <div class="flex items-start space-x-4">
+            <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded">
+            <div>
+              <h3 class="text-xl font-bold text-red-500">Tiramisu</h3>
+              <p class="text-gray-700 mb-2">Tiramisu is incredibly delicious, with its rich, creamy layers and a perfect
+                balance of coffee and cocoa flavors, making it a favorite among dessert lovers.</p>
+              <p class="text-gray-500 line-through">85.000 VND</p>
+              <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
+              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
             </div>
+          </div>
+          <!-- Repeat for more cakes... -->
+          <div class="flex items-start space-x-4">
+            <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded">
+            <div>
+              <h3 class="text-xl font-bold text-red-500">Macaron</h3>
+              <p class="text-gray-700 mb-2">
+                A macaron is a delicate French pastry featuring two almond meringue cookies sandwiched around a
+                flavorful filling such as buttercream, ganache, or jam.</p>
+              <p class="text-gray-500 line-through">100.000 VND</p>
+              <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
+              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 </section>
 
@@ -368,108 +350,88 @@
       <div class="grid text-start content-between">
         <h2 class="text-3xl font-bold mb-4">OUR BAKER</h2>
         <p class="max-w-2xl mx-auto text-gray-700 mb-8 text-justify">
-          In the world of artisanal baking, Two Worms Bakery stands out, led by the visionary duo Nhi Nguyen Van and Thu
-          Huong Duong. As CEOs, they have transformed their bakery into a haven of culinary excellence.
-        <p class="max-w-2xl mx-auto text-gray-700 mb-8 text-justify">
-          When they met together, Huong Duong and Nhi Nguyen have created a dynamic and successful partnership at Two
-          Worms Bakery. Their blend of innovation and tradition continues to delight and inspire, making their bakery a
-          beloved destination for all who appreciate exceptional baked goods.
-        </p>
-        </p>
+          In the world of artisanal baking, Two Worms Bakery stands out, led by the visionary duo Nhi Nguyen Van and Thu Huong Duong. As CEOs, they have transformed their bakery into a haven of culinary excellence. Together, Nhi and Thu Huong have created a dynamic and successful partnership at Two Worms Bakery. Their blend of innovation and tradition continues to delight and inspire, making their bakery a beloved destination for all who appreciate exceptional baked goods.
 
+        <ul class="list-disc list-inside text-left mb-8 space-y-4">
+          <li>Innovative Flavor Combinations</li>
+          <li>Artisanal Craftsmanship</li>
+          <li>Aesthetic Presentation</li>
         </ul>
-        <a href="about_us.html"
-          class="bg-red-500 text-white py-2 px-2 rounded-full mb-8 flex justify-center items-center">
-          <button class="w-full h-full flex justify-center items-center">READ MORE ></button>
-        </a>
-
+        <button class="bg-red-500 text-white py-2 px-2 rounded-full mb-8">READ MORE ></button>
       </div>
       <div class="bg-white p-6 rounded-lg shadow-md text-left">
-        <img src="https://qph.cf2.quoracdn.net/main-qimg-81fefa1015761c1985fb33860e17f1e7" alt="Baker 1"
+        <img src="img/baker1.jpeg" alt="Baker 1"
           class="w-full mx-auto h-[300px] object-cover mx-auto bg-center-lg mb-6">
         <h3 class="text-xl font-bold">THU HUONG DUONG</h3>
         <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
         <p class="text-gray-700 mb-4">
-          Brings warmth and nostalgia to her artisanal breads and rustic pastries, inspired by traditional techniques
-          from her grandmother’s kitchen.
-        <div class="flex space-x-4">
-          <a href="#" class="text-gray-700"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-gray-700"><i class="fab fa-google"></i></a>
-          <a href="#" class="text-gray-700"><i class="fab fa-twitter"></i></a>
-        </div>
+          Huong brings warmth and nostalgia to her artisanal breads and rustic pastries, inspired by traditional techniques from her grandmother’s kitchen.
+        </p>
       </div>
       <div class="bg-white p-6 rounded-lg shadow-md text-left">
-        <img src="https://img.freepik.com/free-photo/portrait-young-woman-with-natural-make-up_23-2149084942.jpg"
+        <img src="img/baker2.jpg"
           alt="Baker 2" class="w-full h-[300px] object-cover mx-auto bg-top mb-6">
         <h3 class="text-xl font-bold">VAN NHI NGUYEN</h3>
         <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
         <p class="text-gray-700 mb-4">
-          Renowned for her meticulous approach and innovative flavors, transforming pastries into edible art.
+          Nhi is renowned for her meticulous approach and innovative flavors, transforming pastries into edible art.
         </p>
-        <div class="flex space-x-4">
-          <a href="#" class="text-gray-700"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-gray-700"><i class="fab fa-google"></i></a>
-          <a href="#" class="text-gray-700"><i class="fab fa-twitter"></i></a>
-        </div>
       </div>
-    </div>
     </div>
   </section>
-<!--Contact us and map-->
-<div class="relative h-screen flex">
-  <!-- Map section -->
-  <div class="absolute inset-0 z-0 w-full h-full">
-    <iframe class="w-full h-full"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8932923783746!2d108.21766391168802!3d16.07102618454454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218314984c6bd%3A0xb53a043f246ab8cb!2zMTU4YSBMw6ogTOG7o2ksIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1717721377642!5m2!1sen!2s"
-      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <!--Contact us and map-->
+  <div class="relative h-screen flex">
+    <!-- Map section -->
+    <div class="absolute inset-0 z-0 w-full h-full">
+      <iframe class="w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8932923783746!2d108.21766391168802!3d16.07102618454454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218314984c6bd%3A0xb53a043f246ab8cb!2zMTU4YSBMw6ogTOG7o2ksIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1717721377642!5m2!1sen!2s"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Form section -->
+    <div
+      class="relative z-10 bg-melon bg-opacity-75 p-6 w-1/2 h-1/2+300px ml-auto my-auto mr-6 rounded-lg shadow-lg items-center">
+      <h2 class="text-2xl font-bold mb-4 text-center">Contact us</h2>
+      <form action="#" method="POST" id="contactForm">
+        <div class="mb-4">
+          <label id="name" class="block text-sm font-medium mb-2" for="name">Name <span
+              class="text-red-500">*</span></label>
+          <input class="w-full p-2 border border-gray-300 rounded" type="text" id="name" name="name" required>
+        </div>
+        <div class="mb-4">
+          <label id="email" class="block text-sm font-medium mb-2" for="email">Email <span
+              class="text-red-500">*</span></label>
+          <input class="w-full p-2 border border-gray-300 rounded" type="email" id="email" name="email" required>
+        </div>
+        <div class="mb-4">
+          <label id="phone" class="block text-sm font-medium mb-2" for="phone">Phone</label>
+          <input class="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" name="phone">
+        </div>
+        <div class="mb-4">
+          <label id="message" class="block text-sm font-medium mb-2" for="message">Your message <span
+              class="text-red-500">*</span></label>
+          <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message" required></textarea>
+        </div>
+        <div class="flex justify-center mt-4">
+          <button onclick="sendThankyouCUEmail(); return false;"
+            class="bg-pink-400 text-white p-2 rounded hover:bg-pink-500 transition duration-300">Send message</button>
+        </div>
+      </form>
+    </div>
   </div>
-  <!-- Form section -->
-  <div
-    class="relative z-10 bg-melon bg-opacity-75 p-6 w-1/2 h-1/2+300px ml-auto my-auto mr-6 rounded-lg shadow-lg items-center">
-    <h2 class="text-2xl font-bold mb-4 text-center">Contact us</h2>
-    <form action="#" method="POST" id="contactForm">
-      <div class="mb-4">
-        <label id="name" class="block text-sm font-medium mb-2" for="name">Name <span
-            class="text-red-500">*</span></label>
-        <input class="w-full p-2 border border-gray-300 rounded" type="text" id="name" name="name" required>
-      </div>
-      <div class="mb-4">
-        <label id="email" class="block text-sm font-medium mb-2" for="email">Email <span
-            class="text-red-500">*</span></label>
-        <input class="w-full p-2 border border-gray-300 rounded" type="email" id="email" name="email" required>
-      </div>
-      <div class="mb-4">
-        <label id="phone" class="block text-sm font-medium mb-2" for="phone">Phone</label>
-        <input class="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" name="phone">
-      </div>
-      <div class="mb-4">
-        <label id="message" class="block text-sm font-medium mb-2" for="message">Your message <span
-            class="text-red-500">*</span></label>
-        <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message" required></textarea>
-      </div>
-      <div class="flex justify-center mt-4">
-        <button onclick="sendThankyouCUEmail(); return false;"
-          class="bg-pink-400 text-white p-2 rounded hover:bg-pink-500 transition duration-300">Send message</button>
-      </div>
-    </form>
-  </div>
-</div>
-<!--Contact us and map ./-->
+  <!--Contact us and map ./-->
 
   <footer>
+    <!-- Footer -->
     <div class="footer bg-black text-seashell py-16">
       <div class="footer-content flex justify-around items-start py-5">
         <div class="content about w-1/3 mx-4">
           <h2 class="subscribe-title text-2xl font-bold underline mb-2">About us</h2>
-          <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting
-            atmosphere and cute decor. The bakery excels in food quality, offering a variety of
-            high-quality, delicious baked goods, including must-try items like their signature cupcakes
-            and
-            buttery cookies. Though slightly pricier, the taste and portion sizes justify the cost. It
-            can
-            be said that, Two worms bakery is a great destination if you are in need of delicious,
-            freshly
-            baked cakes.</p>
+          <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting atmosphere and
+            cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious baked goods,
+            including must-try items like their signature cupcakes and buttery cookies. Though slightly pricier, the
+            taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great destination if
+            you are in need of delicious, freshly baked cakes.</p>
         </div>
         <img src="img/Logo.png" alt="Logo" class="w-40 h-40 lg:w-52 lg:h-52 my-2">
         <div class="content subscribe w-1/3 mx-4">
@@ -485,6 +447,7 @@
     <div class="footer-links flex justify-around bg-seashell text-black py-5">
       <div class="footer-column w-1/5 text-center">
         <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
+        <footer class="py-2 flex justify-center items-center"></footer>
         <ul class="flex space-x-5">
           <img
             src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
@@ -494,7 +457,8 @@
           <img
             src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
             alt="Internet Banking" class="w-20 h-20">
-        </ul>
+          <ul>
+            <footer>
       </div>
       <div class="footer-column w-100 text-left">
         <h3 class="text center footer-links-title text-lg font-bold mb-2">Working time</h3>
@@ -508,30 +472,31 @@
         <ul class="list-none p-0">
           <li class="text-l"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
           <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Shipping</a></li>
-          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Policy Return
-              Policy</a></li>
+          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Policy Return Policy</a></li>
           <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Payments</a></li>
         </ul>
       </div>
       <div class="footer-column w-1/5 text-center">
         <h3 class="footer-links-title text-lg font-bold mb-2">Connect us</h3>
-        <ul class="flex space-x-4">
-          <li class="cursor-pointer transform hover:scale-110">
-            <a href="https://zalo.me/0905323959/" target="_blank">
-              <img class="w-12 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo">
-            </a>
-          </li>
-          <li class="cursor-pointer transform hover:scale-110">
-            <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
-              <img class="w-12 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram">
-            </a>
-          </li>
-          <li class="cursor-pointer transform hover:scale-110">
-            <a href="tel:+84905323959">
-              <img class="w-12 grayscale hover:grayscale-0" src="/img/phone_logo.png" alt="Phone">
-            </a>
-          </li>
-        </ul>
+        <footer class="py-2 flex justify-center items-center">
+          <ul class="flex space-x-4">
+            <li class="cursor-pointer transform hover:scale-110">
+              <a href="https://zalo.me/0905323959/" target="_blank">
+                <img class="w-12 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo">
+              </a>
+            </li>
+            <li class="cursor-pointer transform hover:scale-110">
+              <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
+                <img class="w-12 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram">
+              </a>
+            </li>
+            <li class="cursor-pointer transform hover:scale-110">
+              <a href="tel:+84905323959">
+                <img class="w-12 grayscale hover:grayscale-0" src="/img/phone_logo.png" alt="Phone">
+              </a>
+            </li>
+          </ul>
+        </footer>
       </div>
     </div>
     <div class="copyright w-50 text-center mt-5 pb-5 text-sm">
@@ -539,7 +504,7 @@
     </div>
   </footer>
 
-  <!-- Search icon-->
+  <!-- Search icon hover-->
   <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden">
     <div
       class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-full">
@@ -582,7 +547,7 @@
           <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
           <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
             chocolate.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
+          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15s.00</p>
           <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
             Now</button>
         </div>
@@ -609,19 +574,22 @@
         </div>
         <div class="w-1/2 pl-4">
           <div class="mb-4">
-            <p id="cakeName">Name of cake</p>
-            <p id="cakeRate">Rate</p>
-            <p id="cakeAvailable">Available</p>
-            <p id="cakeCategory">Category</p>
-            <p id="cakePrice">15000 VND</p>
+            <p>Name of cake</p>
+            <p>Rate</p>
+            <p>Available</p>
+            <p>Category</p>
+            <p>Price</p>
           </div>
-          <div class="flex items-center justify-center ml-4 pb-10">
-            <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(-1)">-</button>
-            <input id="quantity" class="mx-4 text-center w-12 border rounded" value="1">
-            <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(1)">+</button>
+          <div class="mb-4 flex items-center">
+            <p>Size</p>
+            <div class="flex items-center justify-center ml-4">
+              <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(-1)">-</button>
+              <input id="quantity" class="mx-4 text-center w-12 border rounded" value="01">
+              <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(1)">+</button>
+            </div>
           </div>
           <div>
-            <button class="p-2 bg-red-500 text-white rounded w-full" id="purchaseButton">Purchase</button>
+            <button class="p-2 bg-red-500 text-white rounded w-full">Purchase</button>
           </div>
         </div>
       </div>
@@ -650,11 +618,6 @@
   <script src="/src/scripts/carousel.js"></script>
   <script src="/src/scripts/icon_search_hover.js"></script>
   <script src="/src/scripts/cake_information_hover.js"></script>
-  <script src="/src/scripts/add_to_cart.js"></script>
-  <script src="/src/scripts/render_product.js"></script>
-  <script src="/src/scripts/cart_popup.js"></script>
-
 </body>
-
 
 </html>
