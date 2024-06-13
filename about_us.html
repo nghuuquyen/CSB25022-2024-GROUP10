@@ -6,6 +6,7 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .hidden {
       display: none;
@@ -13,6 +14,11 @@
 
     .flex {
       display: flex;
+    }
+    .banner {
+      background-image: url("https://images.unsplash.com/photo-1450862479751-84eeaf2fcca4?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-size: cover;
+      background-position: center;
     }
   </style>
 </head>
@@ -86,20 +92,6 @@
     <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-7 z-50">
       <img src="img/Logo.png" alt="Logo" class="w-28 h-28 lg:w-40 lg:h-40 rounded-full">
     </div>
-</header>
-</head>
-
-<body class="bg-gray-100">
-  <!-- Header end -->
-  <title>Our Bakery</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .banner {
-      background-image: url("https://images.unsplash.com/photo-1450862479751-84eeaf2fcca4?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
   <!-- Poster -->
   <div class="relative banner h-64 flex items-end justify-center text-white">
     <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -112,8 +104,12 @@
     </div>
   </div>
   <!-- Poster end -->
-  </header>
-  <!-- Header end -->
+</header>
+</head>
+
+<body class="bg-gray-100">
+  
+
 
 <!-- Our Baker Section -->
 <section class="bg-seashell flex justify-center pt-[50px]">
