@@ -120,44 +120,33 @@
                         <input type="text" id="companyName" class="w-full mt-1 p-2 border rounded-md" name="companyName" required>
                     </div>
                     <div class="mb-4">
-                        <label for="country" class="block font-medium">Country <span class="text-red-500">*</span></label>
-                        <input type="text" id="country" class="w-full mt-1 p-2 border rounded-md" name="country" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="address" class="block font-medium">Street address <span class="text-red-500">*</span></label>
-                        <input type="text" id="address" class="w-full mt-1 p-2 border rounded-md" name="address" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="town" class="block font-medium">Town / City <span class="text-red-500">*</span></label>
-                        <input type="text" id="town" class="w-full mt-1 p-2 border rounded-md" name="town" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="state" class="block font-medium">State / County <span class="text-red-500">*</span></label>
-                        <input type="text" id="state" class="w-full mt-1 p-2 border rounded-md" name="state" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="postcode" class="block font-medium">Postcode / ZIP <span class="text-red-500">*</span></label>
-                        <input type="text" id="postcode" class="w-full mt-1 p-2 border rounded-md" name="postcode" required>
+                        <label for="email" class="block font-medium">Email address <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" class="w-full mt-1 p-2 border rounded-md" name="email" required>
                     </div>
                     <div class="mb-4">
                         <label for="phone" class="block font-medium">Phone <span class="text-red-500">*</span></label>
                         <input type="tel" id="phone" class="w-full mt-1 p-2 border rounded-md" name="phone" required>
                     </div>
                     <div class="mb-4">
-                        <label for="email" class="block font-medium">Email address <span class="text-red-500">*</span></label>
-                        <input type="email" id="email" class="w-full mt-1 p-2 border rounded-md" name="email" required>
+                        <label for="address" class="block font-medium">Address <span class="text-red-500">*</span></label>
+                        <input type="text" id="address" class="w-full mt-1 p-2 border rounded-md" name="address" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="orderNote" class="block font-medium">Order note <span
+                                class="text-red-500">*</span></label>
+                        <textarea id="orderNote" class="w-full mt-1 p-2 border rounded-md" required></textarea>
                     </div>
                 </form>
             </div>
             <div class="order-section">
                 <h2 class="text-2xl font-bold mb-6 text-center">YOUR ORDER</h2>
-                <div class="overflow-x-auto">
+                <div class="bg-white shadow-2xl overflow-x-auto">
                     <table class="min-w-full border border-collapse">
-                        <thead class="bg-gray-200">
+                        <thead class="bg-metalic_bronze text-white">
                             <tr>
-                                <th class="py-2 border text-center">Product</th>
-                                <th class="py-2 border text-center">Quantity</th>
-                                <th class="py-2 border text-center">Total</th>
+                                <th class="py-2 text-center">Product</th>
+                                <th class="py-2 text-center">Quantity</th>
+                                <th class="py-2 text-center">Total</th>
                             </tr>
                             
                         </thead>
@@ -193,7 +182,7 @@
                                 <td class="py-2 text-center voucher"><span>-15,000</span> VND</td>
                             </tr>
                             <tr>
-                                <td colspan="2" class="py-2 text-right">Total amount:</td>
+                                <td colspan="2" class="py-2 text-xl text-right font-bold underline">Total amount:</td>
                                 <td class="py-2 text-center total-amount"><span>305,000</span> VND</td>
                             </tr>
                         </tfoot>
@@ -299,3 +288,5 @@
 
 
 </html>
+
+
