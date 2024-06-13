@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.getElementById('closeButton');
     const cartItemsContainer = document.getElementById('cart-items');
     const totalPriceElement = document.getElementById('total-price');
-    const cartIcon = document.getElementById('cart_icon');
-    const order_button = document.getElementById('order-btn');
+    const cartIcon = document.querySelectorAll('cart_icon');
+    const orderButton = document.getElementById('order-btn');
 
     purchaseButton.addEventListener('click', () => {
         const item = {
@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.addEventListener('click', () => {
         cakeDetailOverlay.classList.add('hidden');
     });
+
+
 
 
     // Hàm tạo ID sản phẩm một cách động (cần được cài đặt)
@@ -67,22 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Added to cart!');
     });
 
-    order_button.addEventListener('click', () => {
+    orderButton.addEventListener('click', () => {
         // Truy cập và lấy thông tin sản phẩm từ các phần tử HTML tương ứng
-        const productName = orderBtn.parentElement.querySelector('h3').innerText;
-        const productDiscountedPrice = orderBtn.parentElement.querySelector('.text-gray-800').innerText;
-        const productPrice = parseInt(productDiscountedPrice.replace(' VND', '').replace('.', ''));
-
         const item = {
-            id: generateProductId(),
-            name: productName,
-            price: productPrice,
+            id: generateProductId(), // New product with a larger ID
+            name: document.getElementById('cakeName').innerText,
+            price: parseInt(document.getElementById('cakePrice').innerText.replace(' VND', '')),
             quantity: 1
         };
+
 
         // Thêm sản phẩm vào giỏ hàng
         addToCart(item);
         alert('Added to cart!');
+        window.location.href = 'cart.html';
     });
 
 
