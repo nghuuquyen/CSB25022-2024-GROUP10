@@ -196,7 +196,7 @@ We will have 6 main pages:
             </tr>
             <tr>
                 <td class="border border-gray-400 px-4 py-2">About us</td>
-                <td class="border border-gray-400 px-4 py-2" rowspan="9">Week 2</td>
+                <td class="border border-gray-400 px-4 py-2" rowspan="13">Week 2</td>
                 <td class="border border-gray-400 px-4 py-2">Create complete page</td>
                 <td class="border border-gray-400 px-4 py-2">
                 Design all UI and javascript in About us page
@@ -272,11 +272,10 @@ We will have 6 main pages:
             <tr>
                 <td class="border border-gray-400 px-4 py-2">Thank you page</td>
                 <td class="border border-gray-400 px-4 py-2">Create complete page</td>
-                <td class="border border-gray-400 px-4 py-2"></td>
                  <td class="border border-gray-400 px-4 py-2">
                     <img src="img_for_Readme/General_wireframe/Thank you.png">
                 </td>
-                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
                 <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
             </tr>
              <tr>
@@ -289,7 +288,6 @@ We will have 6 main pages:
             </tr>
             <tr>
                 <td class="border border-gray-400 px-4 py-2" rowspan="2">Checkout</td>
-                <td class="border border-gray-400 px-4 py-2" rowspan="5">Week 3</td>
                 <td class="border border-gray-400 px-4 py-2">Form collect iniormation</td>
                 <td class="border border-gray-400 px-4 py-2">
                 <br>Form for customer to collect shipping information</br>
@@ -297,7 +295,7 @@ We will have 6 main pages:
                  <td class="border border-gray-400 px-4 py-2">
                     <img src="img_for_Readme/Detail_checkout/form.png">
                  </td>
-                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
             </tr>
             <tr>
@@ -308,11 +306,11 @@ We will have 6 main pages:
                  <td class="border border-gray-400 px-4 py-2">
                     <img src="img_for_Readme/Detail_checkout/billing.png">
                  </td>
-                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
             </tr>
             <tr>
-                <td class="border border-gray-400 px-4 py-2" rowspan="3">About us</td>
+                <td class="border border-gray-400 px-4 py-2" rowspan="3">Contact us</td>
                 <td class="border border-gray-400 px-4 py-2">Map</td>
                 <td class="border border-gray-400 px-4 py-2">
                 <br>Embeded map</br>
@@ -332,7 +330,7 @@ We will have 6 main pages:
                     <img src="img_for_Readme/Detail_contact/form_message.png">
                  </td>
                 <td class="border border-gray-400 px-4 py-2">To do</td>
-                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
             </tr>
             <tr>
                 <td class="border border-gray-400 px-4 py-2">Some information box</td>
@@ -345,6 +343,32 @@ We will have 6 main pages:
                 <td class="border border-gray-400 px-4 py-2">To do</td>
                 <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
             </tr>   
+            <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2" rowspan="2">Week 3</td>
+                <td class="border border-gray-400 px-4 py-2">Fix UI</td>
+                <td class="border border-gray-400 px-4 py-2">Fix all UI follow feedback</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong & Van Nhi</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Implement backend, server-side</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong & Van Nhi</td>
+            </tr>
+             <tr>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2" >Week 4</td>
+                <td class="border border-gray-400 px-4 py-2">Finish the project</td>
+                <td class="border border-gray-400 px-4 py-2">Fix UI (if necessary) and server-side</td>
+                <td class="border border-gray-400 px-4 py-2"></td>
+                <td class="border border-gray-400 px-4 py-2">To do</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong & Van Nhi</td>
+            </tr>
         </tbody>
     </table>
 </div>
