@@ -139,8 +139,8 @@
             <img src="img/best_seller_cake_hp_1.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
               alt="Strawberry Cupcake">
             <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Strawberry Cupcake</b></p>
-              <p><b>25.000 VND</b> per cake</p>
+              <p class="text-2xl text-red-900" id="cake_name"><b>Strawberry Cupcake</b></p>
+              <p id="cake_price"><b>25.000 VND</b> per cake</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
               <button class="view-detail p-2 w-10 h-10">
@@ -157,8 +157,8 @@
             <img src="img/best_seller_cake_hp_2.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
               alt="Banana Bread">
             <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Banana Bread</b></p>
-              <p><b>45.000 VND</b> per loaf</p>
+              <p class="text-2xl text-red-900" id="cake_name"><b>Banana Bread</b></p>
+              <p id="cake_price"><b>45.000 VND</b> per loaf</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
               <button class="view-detail p-2 w-10 h-10">
@@ -175,9 +175,9 @@
             <img src="img/best_seller_cake_hp_3.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
               alt="Chocolate Muffin">
             <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Chocolate Muffin</b></p>
+              <p class="text-2xl text-red-900" id="cake_name"><b>Chocolate Muffin</b></p>
               <p class="text-gray-500 line-through">19.000 VND per cake</p>
-              <p><b>9.500 VND</b> per cake</p>
+              <p id="cake_price"><b>9.500 VND</b> per cake</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
               <button class="view-detail p-2 w-10 h-10">
@@ -196,8 +196,8 @@
             <img src="img/best_seller_cake_hp_4.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
               alt="Tiramisu">
             <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Tiramisu</b></p>
-              <p><b>85.000 VND</b> per 250gr box</p>
+              <p class="text-2xl text-red-900" id="cake_name"><b>Tiramisu</b></p>
+              <p id="cake_price"><b>85.000 VND</b> per 250gr box</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
               <button class="view-detail p-2 w-10 h-10">
@@ -217,9 +217,9 @@
               <div class="absolute top-0 right-0 bg-red-500 text-white text-xs px-2 py-1 rounded">-10%</div>
             </div>
             <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Macaron Cookies</b></p>
+              <p class="text-2xl text-red-900" id="cake_name"><b>Macaron Cookies</b></p>
               <p class="text-gray-500 line-through">100.000 VND box of 10</p>
-              <p><b>90.000 VND</b> per box of 10</p>
+              <p id="cake_price"><b>90.000 VND</b> per box of 10</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
               <button class="view-detail p-2 w-10 h-10">
@@ -236,9 +236,9 @@
             <img src="img/best_seller_cake_hp_6.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
               alt="Berry Cheesecake">
             <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Berry Cheesecake</b></p>
+              <p class="text-2xl text-red-900" id="cake_name"><b>Berry Cheesecake</b></p>
               <p class="text-gray-500 line-through">125.000 VND per cake</p>
-              <p><b>100.000 VND</b> per cake</p>
+              <p id="cake_price"><b>100.000 VND</b> per cake</p>
             </div>
             <div class="flex justify-center mt-2 space-x-4">
               <button class="view-detail p-2 w-10 h-10">
@@ -305,26 +305,26 @@
         <div class="space-y-8">
           <!-- Cake Item -->
           <div class="flex items-start space-x-4">
-            <img src="img/hot_cake_1.png" alt="Cake 1" class="w-36 h-36 object-cover rounded">
+            <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover rounded">
             <div>
               <h3 class="text-xl font-bold text-red-500">Chocolate cupcake</h3>
               <p class="text-gray-700 mb-2">A chocolate cupcake is a rich, single-serving chocolate cake topped with
                 creamy chocolate frosting.</p>
               <p class="text-gray-500 line-through">25.000 VND</p>
               <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
-              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2" id="order-btn">ORDER NOW ></button>
+              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
             </div>
           </div>
           <!-- Repeat for more cakes... -->
           <div class="flex items-start space-x-4">
-            <img src="img/Logo.png" alt="Cake 1" class="w-36 h-36 object-cover rounded">
+            <img src="img/hot_cake_2.png" alt="Blueberry cupcake" class="w-36 h-36 object-cover rounded">
             <div>
               <h3 class="text-xl font-bold text-red-500">Blueberry cupcake</h3>
               <p class="text-gray-700 mb-2">A blueberry cupcake is a moist, single-serving cake studded with juicy
                 blueberries and often topped with a sweet, creamy frosting.</p>
               <p class="text-gray-500 line-through">20.000 VND</p>
               <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
-              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2" id="order-btn">ORDER NOW ></button>
+              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
             </div>
           </div>
         </div>
@@ -332,20 +332,20 @@
         <!-- Right Column: New Cakes -->
         <div class=" space-y-8">
           <!-- Cake Item -->
-          <div class=" flex items-start space-x-4">
-            <img src="img/Logo.png" alt="Cake 2" class="w-36 h-36 object-cover rounded">
+          <div class="flex items-start space-x-4">
+            <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded">
             <div>
               <h3 class="text-xl font-bold text-red-500">Tiramisu</h3>
               <p class="text-gray-700 mb-2">Tiramisu is incredibly delicious, with its rich, creamy layers and a perfect
                 balance of coffee and cocoa flavors, making it a favorite among dessert lovers.</p>
               <p class="text-gray-500 line-through">85.000 VND</p>
               <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
-              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2" id="order-btn">ORDER NOW ></button>
+              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
             </div>
           </div>
           <!-- Repeat for more cakes... -->
           <div class="flex items-start space-x-4">
-            <img src="img/Logo.png" alt="Cake 1" class="w-36 h-36 object-cover rounded">
+            <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded">
             <div>
               <h3 class="text-xl font-bold text-red-500">Macaron</h3>
               <p class="text-gray-700 mb-2">
@@ -353,13 +353,13 @@
                 flavorful filling such as buttercream, ganache, or jam.</p>
               <p class="text-gray-500 line-through">100.000 VND</p>
               <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
-              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2" id="order-btn">ORDER NOW ></button>
+              <button class="bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+</section>
 
   <!-- Our Baker Section -->
   <section class="bg-gray-50 py-16  flex justify-around">
@@ -368,7 +368,6 @@
       <div class="grid text-start content-between">
         <h2 class="text-3xl font-bold mb-4">OUR BAKER</h2>
         <p class="max-w-2xl mx-auto text-gray-700 mb-8 text-justify">
-<<<<<<< HEAD
           In the world of artisanal baking, Two Worms Bakery stands out, led by the visionary duo Nhi Nguyen Van and Thu
           Huong Duong. As CEOs, they have transformed their bakery into a haven of culinary excellence.
         <p class="max-w-2xl mx-auto text-gray-700 mb-8 text-justify">
@@ -378,14 +377,12 @@
         </p>
         </p>
 
-=======
           In the world of artisanal baking, Two Worms Bakery stands out, led by the visionary duo Nhi Nguyen Van and Thu Huong Duong. As CEOs, they have transformed their bakery into a haven of culinary excellence. Together, Nhi and Thu Huong have created a dynamic and successful partnership at Two Worms Bakery. Their blend of innovation and tradition continues to delight and inspire, making their bakery a beloved destination for all who appreciate exceptional baked goods.
 
         <ul class="list-disc list-inside text-left mb-8 space-y-4">
           <li>Innovative Flavor Combinations</li>
           <li>Artisanal Craftsmanship</li>
           <li>Aesthetic Presentation</li>
->>>>>>> f67dc2c (Update content for "Our baker" section)
         </ul>
         <a href="about_us.html"
           class="bg-red-500 text-white py-2 px-2 rounded-full mb-8 flex justify-center items-center">
@@ -399,7 +396,6 @@
         <h3 class="text-xl font-bold">THU HUONG DUONG</h3>
         <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
         <p class="text-gray-700 mb-4">
-<<<<<<< HEAD
           Brings warmth and nostalgia to her artisanal breads and rustic pastries, inspired by traditional techniques
           from her grandmother’s kitchen.
         <div class="flex space-x-4">
@@ -407,10 +403,8 @@
           <a href="#" class="text-gray-700"><i class="fab fa-google"></i></a>
           <a href="#" class="text-gray-700"><i class="fab fa-twitter"></i></a>
         </div>
-=======
           Huong brings warmth and nostalgia to her artisanal breads and rustic pastries, inspired by traditional techniques from her grandmother’s kitchen.
         </p>
->>>>>>> f67dc2c (Update content for "Our baker" section)
       </div>
       <div class="bg-white p-6 rounded-lg shadow-md text-left">
         <img src="img/baker2.jpg"
@@ -418,14 +412,17 @@
         <h3 class="text-xl font-bold">VAN NHI NGUYEN</h3>
         <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
         <p class="text-gray-700 mb-4">
-<<<<<<< HEAD
           Renowned for her meticulous approach and innovative flavors, transforming pastries into edible art.
-=======
           Nhi is renowned for her meticulous approach and innovative flavors, transforming pastries into edible art.
->>>>>>> f67dc2c (Update content for "Our baker" section)
         </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-700"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-700"><i class="fab fa-google"></i></a>
+          <a href="#" class="text-gray-700"><i class="fab fa-twitter"></i></a>
+        </div>
       </div>
     </div>
+      </div>
     </div>
   </section>
 <!--Contact us and map-->
