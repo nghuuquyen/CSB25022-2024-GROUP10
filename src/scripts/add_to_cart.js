@@ -1,40 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const purchaseButton = document.getElementById('purchaseButton');
-    const cakeDetailOverlay = document.getElementById('cakeDetailOverlay');
-    const closeButton = document.getElementById('closeButton');
     const cartItemsContainer = document.getElementById('cart-items');
     const totalPriceElement = document.getElementById('total-price');
-    const cartIcon = document.querySelectorAll('cart_icon');
-    const orderButton = document.getElementById('order-btn');
+    const purchaseButton = document.getElementById('purchase_btn');
+    const cakeDetailOverlay = document.getElementById('cakeDetailOverlay');
+    const closeButton = document.getElementById('closeButton');
+    const cartIcons = document.querySelectorAll('.cart_icon'); // Corrected the selector to .cart_icon
+    const orderButtons = document.querySelectorAll('.order_btn');
 
-    purchaseButton.addEventListener('click', () => {
-        const item = {
-            id: 2, // New product with a larger ID
-            name: document.getElementById('cakeName').innerText,
-            price: parseInt(document.getElementById('cakePrice').innerText.replace(' VND', '')),
-            quantity: parseInt(document.getElementById('quantity').value)
-        };
-        addToCart(item);
-        cakeDetailOverlay.classList.add('hidden');
-        window.location.href = 'cart.html';
-    });
-
-    closeButton.addEventListener('click', () => {
-        cakeDetailOverlay.classList.add('hidden');
-    });
-
-
-
-
-    // Hàm tạo ID sản phẩm một cách động (cần được cài đặt)
+    // Function to generate a product ID dynamically
     function generateProductId() {
-        // Thực hiện logic tạo ID một cách động ở đây
-        return Math.floor(Math.random() * 1000) + 1; // Ví dụ: ID được tạo ngẫu nhiên từ 1 đến 1000
+        return Math.floor(Math.random() * 1000) + 1; // Example: Random ID between 1 and 1000
     }
 
     function addToCart(item) {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        const existingItem = cartItems.find(cartItem => cartItem.id === item.id);
+        const existingItem = cartItems.find(cartItem => cartItem.name === item.name);
         if (existingItem) {
             existingItem.quantity += item.quantity;
         } else {
@@ -43,53 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }
 
-    window.changeQuantity = (delta) => {
-        const quantityInput = document.getElementById('quantity');
-        const newQuantity = Math.max(1, parseInt(quantityInput.value) + delta);
-        quantityInput.value = newQuantity;
-    };
 
-    cartIcon.addEventListener('click', () => {
-        // Truy cập và lấy thông tin sản phẩm từ các phần tử HTML tương ứng
-        const productContainer = cartIcon.closest('.relative');
-        const productName = productContainer.querySelector('.text-red-900').textContent;
-        const productPriceText = productContainer.querySelector('.text-red-900').nextElementSibling.textContent;
-        const productPrice = parseInt(productPriceText.replace(' VND', '').replace('.', ''));
-
-        // Tạo đối tượng sản phẩm
-        const item = {
-            id: generateProductId(), // Tạo ID sản phẩm một cách động
-            name: productName,
-            price: productPrice,
-            quantity: 1
-        };
-
-        // Thêm sản phẩm vào giỏ hàng
-        addToCart(item);
-        alert('Added to cart!');
-    });
-
-    orderButton.addEventListener('click', () => {
-        // Truy cập và lấy thông tin sản phẩm từ các phần tử HTML tương ứng
-        const item = {
-            id: generateProductId(), // New product with a larger ID
-            name: document.getElementById('cakeName').innerText,
-            price: parseInt(document.getElementById('cakePrice').innerText.replace(' VND', '')),
-            quantity: 1
-        };
-
-
-        // Thêm sản phẩm vào giỏ hàng
-        addToCart(item);
-        alert('Added to cart!');
-        window.location.href = 'cart.html';
-    });
-
-
-
-
-    const renderCartItems = () => {
+    function renderCartItems() {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        console.log('Rendering cart items:', cartItems);
         cartItemsContainer.innerHTML = '';
         let totalPrice = 0;
 
@@ -115,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         totalPriceElement.innerText = `${totalPrice} VND`;
-    };
+    }
 
     window.updateQuantity = (id, delta) => {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -123,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (item) {
             item.quantity = Math.max(1, item.quantity + delta);
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
-            renderCartItems();
+            renderCartItems(); // Re-render cart items after updating quantity
         }
     };
 
@@ -131,12 +68,80 @@ document.addEventListener('DOMContentLoaded', () => {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         cartItems = cartItems.filter(item => item.id !== id);
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        renderCartItems();
+        renderCartItems(); // Re-render cart items after removing item
     };
 
     window.continueShopping = () => {
         window.location.href = 'index.html';
     };
 
-    renderCartItems();
+    if (purchaseButton) {
+        purchaseButton.addEventListener('click', () => {
+            const item = {
+                id: generateProductId(),
+                name: document.getElementById('cake_name').textContent.trim(),
+                price: parseInt(document.getElementById('cake_price').textContent.replace(' VND', '').replace('.', '')),
+                quantity: parseInt(document.getElementById('quantity').value)
+            };
+            addToCart(item);
+            cakeDetailOverlay.classList.add('hidden');
+            alert('Added to cart!');
+        });
+    }
+
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            cakeDetailOverlay.classList.add('hidden');
+        });
+    }
+
+
+
+    // Loop through each cart icon and add an event listener
+    cartIcons.forEach(cartIcon => {
+        cartIcon.addEventListener('click', () => {
+            // Access product details from corresponding HTML elements
+            const productContainer = cartIcon.closest('.relative');
+            const productName = productContainer.querySelector('.text-red-900').textContent;
+            const productPriceText = productContainer.querySelector('.text-gray-500')
+                ? productContainer.querySelector('.text-gray-500').nextElementSibling.textContent
+                : productContainer.querySelector('.text-red-900').nextElementSibling.textContent;
+            const productPrice = parseInt(productPriceText.replace(' VND', '').replace('.', ''));
+
+            // Create product object
+            const item = {
+                id: generateProductId(), // Generate product ID dynamically
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+
+            // Add product to cart
+            addToCart(item);
+            alert('Added to cart!');
+        });
+    });
+
+    // Add event listener to each order button
+    orderButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productContainer = button.closest('.flex.items-start');
+            const productName = productContainer.querySelector('.text-red-500').textContent;
+            const productPriceText = productContainer.querySelector('.text-gray-800').textContent;
+            const productPrice = parseInt(productPriceText.replace(' VND', '').replace('.', ''));
+
+            const item = {
+                id: generateProductId(), // Generate product ID dynamically
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+
+            // Add product to cart
+            addToCart(item);
+            alert('Added to cart!');
+        });
+    });
+
+    renderCartItems(); // Initial render of cart items
 });

@@ -5,7 +5,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     // Function to show cake detail overlay
-    function showCakeDetail() {
+    function showCakeDetail(event) {
+        const cakeInfo = event.currentTarget.closest('.relative');
+        const cakeName = cakeInfo.querySelector('.text-2xl').innerText;
+        const cakePrice = cakeInfo.querySelector('p + p b').innerText;
+        const cakeImage = cakeInfo.querySelector('img').src;
+
+        document.getElementById('cake_name').innerText = cakeName;
+        document.getElementById('cake_price').innerText = cakePrice;
+        document.getElementById('cakeImage').innerHTML = `<img src="${cakeImage}" alt="${cakeName}" class="w-full h-64 bg-gray-300 flex items-center justify-center">`;
+
         document.getElementById('cakeDetailOverlay').classList.remove('hidden');
     }
     
@@ -28,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (isNaN(value) || value < 1) {
             input.value = '';
         } else {
-            input.value = formatQuantity(value);
+            input.value = formatQuantity(value); // Format input to two digits
         }
     }
 
@@ -50,6 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Add event listeners for direct input changes
     const quantityInput = document.getElementById('quantity');
     quantityInput.addEventListener('input', function(event) {
+        // When input value is changed, update and format quantity
         updateQuantity(event.target);
     });
     quantityInput.addEventListener('blur', function(event) {
