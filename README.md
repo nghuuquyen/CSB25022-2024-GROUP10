@@ -220,7 +220,7 @@ We will have 6 main pages:
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
             </tr>
             <tr>
-                <td class="border border-gray-400 px-4 py-2" rowspan="5">Menu</td>
+                <td class="border border-gray-400 px-4 py-2" rowspan="3">Menu</td>
                 <td class="border border-gray-400 px-4 py-2">Header and Footer</td>
                 <td class="border border-gray-400 px-4 py-2">
                 <br>Header top</br>
