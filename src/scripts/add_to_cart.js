@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="mx-2">${item.quantity}</span>
                     <button class="px-2 py-1 bg-green-500 text-white rounded-md" onclick="updateQuantity(${item.id}, 1)">+</button>
                 </td>
-                <td class="py-2 px-4 border-b border-gray-300">${total} VND</td>
+                <td class="py-2 px-4 border-b border-gray-300">${total.toLocaleString()} VND</td>
                 <td class="py-2 px-4 border-b border-gray-300">
                     <button class="px-2 py-1 bg-red-500 text-white rounded-md" onclick="removeItem(${item.id})">X</button>
                 </td>
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsContainer.appendChild(row);
         });
 
-        totalPriceElement.innerText = `${totalPrice} VND`;
+        totalPriceElement.innerText = `${totalPrice.toLocaleString()} VND`;
     }
 
     window.updateQuantity = (id, delta) => {
