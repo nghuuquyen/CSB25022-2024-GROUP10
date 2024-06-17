@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
     <link href="styles.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script> 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 <!-- Header -->
 <header class="header">
@@ -55,15 +55,15 @@
                     <a href="index.html" class="text-s md:text-xl font-semibold hover:underline">Home</a>
                     <a href="menu.html" class="text-s md:text-xl font-semibold hover:underline">Menu</a>
                 </div>
-                <div
-                    class="flex text-center items-center space-x-10 md:space-x-20 lg:space-x-80 flex-1 justify-end">
+                <div class="flex text-center items-center space-x-10 md:space-x-20 lg:space-x-80 flex-1 justify-end">
                     <a href="checkout.html" class="text-s md:text-xl font-semibold hover:underline">Checkout</a>
                     <div class="relative" id="cartContainer">
                         <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
-                            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png"
-                                alt="Cart" class="h-6 w-6">
+                            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart"
+                                class="h-6 w-6">
                         </a>
-                        <div class="absolute top-8 right-0 w-72 bg-pink-100 border border-gray-300 shadow-lg hidden" id="cartPopup">
+                        <div class="absolute top-8 right-0 w-72 bg-pink-100 border border-gray-300 shadow-lg hidden"
+                            id="cartPopup">
                             <div id="popup-content">
                                 <!-- Cart popup content will be loaded here -->
                             </div>
@@ -76,9 +76,9 @@
 
         <!-- Logo -->
         <div
-        class="absolute left-1/2 transform -translate-x-1/2 -translate-y-5 md:-translate-y-7 z-50 flex flex-col items-center">
-        <img src="img/Logo.png" alt="Logo" class="w-16 h-16 md:w-28 md:h-28 lg:w-40 lg:h-40 rounded-full">
-    </div>
+            class="absolute left-1/2 transform -translate-x-1/2 -translate-y-5 md:-translate-y-7 z-50 flex flex-col items-center">
+            <img src="img/Logo.png" alt="Logo" class="w-16 h-16 md:w-28 md:h-28 lg:w-40 lg:h-40 rounded-full">
+        </div>
         <!-- Poster -->
         <div class="relative banner h-32 md:h-64 flex items-end justify-center text-white">
             <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -98,13 +98,409 @@
 
     <div class="container mx-auto p-6">
         <div class="grid grid-cols-12 gap-6">
+            <!-- Main content -->
+            <div class="col-span-12 lg:col-span-9 order-last lg:order-first">
+                <div class="flex justify-left items-center mb-6">
+                    <h2 class="text-lg font-bold mr-10">Sort by:</h2>
+                    <div class="relative">
+                        <select class="w-full custom-select p-3 pr-10 border bg-white shadow-md">
+                            <option value="new">New</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="price">Price from high to low</option>
+                            <option value="price">Price from low to high</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Product grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 product-grid">
+                    <!-- Product items -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
+                        <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover mx-auto">
+                        <p class="text-xl font-bold text-red-500">Chocolate Cupcake</p>
+                        <p class="text-gray-700 mb-2 h-[100px]">A chocolate cupcake is a rich, single-serving chocolate
+                            cake topped with creamy chocolate frosting.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-500 line-through">25.000 VND</p>
+                            <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
+                        <img src="img/hot_cake_2.png" alt="Blueberry cupcake"
+                            class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Blueberry Cupcake</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">A blueberry cupcake is a moist, single-serving cake
+                            studded with juicy blueberries and often topped with a sweet, creamy frosting.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-500 line-through">20.000 VND</p>
+                            <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
+                        <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Tiramisu</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Tiramisu is incredibly delicious, with its rich, creamy
+                            layers and a perfect balance of coffee and cocoa flavors, making it a favorite among dessert
+                            lovers.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-500 line-through">85.000 VND</p>
+                            <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
+                        <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Macaroon</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">A macaron is a delicate French pastry featuring two
+                            almond meringue cookies sandwiched around a flavorful filling such as buttercream, ganache,
+                            or jam.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-500 line-through">100.000 VND</p>
+                            <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu1.png" alt="Banana Bread" class="w-full h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Banana Bread</p>
+                        <p class="text-gray-700 mb-2 h-[100px]">Banana bread is a moist, sweet loaf made with ripe
+                            bananas, often including walnuts or chocolate chips. It's perfect for breakfast, snacks, or
+                            dessert.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu2.png" alt="Whole wheat Bread"
+                            class="w-full h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Whole wheat Bread</p>
+                        <p class="text-gray-700 mb-2 h-[100px]">Whole wheat bread is a nutritious loaf made from whole
+                            wheat flour, known for its hearty texture and nutty flavor. It's a healthy alternative to
+                            white bread.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu3.png" alt="Chocolate cake" class="w-52 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Chocolate cake</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Chocolate cake is a rich, moist dessert made with
+                            chocolate-flavored sponge layers and creamy chocolate frosting, ideal for celebrations.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">30.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu4.png" alt="Strawberry cake" class="w-52 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Strawberry Cake</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Strawberry cake is a fruity dessert made with fresh or
+                            pureed strawberries, offering a light and refreshing taste, often topped with strawberry
+                            frosting.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">30.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu5.png" alt="Chocolate cookies" class="w-52 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Chocolate cookies</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Chocolate cookies are a treat made with
+                            chocolate-flavored dough and chocolate chips or chunks, known for their chewy or crispy
+                            texture and rich chocolate taste.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">45.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu6.png" alt="Orange Cupcake" class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Orange Cupcake</p>
+                        <p class="text-gray-700 mb-2 h-[100px]">Orange cupcakes are light, citrus-flavored treats with a
+                            moist texture, often topped with creamy orange frosting. They offer a refreshing twist on
+                            classic cupcakes.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">10.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu7.png" alt="Coffee Cupcake" class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Coffee Cupcake</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Coffee cupcakes are rich, coffee-infused treats with a
+                            tender crumb, typically adorned with coffee or mocha frosting. Perfect for coffee lovers.
+                        </p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu8.png" alt="Blackberry Cupcake"
+                            class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Blackberry Cupcake</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Blackberry cupcakes are fruity delights made with fresh
+                            blackberries, offering a sweet-tart flavor, often topped with blackberry-infused frosting.
+                        </p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu9.png" alt="Passion Fruit Mousse"
+                            class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Passion Fruit Mousse</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Passion fruit mousse is a creamy, tropical dessert made
+                            with fresh passion fruit, offering a tangy and sweet flavor, light and airy in texture.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu10.png" alt="Chocolate Mousse" class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Chocolate Mousse</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Chocolate mousse is a decadent, airy dessert made with
+                            rich chocolate, offering a smooth and velvety texture, perfect for chocolate lovers.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu11.png" alt="Peach Mousse" class="w-36 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Peach Mousse</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Peach mousse is a light, fruity dessert made with fresh
+                            peaches, delivering a sweet and refreshing flavor with a smooth and creamy texture.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu12.png" alt="Fruit Cheesecake" class="w-52 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Fruit Cheesecake</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">Fruit cheesecake is a rich, creamy dessert with a
+                            graham cracker crust, topped with a variety of fresh fruits, offering a blend of tangy and
+                            sweet flavors.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">60.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu13.png" alt="Croissant" class="w-52 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Croissant</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">A croissant is a buttery, flaky pastry with a crisp
+                            outer layer and a soft, airy interior, perfect for breakfast or snacks, often enjoyed plain
+                            or with fillings.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
+                        <img src="img/menu14.png" alt="Donut" class="w-52 h-36 object-cover rounded mx-auto">
+                        <p class="text-xl font-bold text-red-500">Donut</p>
+                        <p class="text-gray-700 mb-2  h-[100px]">A donut is a sweet, fried dough treat, typically
+                            ring-shaped or filled, available in various flavors and toppings like glaze, sprinkles, or
+                            sugar.</p>
+                        <div class="flex flex-col h-[50px]">
+                            <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
+                        </div>
+                        <div class="flex justify-center mt-2 space-x-4">
+                            <button class="view-detail p-2 w-10 h-10">
+                                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
+                                    alt="View detail">
+                            </button>
+                            <button class="cart_icon p-2 w-10 h-10">
+                                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
+                                    alt="Add to cart">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination buttons -->
+                <div class="flex justify-center mt-6 space-x-1 pagination">
+                    <button class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300 prev-page">&lt;</button>
+                    <div class="flex space-x-1">
+                        <!-- Page numbers will be dynamically added here -->
+                    </div>
+                    <button class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300 next-page">&gt;</button>
+                </div>
+            </div>
+
             <!-- Sidebar -->
-            <div class="col-span-3 bg-white p-6 rounded-lg shadow-lg">
+            <div
+                class="col-span-12 lg:col-span-3 bg-white p-6 rounded-lg shadow-lg order-first lg:order-last flex flex-col">
                 <div class="mb-6">
-                    <input type="text" placeholder="Search" class="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300">
+                    <input type="text" placeholder="Search"
+                        class="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300">
                     <button class="w-full bg-red-500 text-white p-3 rounded-lg hover:bg-red-900">APPLY</button>
                 </div>
-    
+
                 <div class="mb-6">
                     <h2 class="text-lg font-bold mb-4">TAGS</h2>
                     <div class="flex flex-wrap gap-2">
@@ -117,7 +513,7 @@
                     </div>
                     <button class="w-full bg-red-500 text-white p-3 mt-4 rounded-lg hover:bg-red-900">APPLY</button>
                 </div>
-    
+
                 <div>
                     <h2 class="text-lg font-bold mb-4">SPECIAL OFFERS</h2>
                     <div class="space-y-4">
@@ -144,7 +540,7 @@
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg shadow-lg">
                             <div class="bg-gray-200 flex items-center justify-center shadow-xl">
-                                <img src="img/limited-5.png" alt="discount voucher">
+                                <img src="img/limited-5.png" alt="Discount voucher">
                             </div>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg shadow-lg">
@@ -152,381 +548,16 @@
                                 <img src="img/limited-6.png" alt="Super sale">
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
-    
-            <!-- Main content -->
-            <div class="col-span-9">
-                <div class="flex justify-left items-center mb-6">
-                    <h2 class="text-lg font-bold mr-10">Sort by:</h2>
-                    <div class="relative">
-                        <select class="w-full custom-select p-3 pr-10 border bg-white shadow-md">
-                            <option value="new">New</option>
-                            <option value="popular">Most Popular</option>
-                            <option value="price">Price from high to low</option>
-                            <option value="price">Price from low to high</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- Product grid -->
-                <div class="grid grid-cols-3 gap-6 product-grid">
-                    <!-- Product items -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
-                        <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover mx-auto">  
-                        <p class="text-xl font-bold text-red-500">Chocolate Cupcake</p>
-                        <p class="text-gray-700 mb-2 h-[100px]">A chocolate cupcake is a rich, single-serving chocolate cake topped with
-                            creamy chocolate frosting.</p>
-                        <div class="flex flex-col h-[50px]">
-                            <p class="text-gray-500 line-through">25.000 VND</p>
-                            <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
-                        </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <!-- Repeat the above block for more cakes (Total 9 items per page) -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
-                        <img src="img/hot_cake_2.png" alt="Blueberry cupcake" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Blueberry Cupcake</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">A blueberry cupcake is a moist, single-serving cake studded with juicy
-                            blueberries and often topped with a sweet, creamy frosting.</p>
-                            <div class="flex flex-col h-[50px]">
 
-                                <p class="text-gray-500 line-through">20.000 VND</p>
-                                <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
-                            </div>
-                          <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
-                        <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Tiramisu</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">Tiramisu is incredibly delicious, with its rich, creamy layers and a perfect
-                            balance of coffee and cocoa flavors, making it a favorite among dessert lovers.</p>
-                            <div class="flex flex-col h-[50px]">
 
-                                <p class="text-gray-500 line-through">85.000 VND</p>
-                                <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
-                            </div>
-                          <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
-                        <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Macaroon</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            A macaron is a delicate French pastry featuring two almond meringue cookies sandwiched around a
-                            flavorful filling such as buttercream, ganache, or jam.</p>
-                            <div class="flex flex-col h-[50px]">
 
-                                <p class="text-gray-500 line-through">100.000 VND</p>
-                                <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
-                            </div>
-                          <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu1.png" alt="Banana Bread" class="w-full h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Banana Bread</p>
-                        <p class="text-gray-700 mb-2 h-[100px]">
-                            Banana bread is a moist, sweet loaf made with ripe bananas, often including walnuts or chocolate chips. It's perfect for breakfast, snacks, or dessert.</p>
-                            <div class="flex flex-col h-[50px]">
-
-                                <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
-                            </div>
-                          <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu2.png" alt="Whole wheat Bread" class="w-full h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Whole wheat Bread</p>
-                        <p class="text-gray-700 mb-2 h-[100px]">
-                            Whole wheat bread is a nutritious loaf made from whole wheat flour, known for its hearty texture and nutty flavor. It's a healthy alternative to white bread.</p>
-                            <div class="flex flex-col h-[50px]">
-
-                                <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
-                            </div>
-                          <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu3.png" alt="Chocolate cake" class="w-52 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Chocolate cake</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Chocolate cake is a rich, moist dessert made with chocolate-flavored sponge layers and creamy chocolate frosting, ideal for celebrations.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">30.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        
-                        <img src="img/menu4.png" alt="Strawberry cake" class="w-52 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Strawberry Cake</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Strawberry cake is a fruity dessert made with fresh or pureed strawberries, offering a light and refreshing taste, often topped with strawberry frosting.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">30.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu5.png" alt="Chocolate cookies" class="w-52 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Chocolate cookies</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Chocolate cookies are a treat made with chocolate-flavored dough and chocolate chips or chunks, known for their chewy or crispy texture and rich chocolate taste.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">45.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu6.png" alt="Orange Cupcake" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Orange Cupcake</p>
-                        <p class="text-gray-700 mb-2 h-[100px]">
-                            Orange cupcakes are light, citrus-flavored treats with a moist texture, often topped with creamy orange frosting. They offer a refreshing twist on classic cupcakes.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">10.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu7.png" alt="Coffee Cupcake" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Coffee Cupcake</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Coffee cupcakes are rich, coffee-infused treats with a tender crumb, typically adorned with coffee or mocha frosting. Perfect for coffee lovers.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu8.png" alt="Banana Bread" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Blackberry Cupcake</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Blackberry cupcakes are fruity delights made with fresh blackberries, offering a sweet-tart flavor, often topped with blackberry-infused frosting.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu9.png" alt="Passion Fruit Mousse" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Passion Fruit Mousse</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Passion fruit mousse is a creamy, tropical dessert made with fresh passion fruit, offering a tangy and sweet flavor, light and airy in texture.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu10.png" alt="Chocolate Mousse" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Chocolate Mousse</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Chocolate mousse is a decadent, airy dessert made with rich chocolate, offering a smooth and velvety texture, perfect for chocolate lovers.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu11.png" alt="Peach mousse" class="w-36 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Peach Mousse</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Peach mousse is a light, fruity dessert made with fresh peaches, delivering a sweet and refreshing flavor with a smooth and creamy texture.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu12.png    " alt="Fruit Cheesecake" class="w-52 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Fruit Cheesecake</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            Fruit cheesecake is a rich, creamy dessert with a graham cracker crust, topped with a variety of fresh fruits, offering a blend of tangy and sweet flavors.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">60.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu13.png" alt="Croissant" class="w-52 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Croissant</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            A croissant is a buttery, flaky pastry with a crisp outer layer and a soft, airy interior, perfect for breakfast or snacks, often enjoyed plain or with fillings.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item">
-                        <img src="img/menu14.png" alt="Donut" class="w-52 h-36 object-cover rounded mx-auto">
-                        <p class="text-xl font-bold text-red-500">Donut</p>
-                        <p class="text-gray-700 mb-2  h-[100px]">
-                            A donut is a sweet, fried dough treat, typically ring-shaped or filled, available in various flavors and toppings like glaze, sprinkles, or sugar.</p>
-                            <div class="flex flex-col h-[50px]">
-                                <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
-                            </div>
-                        <div class="flex justify-center mt-2 space-x-4">
-                            <button class="view-detail p-2 w-10 h-10">
-                              <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                                alt="View detail">
-                            </button>
-                            <button class="cart_icon p-2 w-10 h-10">
-                              <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-                            </button>
-                          </div>
-                    </div>
-                </div>
-    
-                 <!-- Pagination buttons -->
-            <div class="flex justify-center mt-6 space-x-1 pagination">
-                <button class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300 prev-page">&lt;</button>
-                <div class="flex space-x-1">
-                    <!-- Page numbers will be dynamically added here -->
-                </div>
-                <button class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300 next-page">&gt;</button>
-            </div>
-            </div>
         </div>
     </div>
+
+
 
     <footer>
         <!-- Footer -->
@@ -562,9 +593,12 @@
                 <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
                 <div class="py-2 flex justify-center items-center">
                     <ul class="flex flex-wrap justify-center space-x-2 lg:space-x-5">
-                        <li><img src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg" alt="Cash" class="w-16 h-16 lg:w-20 lg:h-20"></li>
-                        <li><img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png" alt="MoMo" class="w-16 h-16 lg:w-20 lg:h-20"></li>
-                        <li><img src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg" alt="Internet Banking" class="w-16 h-16 lg:w-20 lg:h-20"></li>
+                        <li><img src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
+                                alt="Cash" class="w-16 h-16 lg:w-20 lg:h-20"></li>
+                        <li><img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png"
+                                alt="MoMo" class="w-16 h-16 lg:w-20 lg:h-20"></li>
+                        <li><img src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
+                                alt="Internet Banking" class="w-16 h-16 lg:w-20 lg:h-20"></li>
                     </ul>
                 </div>
             </div>
@@ -590,28 +624,31 @@
                     <ul class="flex space-x-4">
                         <li class="cursor-pointer transform hover:scale-110">
                             <a href="https://zalo.me/0905323959/" target="_blank">
-                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo">
+                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/zalo_logo.png"
+                                    alt="Zalo">
                             </a>
                         </li>
                         <li class="cursor-pointer transform hover:scale-110">
                             <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
-                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram">
+                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/ins_logo.png"
+                                    alt="Instagram">
                             </a>
                         </li>
                         <li class="cursor-pointer transform hover:scale-110">
                             <a href="tel:+84905323959">
-                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="/img/phone_logo.png" alt="Phone">
+                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="/img/phone_logo.png"
+                                    alt="Phone">
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        
-        
-        
-        
-        
+
+
+
+
+
         <div class="copyright bg-white w-50 text-center pt-5 pb-5 text-sm">
             &copy; 2024 Two worms Bakery. All rights reserved.
         </div>
@@ -758,7 +795,6 @@
     <script src="/src/scripts/cake_information_hover.js"></script>
     <script src="/src/scripts/cart_popup.js"></script>
     <script src="/src/scripts/menu_prd_show.js"></script>
-
 </body>
 
 </html>
