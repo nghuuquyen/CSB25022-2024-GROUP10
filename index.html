@@ -9,17 +9,17 @@
 </head>
 
 <!-- Header -->
-<header class="header">
+<header class="header bg-seashell">
   <!-- Header top -->
-  <div class="content header_top py-2">
-    <div class="flex gap-4 items-center justify-between">
-      <div class="address-hotline flex-1">
+  <div class="content header_top py-2 ">
+    <div class="flex-wrap text-sm lg:flex lg:gap-4 lg:items-center lg:justify-between">
+      <div class="address-hotline text-right lg:flex-1 lg:text-left">
         <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city - <b>Hotline</b>:
           84-905-323-959 | 84-838-446-667</p>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5">
         <div class="dropdown-box">
-          <select class="form-control border-gray-300 rounded-md w-full text-center">
+          <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
             <option value="USD">USD</option>
             <option value="SGD">SGD</option>
             <option value="EUR">EUR</option>
@@ -27,7 +27,7 @@
           </select>
         </div>
         <div class="dropdown-box">
-          <select class="form-control border-gray-300 rounded-md w-full text-center">
+          <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
             <option value="en">English</option>
             <option value="ja">Japanese</option>
             <option value="zh">Chinese</option>
@@ -47,19 +47,14 @@
   <!-- Banner -->
   <div class="Banner relative">
     <!-- Navigate bar -->
-    <nav class="bg-seashell border border-dashed border-5 border-black relative z-10">
-      <div class="content px-2 flex items-center justify-between">
-        <div class="flex text-center space-x-20 lg:space-x-40 flex-1">
-          <a href="index.html" class="text-lg font-semibold hover:underline">Home</a>
-          <a href="about_us.html" class="text-lg font-semibold hover:underline">About us</a>
-          <a href="menu.html" class="text-lg font-semibold hover:underline">Menu</a>
+    <nav class="bg-seashell bg-opacity-90 border border-dashed border-5 border-black relative py-1 z-10">
+      <div class="content flex flex-wrap items-center justify-between">
+        <div class="flex text-center space-x-10 md:space-x-20 lg:space-x-80 flex-1">
+          <a href="index.html" class="text-s md:text-xl font-semibold hover:underline">Home</a>
+          <a href="menu.html" class="text-s md:text-xl font-semibold hover:underline">Menu</a>
         </div>
-        <div class="text-center flex-shrink-0 mx-2">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center"></div>
-        </div>
-        <div class="flex text-center items-center space-x-20 lg:space-x-40 flex-1 justify-end">
-          <a href="checkout.html" class="text-lg font-semibold hover:underline">Checkout</a>
-          <a href="contact_us.html" class="text-lg font-semibold hover:underline">Contact</a>
+        <div class="flex text-center items-center space-x-10 md:space-x-20 lg:space-x-80 flex-1 justify-end">
+          <a href="checkout.html" class="text-s md:text-xl font-semibold hover:underline">Checkout</a>
           <div class="relative" id="cartContainer">
             <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
               <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart" class="h-6 w-6">
@@ -71,26 +66,36 @@
             </div>
           </div>
         </div>
+      </div>
     </nav>
     <!-- Navigate bar end -->
 
     <!-- Logo -->
-    <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-7 z-50">
-      <img src="img/Logo.png" alt="Logo" class="w-28 h-28 lg:w-40 lg:h-40 rounded-full">
+    <div
+      class="absolute left-1/2 transform -translate-x-1/2 -translate-y-5 md:-translate-y-7 z-50 flex flex-col items-center">
+      <img src="img/Logo.png" alt="Logo" class="w-16 h-16 md:w-28 md:h-28 lg:w-40 lg:h-40 rounded-full">
     </div>
 
     <!-- Slideshow Container -->
-
-    <div class="slideshow-container relative w-1200 h-400 mx-auto">
-      <!-- Slides -->
-      <div class="mySlides fade w-full h-full">
-        <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
-      </div>
-      <div class="mySlides fade hidden w-full h-full">
-        <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2">
-      </div>
-      <div class="mySlides fade hidden w-full h-full">
-        <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3">
+    <div class="slideshow-container relative w-full h-[200px] md:h-[300px] lg:h-[400px] mx-auto overflow-hidden">
+      <!-- Slides container -->
+      <div id="slides" class="slides-container flex transition-transform duration-[5000ms] ease-in-out w-full">
+        <!-- Slide 1 -->
+        <div class="slide w-full h-full flex-shrink-0">
+          <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide w-full h-full flex-shrink-0">
+          <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide w-full h-full flex-shrink-0">
+          <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3">
+        </div>
+        <!-- Duplicate Slide 1 for smooth transition -->
+        <div class="slide w-full h-full flex-shrink-0">
+          <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
+        </div>
       </div>
       <!-- Next and previous buttons for Slideshow -->
       <button
@@ -109,6 +114,8 @@
           onclick="currentSlide(3)"></span>
       </div>
     </div>
+  
+  
   </div>
   <!-- Banner end -->
 </header>
@@ -437,17 +444,21 @@
   <footer>
     <!-- Footer -->
     <div class="footer bg-black text-seashell py-16">
-      <div class="footer-content flex justify-around items-start py-5">
-        <div class="content about w-1/3 mx-4">
+      <div class="content footer-content flex flex-wrap md:flex md:justify-around md:items-start py-5">
+        <div class="lg:w-1/3 mx-4 mb-10">
           <h2 class="subscribe-title text-2xl font-bold underline mb-2">About us</h2>
-          <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting atmosphere and
-            cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious baked goods,
-            including must-try items like their signature cupcakes and buttery cookies. Though slightly pricier, the
-            taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great destination if
+          <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting
+            atmosphere and
+            cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious
+            baked goods,
+            including must-try items like their signature cupcakes and buttery cookies. Though slightly
+            pricier, the
+            taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great
+            destination if
             you are in need of delicious, freshly baked cakes.</p>
         </div>
-        <img src="img/Logo.png" alt="Logo" class="w-40 h-40 lg:w-52 lg:h-52 my-2">
-        <div class="content subscribe w-1/3 mx-4">
+        <img src="img/Logo.png" alt="Logo" class="w-40 h-40 ml-28 lg:ml-0 md:ml-0 lg:w-52 lg:h-52 my-2">
+        <div class="subscribe lg:w-1/3 mx-4  mt-10">
           <h2 class="subscribe-title text-2xl font-bold underline mb-2">Subscribe email</h2>
           <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
           <div class="subscribe-form flex justify-between items-center bg-seashell p-2 rounded">
@@ -457,62 +468,67 @@
         </div>
       </div>
     </div>
-    <div class="footer-links flex justify-around bg-seashell text-black py-5">
-      <div class="footer-column w-1/5 text-center">
+    <div class="footer-links flex flex-wrap lg:flex-nowrap justify-around bg-seashell text-black py-5">
+      <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
         <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
-        <footer class="py-2 flex justify-center items-center"></footer>
-        <ul class="flex space-x-5">
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
-            alt="Cash" class="w-20 h-20">
-          <img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png" alt="MoMo"
-            class="w-20 h-20">
-          <img
-            src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
-            alt="Internet Banking" class="w-20 h-20">
-          <ul>
-            <footer>
+        <div class="py-2 flex justify-center items-center">
+          <ul class="flex flex-wrap justify-center space-x-2 lg:space-x-5">
+            <li><img
+                src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
+                alt="Cash" class="w-16 h-16 lg:w-20 lg:h-20"></li>
+            <li><img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png"
+                alt="MoMo" class="w-16 h-16 lg:w-20 lg:h-20"></li>
+            <li><img
+                src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
+                alt="Internet Banking" class="w-16 h-16 lg:w-20 lg:h-20"></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-column w-100 text-left">
-        <h3 class="text center footer-links-title text-lg font-bold mb-2">Working time</h3>
+      <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
+        <h3 class="footer-links-title text-lg font-bold mb-2">Working time</h3>
         <p class="font-bold">Monday - Friday</p>
         <p class="text-gray-500"> 8:00 am - 8:30 pm</p>
         <p class="font-bold">Saturday - Sunday</p>
         <p class="text-gray-500">10:00 am - 4:30 pm</p>
       </div>
-      <div class="footer-column w-200 text-left">
-        <h3 class="text-center footer-links-title text-lg font-bold mb-2">Orders and Returns</h3>
+      <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
+        <h3 class="footer-links-title text-lg font-bold mb-2">Orders and Returns</h3>
         <ul class="list-none p-0">
-          <li class="text-l"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
+          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
           <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Shipping</a></li>
-          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Policy Return Policy</a></li>
+          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Return Policy</a></li>
           <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Payments</a></li>
         </ul>
       </div>
-      <div class="footer-column w-1/5 text-center">
+      <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
         <h3 class="footer-links-title text-lg font-bold mb-2">Connect us</h3>
-        <footer class="py-2 flex justify-center items-center">
+        <div class="py-2 flex justify-center items-center">
           <ul class="flex space-x-4">
             <li class="cursor-pointer transform hover:scale-110">
               <a href="https://zalo.me/0905323959/" target="_blank">
-                <img class="w-12 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo">
+                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo">
               </a>
             </li>
             <li class="cursor-pointer transform hover:scale-110">
               <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
-                <img class="w-12 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram">
+                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram">
               </a>
             </li>
             <li class="cursor-pointer transform hover:scale-110">
               <a href="tel:+84905323959">
-                <img class="w-12 grayscale hover:grayscale-0" src="/img/phone_logo.png" alt="Phone">
+                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="/img/phone_logo.png" alt="Phone">
               </a>
             </li>
           </ul>
-        </footer>
+        </div>
       </div>
     </div>
-    <div class="copyright w-50 text-center mt-5 pb-5 text-sm">
+
+
+
+
+
+    <div class="copyright bg-white w-50 text-center pt-5 pb-5 text-sm">
       &copy; 2024 Two worms Bakery. All rights reserved.
     </div>
   </footer>
@@ -598,9 +614,9 @@
               <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5">
               <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5">
               <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5">
-          </div>
-          
-          
+            </div>
+
+
             <p class="my-2" id="cake_availability">Available</p>
             <p id="cake_category">Category</p>
             <p class="my-2 text-xl text-center text-red-900" id="cake_price">Price</p>

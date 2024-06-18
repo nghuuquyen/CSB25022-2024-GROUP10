@@ -78,7 +78,7 @@
                 <h1 class="text-2xl md:text-4xl font-bold">OUR BAKERY</h1>
                 <nav class="mt-1 md:mt-2">
                     <a href="index.html" class="text-gray-400">Home</a> /
-                    <span class="text-red-500">Checkout</span>
+                    <span class="text-red-500">Cart</span>
                 </nav>
             </div>
         </div>
@@ -91,17 +91,17 @@
 <body class="bg-seashell">
 
     <!-- Cart Section -->
-    <div class="content mx-auto py-10 px-4 sm:px-6 lg:px-8">
-        <div class="p-4 sm:p-6 md:p-8 rounded-md">
+    <div class="container mx-auto py-10">
+        <div class="p-4 md:p-8 rounded-md">
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white w-full text-center mx-auto">
                     <thead>
                         <tr class="bg-metalic_bronze">
-                            <th class="py-2 px-4 border-b border-gray-300">Product</th>
-                            <th class="py-2 px-4 border-b border-gray-300">Price</th>
-                            <th class="py-2 px-4 border-b border-gray-300">Quantity</th>
-                            <th class="py-2 px-4 border-b border-gray-300">Total</th>
-                            <th class="py-2 px-4 border-b border-gray-300">Remove</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Product</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Price</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Quantity</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Total</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Remove</th>
                         </tr>
                     </thead>
                     <tbody id="cart-items">
@@ -109,22 +109,29 @@
                     </tbody>
                 </table>
             </div>
-            <div class="content font-semibold py-5">
-                Total Price: <span id="total-price">0 VND</span>
-            </div>
-            <div class="content flex flex-col sm:flex-row justify-between items-center mt-6 space-y-4 sm:space-y-0">
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <input type="text" placeholder="Promotion code" class="p-2 border border-gray-300 rounded-md w-full sm:w-auto">
-                    <button class="p-2 bg-blue-500 text-white rounded-md w-full sm:w-auto">Apply</button>
+            <div class="flex justify-between items-center my-4 md:my-6">
+                <div style="position: relative; display: inline-block;">
+                    <input type="text" placeholder="Promotion code" style="padding-right: 30px; padding: 8px; border: 1px solid #ccc; border-radius: 15px; width: 180px; font-size: 14px;">
+                    <button style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background-color: transparent; border: none; font-size: 16px; cursor: pointer; color: #333;">&gt;</button>
+                </div>              
+
+                <div class="font-semibold">
+                    Total Price: <span id="total-price">0 VND</span>
                 </div>
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button class="p-2 bg-gray-300 text-black rounded-md w-full sm:w-auto" onclick="continueShopping()">Continue
-                        Shopping</button>
-                    <button class="p-2 bg-green-500 text-white rounded-md w-full sm:w-auto" onclick="location.href='checkout.html'">Checkout</button>
+            </div>
+            <div class="flex justify-between items-center mt-4 md:mt-6">
+                <div>
+                    <button class="p-1 md:p-2 shadow-lg bg-seashell hover:bg-gray-300 text-black rounded-md" onclick="continueShopping()">Continue Shopping</button>
+                </div>
+                <div>
+                    <button class="p-1 md:p-2 bg-metalic_bronze text-white rounded-md" onclick="location.href='checkout.html'">Process to Checkout</button>
                 </div>
             </div>
         </div>
     </div>
+    
+    
+    
     
 
     <!-- Footer -->

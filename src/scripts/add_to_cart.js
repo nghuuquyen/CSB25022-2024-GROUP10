@@ -36,16 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td class="py-2 px-4 border-b border-gray-300">${item.name}</td>
-                <td class="py-2 px-4 border-b border-gray-300">${item.price} VND</td>
-                <td class="py-2 px-4 border-b border-gray-300">
-                    <button class="px-2 py-1 bg-red-900 text-white rounded-md" onclick="updateQuantity(${item.id}, -1)">-</button>
-                    <span class="mx-2">${item.quantity}</span>
-                    <button class="px-2 py-1 bg-green-500 text-white rounded-md" onclick="updateQuantity(${item.id}, 1)">+</button>
+               <td class="px-4 py-2 whitespace-nowrap">${item.name}</td>
+                <td class="px-4 py-2 whitespace-nowrap">${item.price} VND</td>
+                <td class="px-4 py-2 whitespace-nowrap flex justify-center items-center w-40">
+                    <div class="flex items-center justify-center lg:pl-60 md:pl-5">
+                    <button class="px-3 py-1 bg-black text-white font-bold rounded-l-full" onclick="updateQuantity(${item.id}, -1)">-</button>
+                    <span class="px-4 py-1 bg-gray-200 text-center">${item.quantity}</span>
+                    <button class="px-3 py-1 bg-black text-white font-bold rounded-r-full" onclick="updateQuantity(${item.id}, 1)">+</button>
+                    </div>
                 </td>
-                <td class="py-2 px-4 border-b border-gray-300">${total.toLocaleString()} VND</td>
-                <td class="py-2 px-4 border-b border-gray-300">
-                    <button class="px-2 py-1 bg-red-900 text-white rounded-md" onclick="removeItem(${item.id})">X</button>
+                <td class="px-4 py-2 whitespace-nowrap w-32">${total.toLocaleString()} VND</td>
+                <td class="px-4 py-2 whitespace-nowrap">
+                    <button class="px-3 py-1 bg-gray-500 hover:bg-red-800 text-white font-bold rounded-full" onclick="removeItem(${item.id})">X</button>
                 </td>
             `;
             cartItemsContainer.appendChild(row);
@@ -59,17 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemIndex = cartItems.findIndex(item => item.id === id);
         if (itemIndex !== -1) {
             cartItems[itemIndex].quantity += delta;
-            
+
             // Remove item if quantity is zero or less
             if (cartItems[itemIndex].quantity <= 0) {
                 cartItems.splice(itemIndex, 1);
             }
-    
+
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
             renderCartItems(); // Re-render cart items after updating quantity
         }
     };
-    
+
     window.removeItem = (id) => {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         cartItems = cartItems.filter(item => item.id !== id);
