@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td class="py-2 px-4 border-b border-gray-300">${item.name}</td>
                 <td class="py-2 px-4 border-b border-gray-300">${item.price} VND</td>
                 <td class="py-2 px-4 border-b border-gray-300">
-                    <button class="px-2 py-1 bg-red-500 text-white rounded-md" onclick="updateQuantity(${item.id}, -1)">-</button>
+                    <button class="px-2 py-1 bg-red-900 text-white rounded-md" onclick="updateQuantity(${item.id}, -1)">-</button>
                     <span class="mx-2">${item.quantity}</span>
                     <button class="px-2 py-1 bg-green-500 text-white rounded-md" onclick="updateQuantity(${item.id}, 1)">+</button>
                 </td>
                 <td class="py-2 px-4 border-b border-gray-300">${total.toLocaleString()} VND</td>
                 <td class="py-2 px-4 border-b border-gray-300">
-                    <button class="px-2 py-1 bg-red-500 text-white rounded-md" onclick="removeItem(${item.id})">X</button>
+                    <button class="px-2 py-1 bg-red-900 text-white rounded-md" onclick="removeItem(${item.id})">X</button>
                 </td>
             `;
             cartItemsContainer.appendChild(row);
@@ -56,14 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.updateQuantity = (id, delta) => {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        const item = cartItems.find(item => item.id === id);
-        if (item) {
-            item.quantity = Math.max(1, item.quantity + delta);
+        const itemIndex = cartItems.findIndex(item => item.id === id);
+        if (itemIndex !== -1) {
+            cartItems[itemIndex].quantity += delta;
+            
+            // Remove item if quantity is zero or less
+            if (cartItems[itemIndex].quantity <= 0) {
+                cartItems.splice(itemIndex, 1);
+            }
+    
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
             renderCartItems(); // Re-render cart items after updating quantity
         }
     };
-
+    
     window.removeItem = (id) => {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         cartItems = cartItems.filter(item => item.id !== id);
@@ -72,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.continueShopping = () => {
-        window.location.href = 'index.html';
+        window.location.href = 'menu.html';
     };
 
     if (purchaseButton) {

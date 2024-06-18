@@ -49,33 +49,37 @@
                 </div>
             </div>
         </div>
-
-        <div class="relative bg-seashell h-32 md:h-64">
+    
+        <div class="relative bg-seashell h-64">
+    
             <nav class="bg-seashell bg-opacity-90 border border-dashed border-5 border-black relative py-1 z-10">
                 <div class="content flex flex-wrap items-center justify-between">
                     <div class="flex text-center space-x-10 md:space-x-20 lg:space-x-80 flex-1">
                         <a href="index.html" class="text-s md:text-xl font-semibold hover:underline">Home</a>
                         <a href="menu.html" class="text-s md:text-xl font-semibold hover:underline">Menu</a>
                     </div>
-                    <div
-                        class="flex text-center items-center space-x-10 md:space-x-20 lg:space-x-80 flex-1 justify-end">
+                    <div class="flex text-center items-center space-x-10 md:space-x-20 lg:space-x-80 flex-1 justify-end">
                         <a href="checkout.html" class="text-s md:text-xl font-semibold hover:underline">Checkout</a>
                         <div class="relative" id="cartContainer">
                             <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
-                                <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png"
-                                    alt="Cart" class="h-6 w-6">
+                                <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart"
+                                    class="h-6 w-6">
                             </a>
+                            <div class="absolute top-8 right-0 w-72 bg-pink-100 border border-gray-300 shadow-lg hidden"
+                                id="cartPopup">
+                                <div id="popup-content">
+                                    <!-- Cart popup content will be loaded here -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </nav>
-
             <div
                 class="absolute left-1/2 transform -translate-x-1/2 -translate-y-5 md:-translate-y-7 z-50 flex flex-col items-center">
                 <img src="img/Logo.png" alt="Logo" class="w-16 h-16 md:w-28 md:h-28 lg:w-40 lg:h-40 rounded-full">
             </div>
-
-            <!-- Poster -->
+    
             <div class="relative banner h-32 md:h-64 flex items-end justify-center text-white">
                 <div class="absolute inset-0 bg-black opacity-50"></div>
                 <div class="relative z-10 text-center pb-3 md:pb-5 z-60">
@@ -86,13 +90,15 @@
                     </nav>
                 </div>
             </div>
-            <!-- Poster end -->
+    
         </div>
+    
     </header>
+    
 
     <!-- Form Shipping and Billing -->
     <div class="bg-seashell min-h-screen">
-        <div class="container mx-auto flex items-center justify-center h-full py-10 md:py-12">
+        <div class="container mx-auto flex items-center justify-center h-full pb-10 md:pt-40">
             <div class="mx-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:gap-20 md:gap-8">
                 <div class="billing-section">
                     <h2 class="text-xl md:text-2xl font-bold mb-6 text-center">BILLING DETAIL</h2>
