@@ -3,6 +3,9 @@ let autoSlideInterval;
 const slidesContainer = document.querySelector('.slides-container');
 const totalSlides = document.querySelectorAll('.slide').length - 1; // Excluding the duplicate slide
 
+
+
+
 function showSlides() {
   const dots = document.getElementsByClassName("dot");
 
@@ -10,11 +13,12 @@ function showSlides() {
     slideIndex = 0;
     slidesContainer.style.transition = 'none'; // Disable transition for instant move
     slidesContainer.style.transform = `translateX(0%)`;
-    setTimeout(() => {
-      slidesContainer.style.transition = 'transform 1s ease-in-out'; // Re-enable transition
-      slideIndex++;
-      slidesContainer.style.transform = `translateX(${-slideIndex * 100 / totalSlides}%)`;
-    }, 50); // Small delay to allow the DOM to update
+      setTimeout(() => {
+        slidesContainer.style.transition = 'transform 1s ease-in-out'; // Re-enable transition
+        slideIndex++;
+        slidesContainer.style.transform = `translateX(${-slideIndex * 100 / totalSlides}%)`;
+      }, 50);
+   // Small delay to allow the DOM to update
   } else {
     slidesContainer.style.transform = `translateX(${-slideIndex * 100 / totalSlides}%)`;
   }
@@ -94,6 +98,13 @@ function startAutoBestSellerSlide() {
   autoBestSellerSlideInterval = setInterval(() => {
     showBestSellerSlides(bestSellerIndex += 1);
   }, 3000);
+}
+
+function setNotRunSlide(){
+  clearInterval(autoBestSellerSlideInterval);
+}
+function setRunSlide(){
+  startAutoBestSellerSlide()
 }
 
 // Initial setup
