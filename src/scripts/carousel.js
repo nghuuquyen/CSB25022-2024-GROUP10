@@ -1,57 +1,61 @@
-let slideIndex = 0;
+let slideIndex = 1;
 let autoSlideInterval;
-const slidesContainer = document.querySelector('.slides-container');
-const totalSlides = document.querySelectorAll('.slide').length - 1; // Excluding the duplicate slide
 
-function showSlides() {
-  const dots = document.getElementsByClassName("dot");
+function showSlides(n) {
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
 
-  if (slideIndex >= totalSlides) {
-    slideIndex = 0;
-    slidesContainer.style.transition = 'none'; // Disable transition for instant move
-    slidesContainer.style.transform = `translateX(0%)`;
-    setTimeout(() => {
-      slidesContainer.style.transition = 'transform 1s ease-in-out'; // Re-enable transition
-      slideIndex++;
-      slidesContainer.style.transform = `translateX(${-slideIndex * 100 / totalSlides}%)`;
-    }, 50); // Small delay to allow the DOM to update
-  } else {
-    slidesContainer.style.transform = `translateX(${-slideIndex * 100 / totalSlides}%)`;
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    slides[i].classList.add("hidden");
   }
 
   for (let i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("bg-gray-700");
-    dots[i].classList.add("bg-gray-400");
+    dots[i].className = dots[i].className.replace(" bg-gray-800", "");
   }
 
-  dots[slideIndex % (totalSlides - 1)].classList.remove("bg-gray-400");
-  dots[slideIndex % (totalSlides - 1)].classList.add("bg-gray-700");
+  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.remove("hidden");
+  dots[slideIndex - 1].className += " bg-gray-800";
+
+  autoSlideInterval = setTimeout(() => plusSlides(1), 5000); // Change slide every 5 seconds
 }
 
 function plusSlides(n) {
-  clearInterval(autoSlideInterval);
-  slideIndex += n;
-  showSlides();
-  startAutoSlide();
+  clearTimeout(autoSlideInterval);
+  showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-  clearInterval(autoSlideInterval);
-  slideIndex = n - 1;
-  showSlides();
-  startAutoSlide();
+  clearTimeout(autoSlideInterval);
+  showSlides(slideIndex = n);
 }
 
-function startAutoSlide() {
-  autoSlideInterval = setInterval(() => {
-    slideIndex++;
-    showSlides();
-  }, 5000);
+function showButtons() {
+  let buttons = document.querySelectorAll('.prev, .next');
+  buttons.forEach(button => {
+    button.classList.remove('hidden');
+  });
+  clearTimeout(autoSlideInterval);
 }
 
-// Initial setup
-showSlides();
-startAutoSlide();
+function hideButtons() {
+  let buttons = document.querySelectorAll('.prev, .next');
+  buttons.forEach(button => {
+    button.classList.add('hidden');
+  });
+  autoSlideInterval = setTimeout(() => plusSlides(1), 5000);
+}
+
+// Initialize the slideshow
+document.addEventListener("DOMContentLoaded", function() {
+  showSlides(slideIndex);
+});
+
+
 
 
 let bestSellerIndex = 0;

@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=\, initial-scale=1.0">
   <title>Document</title>
   <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <!-- Header -->
@@ -77,32 +79,23 @@
     </div>
 
     <!-- Slideshow Container -->
-    <div class="slideshow-container relative w-full h-[200px] md:h-[300px] lg:h-[400px] mx-auto overflow-hidden">
-      <!-- Slides container -->
-      <div id="slides" class="slides-container flex transition-transform duration-[5000ms] ease-in-out w-full">
-        <!-- Slide 1 -->
-        <div class="slide w-full h-full flex-shrink-0">
-          <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
-        </div>
-        <!-- Slide 2 -->
-        <div class="slide w-full h-full flex-shrink-0">
-          <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2">
-        </div>
-        <!-- Slide 3 -->
-        <div class="slide w-full h-full flex-shrink-0">
-          <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3">
-        </div>
-        <!-- Duplicate Slide 1 for smooth transition -->
-        <div class="slide w-full h-full flex-shrink-0">
-          <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
-        </div>
+    <div class="slideshow-container relative mx-auto overflow-hidden" onmouseover="showButtons()" onmouseout="hideButtons()">
+      <!-- Slides -->
+      <div class="mySlides w-full h-full transition-transform duration-1000">
+        <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
+      </div>
+      <div class="mySlides w-full h-full hidden transition-transform duration-1000">
+        <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2">
+      </div>
+      <div class="mySlides w-full h-full hidden transition-transform duration-1000">
+        <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3">
       </div>
       <!-- Next and previous buttons for Slideshow -->
       <button
-        class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
+        class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-sm p-2 bg-black bg-opacity-50 rounded-r hidden"
         onclick="plusSlides(-1)">❮</button>
       <button
-        class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
+        class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-sm p-2 bg-black bg-opacity-50 rounded-l hidden"
         onclick="plusSlides(1)">❯</button>
       <!-- Dots/bullets/indicators -->
       <div class="dots absolute bottom-2 w-full flex justify-center space-x-2">
@@ -114,8 +107,8 @@
           onclick="currentSlide(3)"></span>
       </div>
     </div>
-  
-  
+    
+    
   </div>
   <!-- Banner end -->
 </header>
@@ -272,21 +265,24 @@
   <div class="bg-melon py-4">
     <div class="text-center text-red-600 font-bold">Limited</div>
     <div class="text-center text-3xl font-bold"> --- Offer for TODAY ---</div>
-    <div class="content mx-auto grid grid-cols-2 gap-8 mt-4">
-      <div class="bg-gray-200 flex items-center justify-center shadow-2xl">
-        <img src="img/limited-1.png" alt="Buy 1 get 1">
-      </div>
-      <div class="bg-gray-200 flex items-center justify-center shadow-2xl">
-        <img src="img/limited-2.png" alt="Free brownie">
-      </div>
-      <div class="bg-gray-200 flex items-center justify-center shadow-2xl">
-        <img src="img/limited-3.png" alt="Discount for 2nd purchase">
-      </div>
-      <div class="bg-gray-200 flex items-center justify-center shadow-2xl">
-        <img src="img/limited-4.png" alt="New Tiramisu Recipe">
-      </div>
+    <div id="offers-section" class="content mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 mt-4">
+        <div id="offer-1" class="bg-gray-200 flex items-center justify-center shadow-2xl hover-animate">
+            <img src="img/limited-1.png" alt="Buy 1 get 1">
+        </div>
+        <div id="offer-2" class="bg-gray-200 flex items-center justify-center shadow-2xl hover-animate">
+            <img src="img/limited-2.png" alt="Free brownie">
+        </div>
+        <div id="offer-3" class="bg-gray-200 flex items-center justify-center shadow-2xl hover-animate">
+            <img src="img/limited-3.png" alt="Discount for 2nd purchase">
+        </div>
+        <div id="offer-4" class="bg-gray-200 flex items-center justify-center shadow-2xl hover-animate">
+            <img src="img/limited-4.png" alt="New Tiramisu Recipe">
+        </div>
     </div>
-  </div>
+</div>
+
+
+
 
   <!-- Hot Cakes Section -->
   <section class="bg-seashell py-16">
@@ -297,69 +293,70 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Left Column: Hot Cakes -->
-        <div class="space-y-8">
+        <div class="space-y-20 flex flex-col">
           <!-- Cake Item -->
-          <div class="flex items-start space-x-4">
+          <div class="flex items-start space-x-4 flex-grow">
             <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover rounded">
-            <div>
+            <div class="flex-grow flex flex-col">
               <h3 class="text-xl font-bold text-red-500">Chocolate cupcake</h3>
               <p class="text-gray-700 mb-2">A chocolate cupcake is a rich, single-serving chocolate cake topped with
                 creamy chocolate frosting.</p>
               <p class="text-gray-500 line-through">25.000 VND</p>
               <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
-              <button class="order_btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
+              <button class="order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
             </div>
           </div>
           <!-- Repeat for more cakes... -->
-          <div class="flex items-start space-x-4">
+          <div class="flex items-start space-x-4 flex-grow">
             <img src="img/hot_cake_2.png" alt="Blueberry cupcake" class="w-36 h-36 object-cover rounded">
-            <div>
+            <div class="flex-grow flex flex-col">
               <h3 class="text-xl font-bold text-red-500">Blueberry cupcake</h3>
               <p class="text-gray-700 mb-2">A blueberry cupcake is a moist, single-serving cake studded with juicy
                 blueberries and often topped with a sweet, creamy frosting.</p>
               <p class="text-gray-500 line-through">20.000 VND</p>
               <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
-              <button class="order_btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
+              <button class="order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
             </div>
           </div>
         </div>
-
+  
         <!-- Right Column: New Cakes -->
-        <div class=" space-y-8">
+        <div class="space-y-20 flex flex-col">
           <!-- Cake Item -->
-          <div class="flex items-start space-x-4">
+          <div class="flex items-start space-x-4 flex-grow">
             <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded">
-            <div>
+            <div class="flex-grow flex flex-col">
               <h3 class="text-xl font-bold text-red-500">Tiramisu</h3>
-              <p class="text-gray-700 mb-2">Tiramisu is incredibly delicious, with its rich, creamy layers and a perfect
-                balance of coffee and cocoa flavors, making it a favorite among dessert lovers.</p>
+              <p class="text-gray-700 mb-2">Tiramisu, with its rich, creamy layers and perfect coffee and cocoa balance, is a favorite among dessert lovers.</p>
               <p class="text-gray-500 line-through">85.000 VND</p>
               <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
-              <button class="order_btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
+              <button class="order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
             </div>
           </div>
           <!-- Repeat for more cakes... -->
-          <div class="flex items-start space-x-4">
+          <div class="flex items-start space-x-4 flex-grow">
             <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded">
-            <div>
+            <div class="flex-grow flex flex-col">
               <h3 class="text-xl font-bold text-red-500">Macaron</h3>
               <p class="text-gray-700 mb-2">
                 A macaron is a delicate French pastry featuring two almond meringue cookies sandwiched around a
                 flavorful filling such as buttercream, ganache, or jam.</p>
               <p class="text-gray-500 line-through">100.000 VND</p>
               <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
-              <button class="order_btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
+              <button class="order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
+
 
   <!-- Our Baker Section -->
-  <section class="bg-gray-50 py-16  flex justify-around">
+  <section class="bg-gray-50 py-16 flex flex-col lg:flex-row justify-around">
 
-    <div class="grid grid-cols-3 gap-x-8 w-5/6">
+    <div class="content grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-x-8 w-5/6">
       <div class="grid text-start content-between">
         <h2 class="text-3xl font-bold mb-4">OUR BAKER</h2>
         <p class="max-w-2xl mx-auto text-gray-700 mb-8 text-justify">
@@ -368,20 +365,18 @@
           and Thu Huong have created a dynamic and successful partnership at Two Worms Bakery. Their blend of innovation
           and tradition continues to delight and inspire, making their bakery a beloved destination for all who
           appreciate exceptional baked goods.
-
+        </p>
         <ul class="list-disc list-inside text-left mb-8 space-y-4">
           <li>Innovative Flavor Combinations</li>
           <li>Artisanal Craftsmanship</li>
           <li>Aesthetic Presentation</li>
         </ul>
-        <a href="about_us.html"
-          class="bg-red-500 text-white py-2 px-2 rounded-full mb-8 flex justify-center items-center">
+        <a href="about_us.html" class="bg-red-500 text-white py-2 px-2 rounded-full mb-8 flex justify-center items-center">
           <button class="w-full h-full flex justify-center items-center">READ MORE ></button>
         </a>
       </div>
       <div class="bg-white p-6 rounded-lg shadow-md text-left">
-        <img src="img/baker1.jpeg" alt="Baker 1"
-          class="w-full mx-auto h-[300px] object-cover mx-auto bg-center-lg mb-6">
+        <img src="img/baker1.jpeg" alt="Baker 1" class="w-full mx-auto h-[300px] object-cover mx-auto bg-center-lg mb-6">
         <h3 class="text-xl font-bold">THU HUONG DUONG</h3>
         <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
         <p class="text-gray-700 mb-4">
@@ -399,46 +394,51 @@
       </div>
     </div>
   </section>
+  
 
   <!--Contact us and map-->
-  <div class="relative h-screen flex">
+  <div class="relative h-screen flex flex-col md:flex-row">
     <!-- Map section -->
-    <div class="absolute inset-0 z-0 w-full h-full">
+    <div class="w-full h-1/2 md:w-1/2 md:h-full">
       <iframe class="w-full h-full"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8932923783746!2d108.21766391168802!3d16.07102618454454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218314984c6bd%3A0xb53a043f246ab8cb!2zMTU4YSBMw6ogTOG7o2ksIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1717721377642!5m2!1sen!2s"
         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <!-- Form section -->
     <div
-      class="relative z-10 bg-melon bg-opacity-75 p-6 w-1/2 h-1/2+300px ml-auto my-auto mr-6 rounded-lg shadow-lg items-center">
-      <h2 class="text-2xl font-bold mb-4 text-center">Contact us</h2>
-      <form action="#" method="POST" id="contactForm">
-        <div class="mb-4">
-          <label id="name" class="block text-sm font-medium mb-2" for="name">Name <span
-              class="text-red-500">*</span></label>
-          <input class="w-full p-2 border border-gray-300 rounded" type="text" id="name" name="name" required>
-        </div>
-        <div class="mb-4">
-          <label id="email" class="block text-sm font-medium mb-2" for="email">Email <span
-              class="text-red-500">*</span></label>
-          <input class="w-full p-2 border border-gray-300 rounded" type="email" id="email" name="email" required>
-        </div>
-        <div class="mb-4">
-          <label id="phone" class="block text-sm font-medium mb-2" for="phone">Phone</label>
-          <input class="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" name="phone">
-        </div>
-        <div class="mb-4">
-          <label id="message" class="block text-sm font-medium mb-2" for="message">Your message <span
-              class="text-red-500">*</span></label>
-          <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message" required></textarea>
-        </div>
-        <div class="flex justify-center mt-4">
-          <button onclick="sendThankyouCUEmail(); return false;"
-            class="bg-pink-400 text-white p-2 rounded hover:bg-pink-500 transition duration-300">Send message</button>
-        </div>
-      </form>
+      class="bg-pink-200 bg-opacity-75 p-6 w-full h-1/2 md:w-1/2 md:h-full flex items-center justify-center">
+      <div class="w-full max-w-lg">
+        <h2 class="text-2xl font-bold mb-4 text-center">Contact us</h2>
+        <form action="#" method="POST" id="contactForm">
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-2" for="name">Name <span
+                class="text-red-500">*</span></label>
+            <input class="w-full p-2 border border-gray-300 rounded" type="text" id="name" name="name" required>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-2" for="email">Email <span
+                class="text-red-500">*</span></label>
+            <input class="w-full p-2 border border-gray-300 rounded" type="email" id="email" name="email" required>
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-2" for="phone">Phone</label>
+            <input class="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" name="phone">
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-2" for="message">Your message <span
+                class="text-red-500">*</span></label>
+            <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message" required></textarea>
+          </div>
+          <div class="flex justify-center mt-4">
+            <button onclick="sendThankyouCUEmail(); return false;"
+              class="bg-pink-400 text-white p-2 rounded hover:bg-pink-500 transition duration-300">Send message</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
+  
+  
   <!--Contact us and map ./-->
 
   <footer>
@@ -659,6 +659,7 @@
   <script src="/src/scripts/cake_information_hover.js"></script>
   <script src="/src/scripts/cart_popup.js"></script>
   <script src="/src/scripts/add_to_cart.js"></script>
+  <script src="/src/scripts/add_animate_for_limited_banner_in_HP.js"></script>
 </body>
 
 </html>

@@ -39,6 +39,14 @@ html {
     background-size: cover;
     background-position: center;
 }
-.slide {
-    transition: transform 1s ease-in-out;
+
+.hover-animate:hover {
+    animation: tada 1s;
   }
+  .animate__animated {
+    animation-duration: 1s;
+  }
+  .animate__tada {
+    animation-name: tada;
+  }
+
