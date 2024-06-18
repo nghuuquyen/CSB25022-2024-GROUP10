@@ -15,6 +15,8 @@ export default {
         fontFamily:{
           serif: ['Libre Baskerville', 'serif'],
           cursive: ['Pacifico', 'cursive'],
+          mono: ["Monaco, mono"],
+          monospace: ["Courier New", "Courier", "monospace"],
         }
       },
     },
