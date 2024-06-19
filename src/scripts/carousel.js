@@ -129,6 +129,7 @@ function deleteSlide(){
   clearInterval(autoBestSellerSlideInterval)
 }
 
+
 // Initial setup
 showBestSellerSlides(bestSellerIndex);
 startAutoBestSellerSlide();
