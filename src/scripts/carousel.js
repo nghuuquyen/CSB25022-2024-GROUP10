@@ -4,6 +4,9 @@ const slidesContainer = document.querySelector('.slides-container');
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length - 1; // Excluding the duplicate slide
 
+
+
+
 function showSlides() {
   const dots = document.getElementsByClassName("dot");
 
@@ -23,6 +26,7 @@ function showSlides() {
       slidesContainer.style.transition = 'transform 1s ease-in-out'; // Re-enable transition
       slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
     }, 50); // Small delay to allow the DOM to update
+
   } else {
     slidesContainer.style.transition = 'transform 1s ease-in-out'; // Enable transition for smooth slide
     slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
@@ -123,6 +127,13 @@ function startAutoBestSellerSlide() {
   autoBestSellerSlideInterval = setInterval(() => {
     plusBestSellerSlides(1);
   }, 15500);  // Increase interval duration
+}
+
+function setNotRunSlide(){
+  clearInterval(autoBestSellerSlideInterval);
+}
+function setRunSlide(){
+  startAutoBestSellerSlide()
 }
 
 // Initial setup
