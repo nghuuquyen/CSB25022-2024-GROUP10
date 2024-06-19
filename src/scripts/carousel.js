@@ -1,55 +1,77 @@
 let slideIndex = 0;
 let autoSlideInterval;
+const slidesContainer = document.querySelector('.slides-container');
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length - 1; // Excluding the duplicate slide
 
 function showSlides() {
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("fade-in");
-    slides[i].classList.add("fade-out", "hidden");
+  const dots = document.getElementsByClassName("dot");
+
+  if (slideIndex >= totalSlides) {
+    slidesContainer.style.transition = 'transform 1s ease-in-out'; // Enable transition for smooth slide
+    slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+    slideIndex = 0;
+    setTimeout(() => {
+      slidesContainer.style.transition = 'none'; // Disable transition for instant move
+      slidesContainer.style.transform = `translateX(0%)`;
+    }, 1000); // Small delay to allow the transition to complete
+  } else if (slideIndex < 0) {
+    slidesContainer.style.transition = 'none'; // Disable transition for instant move
+    slidesContainer.style.transform = `translateX(${-totalSlides * 100}%)`;
+    slideIndex = totalSlides - 1;
+    setTimeout(() => {
+      slidesContainer.style.transition = 'transform 1s ease-in-out'; // Re-enable transition
+      slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+    }, 50); // Small delay to allow the DOM to update
+  } else {
+    slidesContainer.style.transition = 'transform 1s ease-in-out'; // Enable transition for smooth slide
+    slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
   }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].classList.remove("fade-out", "hidden");
-  slides[slideIndex - 1].classList.add("fade-in");
+
+  // Update dots
   for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" bg-gray-800", "");
+    dots[i].classList.remove("bg-gray-700");
+    dots[i].classList.add("bg-gray-400");
   }
-  dots[slideIndex - 1].className += " bg-gray-800";
-  autoSlideInterval = setTimeout(showSlides, 5000); // Change image every 5 seconds
+
+  if (slideIndex === totalSlides || slideIndex === 0) {
+    dots[0].classList.remove("bg-gray-400");
+    dots[0].classList.add("bg-gray-700");
+  } else {
+    dots[slideIndex].classList.remove("bg-gray-400");
+    dots[slideIndex].classList.add("bg-gray-700");
+  }
 }
 
 function plusSlides(n) {
-  clearTimeout(autoSlideInterval);
-  slideIndex += n - 1;
+  clearInterval(autoSlideInterval);
+  slideIndex += n;
   showSlides();
+  startAutoSlide();
 }
 
 function currentSlide(n) {
-  clearTimeout(autoSlideInterval);
+  clearInterval(autoSlideInterval);
   slideIndex = n - 1;
   showSlides();
+  startAutoSlide();
 }
 
-function showButtons() {
-  let buttons = document.querySelectorAll('.prev, .next');
-  buttons.forEach(button => {
-    button.classList.remove('hidden');
-  });
-  clearTimeout(autoSlideInterval);
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    slideIndex++;
+    showSlides();
+  }, 5000);
 }
 
-function hideButtons() {
-  let buttons = document.querySelectorAll('.prev, .next');
-  buttons.forEach(button => {
-    button.classList.add('hidden');
-  });
-  autoSlideInterval = setTimeout(showSlides, 5000);
-}
+// Initial setup
+showSlides();
+startAutoSlide();
 
-document.addEventListener("DOMContentLoaded", function() {
-  showSlides();
-});
+
+
+
+
 let bestSellerIndex = 0;
 let autoBestSellerSlideInterval;
 
