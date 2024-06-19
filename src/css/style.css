@@ -41,4 +41,15 @@ html {
 }
 .slide {
     transition: transform 1s ease-in-out;
-  }
+    }
+
+.h1, h2{
+    font-family: "Playwrite PL", cursive;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-size: x-large;
+    font-style: normal;
+    }
+
+
+    
