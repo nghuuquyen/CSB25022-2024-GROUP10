@@ -6,7 +6,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.content{
+.content {
     margin-left: 80px;
     margin-right: 80px;
 }
@@ -19,8 +19,7 @@ html {
 }
 
 
-.prev
-.next{
+.prev .next {
     border: 50px;
     width: 10vw;
     height: 100%;
@@ -39,17 +38,53 @@ html {
     background-size: cover;
     background-position: center;
 }
-.slide {
-    transition: transform 1s ease-in-out;
-    }
 
-.h1, h2{
-    font-family: "Playwrite PL", cursive;
-    font-optical-sizing: auto;
-    font-weight: bolder;
-    font-size: x-large;
-    font-style: normal;
+.hover-animate:hover {
+    animation: tada 1s;
+}
+
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__tada {
+    animation-name: tada;
+}
+
+.slide {
+    transition: transform 30s ease-in-out;
+}
+
+
+.slide-down {
+    animation: slide-down 2s forwards;
+  }
+
+  .slide-up {
+    animation: slide-up 2s forwards;
+  }
+
+  @keyframes slide-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
     }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
 
   @font-face {
     font-family: 'MyFont';
@@ -60,5 +95,3 @@ html {
   #cartPopup, #popup-content {
     min-height: 200px;
   }
-
-
