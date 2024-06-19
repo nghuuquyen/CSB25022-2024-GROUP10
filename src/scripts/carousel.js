@@ -1,37 +1,34 @@
-let slideIndex = 1;
+let slideIndex = 0;
 let autoSlideInterval;
 
-function showSlides(n) {
+function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-    slides[i].classList.add("hidden");
+    slides[i].classList.remove("fade-in");
+    slides[i].classList.add("fade-out", "hidden");
   }
-
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].classList.remove("fade-out", "hidden");
+  slides[slideIndex - 1].classList.add("fade-in");
   for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" bg-gray-800", "");
   }
-
-  slides[slideIndex - 1].style.display = "block";
-  slides[slideIndex - 1].classList.remove("hidden");
   dots[slideIndex - 1].className += " bg-gray-800";
-
-  autoSlideInterval = setTimeout(() => plusSlides(1), 5000); // Change slide every 5 seconds
+  autoSlideInterval = setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
 
 function plusSlides(n) {
   clearTimeout(autoSlideInterval);
-  showSlides(slideIndex += n);
+  slideIndex += n - 1;
+  showSlides();
 }
 
 function currentSlide(n) {
   clearTimeout(autoSlideInterval);
-  showSlides(slideIndex = n);
+  slideIndex = n - 1;
+  showSlides();
 }
 
 function showButtons() {
@@ -47,17 +44,12 @@ function hideButtons() {
   buttons.forEach(button => {
     button.classList.add('hidden');
   });
-  autoSlideInterval = setTimeout(() => plusSlides(1), 5000);
+  autoSlideInterval = setTimeout(showSlides, 5000);
 }
 
-// Initialize the slideshow
 document.addEventListener("DOMContentLoaded", function() {
-  showSlides(slideIndex);
+  showSlides();
 });
-
-
-
-
 let bestSellerIndex = 0;
 let autoBestSellerSlideInterval;
 
