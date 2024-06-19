@@ -2,7 +2,7 @@ const productItems = document.querySelectorAll('.product-item');
     const prevButton = document.querySelector('.prev-page');
     const nextButton = document.querySelector('.next-page');
     const pageNumberContainer = document.querySelector('.pagination .flex.space-x-1');
-    const itemsPerPage = 8;
+    const itemsPerPage = 9;
     let currentPage = 1;
 
     function showPage(page) {

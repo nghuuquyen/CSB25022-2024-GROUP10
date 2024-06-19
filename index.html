@@ -15,9 +15,10 @@
     <!-- Header top -->
     <div class="content header_top py-2">
       <div class="flex-wrap text-sm lg:flex lg:gap-4 lg:items-center lg:justify-between">
-        <div class="address-hotline text-right lg:flex-1 lg:text-left">
-          <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city - <b>Hotline</b>:
-            84-905-323-959 | 84-838-446-667</p>
+        <div class="address-hotline text-right flex text-start sm:flex-col lg:flex-row gap-3">
+          <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city </p>
+          
+           <p><b>Hotline</b>: 84-905-323-959 | 84-838-446-667</p>
         </div>
         <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5">
           <div class="dropdown-box">
@@ -82,6 +83,7 @@
       <!-- Navigate bar end -->
 
       <!-- Slideshow Container -->
+
       <div class="slideshow-container relative w-full mx-auto overflow-hidden group">
         <!-- Slides container -->
         <div id="slides" class="slides-container flex transition-transform duration-[1000ms] ease-in-out w-full">
@@ -118,6 +120,7 @@
           <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
             onclick="currentSlide(3)"></span>
         </div>
+
       </div>
     </div>
     <!-- Banner end -->
@@ -259,6 +262,7 @@
                     alt="Add to cart">
                 </button>
               </div>
+
             </div>
           </div>
         </div>
@@ -616,10 +620,9 @@
       <div id="cakeDetail" class="bg-white p-8 rounded-lg w-full max-w-4xl relative">
         <div class="flex justify-center items-center mb-4">
           <h2 class="text-red-500 text-2xl font-bold">Delicious Cake</h2>
-          <button id="closeButton" class="absolute right-4 top-4">
-            <img
-              src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/cancel_close_delete_remove_reject-512.png"
-              alt="Close" class="w-10 h-10">
+
+          <button onclick="startAutoBestSellerSlide()" id="closeButton" class="absolute right-4 top-4">
+            <img src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/cancel_close_delete_remove_reject-512.png" alt="Close" class="w-10 h-10">
           </button>
         </div>
         <div class="flex">
@@ -631,7 +634,7 @@
               <strong>
                 <p class="text-xl text-center text-red-900" id="cake_name">Cake Name</p>
               </strong>
-              <div class="grid grid-cols-5 gap-1 justify-center items-center my-2">
+              <div class="flex gap-5 justify-center items-center my-2">
                 <!-- Repeat 5 stars -->
                 <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png"
                   class="w-5 h-5" alt="Star">
@@ -650,9 +653,9 @@
             </div>
             <div class="mb-4 flex justify-center">
               <div class="flex items-center justify-center ml-4">
-                <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(-1)">-</button>
+                <button class="py-1 px-4 text-xl bg-gray-200 rounded" onclick="changeQuantity(-1)">-</button>
                 <input id="quantity" class="mx-4 text-center w-12 border rounded" value="01">
-                <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(1)">+</button>
+                <button class="py-2 px-4 bg-gray-200 rounded" onclick="changeQuantity(1)">+</button>
               </div>
             </div>
             <div>
