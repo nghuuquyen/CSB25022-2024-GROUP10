@@ -122,7 +122,11 @@ function currentBestSellerSlide(n) {
 function startAutoBestSellerSlide() {
   autoBestSellerSlideInterval = setInterval(() => {
     plusBestSellerSlides(1);
-  }, 15500);  // Increase interval duration
+  }, 5000);  // Increase interval duration
+}
+
+function deleteSlide(){
+  clearInterval(autoBestSellerSlideInterval)
 }
 
 // Initial setup
