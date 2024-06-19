@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const purchaseButton = document.getElementById('purchase_btn');
     const cakeDetailOverlay = document.getElementById('cakeDetailOverlay');
     const closeButton = document.getElementById('closeButton');
-    const cartIcons = document.querySelectorAll('.cart_icon'); // Corrected the selector to .cart_icon
+    const cartIcons = document.querySelectorAll('.cart_icon');
     const orderButtons = document.querySelectorAll('.order_btn');
+    const cartButtons = document.querySelectorAll('.cart');
 
     // Function to generate a product ID dynamically
     function generateProductId() {
@@ -23,10 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }
 
-
     function renderCartItems() {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        console.log('Rendering cart items:', cartItems);
         cartItemsContainer.innerHTML = '';
         let totalPrice = 0;
 
@@ -36,19 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const row = document.createElement('tr');
             row.innerHTML = `
-               <td class="px-4 py-2 whitespace-nowrap">${item.name}</td>
-                <td class="px-4 py-2 whitespace-nowrap">${item.price} VND</td>
-                <td class="px-4 py-2 whitespace-nowrap flex justify-center items-center w-40">
-                    <div class="flex items-center justify-center lg:pl-60 md:pl-5">
-                    <button class="px-3 py-1 bg-black text-white font-bold rounded-l-full" onclick="updateQuantity(${item.id}, -1)">-</button>
-                    <span class="px-4 py-1 bg-gray-200 text-center">${item.quantity}</span>
-                    <button class="px-3 py-1 bg-black text-white font-bold rounded-r-full" onclick="updateQuantity(${item.id}, 1)">+</button>
+                <td class="px-4 py-2 whitespace-nowrap">${item.name}</td>
+                <td class="px-4 py-2 whitespace-nowrap">${item.price.toLocaleString()} VND</td>
+                <td class="px-4 py-2 whitespace-nowrap">
+                    <div class="flex justify-center items-center">
+                        <button class="px-3 py-1 bg-black text-white font-bold rounded-l-full" onclick="updateQuantity(${item.id}, -1)">-</button>
+                        <span class="px-4 py-1 bg-gray-200 text-center">${item.quantity}</span>
+                        <button class="px-3 py-1 bg-black text-white font-bold rounded-r-full" onclick="updateQuantity(${item.id}, 1)">+</button>
                     </div>
                 </td>
                 <td class="px-4 py-2 whitespace-nowrap w-32">${total.toLocaleString()} VND</td>
                 <td class="px-4 py-2 whitespace-nowrap">
                     <button class="px-3 py-1 bg-gray-500 hover:bg-red-800 text-white font-bold rounded-full" onclick="removeItem(${item.id})">X</button>
                 </td>
+
             `;
             cartItemsContainer.appendChild(row);
         });
@@ -103,9 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-
-    // Loop through each cart icon and add an event listener
+// Loop through each cart icon and add an event listener
     cartIcons.forEach(cartIcon => {
         cartIcon.addEventListener('click', () => {
             // Access product details from corresponding HTML elements
@@ -129,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Added to cart!');
         });
     });
-
     // Add event listener to each order button
     orderButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -139,13 +136,32 @@ document.addEventListener('DOMContentLoaded', () => {
             const productPrice = parseInt(productPriceText.replace(' VND', '').replace('.', ''));
 
             const item = {
-                id: generateProductId(), // Generate product ID dynamically
+                id: generateProductId(),
                 name: productName,
                 price: productPrice,
                 quantity: 1
             };
 
             // Add product to cart
+            addToCart(item);
+            alert('Added to cart!');
+        });
+    });
+
+    // Loop through each cart button and add an event listener
+    cartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productContainer = button.closest('.product-item');
+            const productName = productContainer.querySelector('.text-red-600').textContent;
+            const productPriceText = productContainer.querySelector('.text-red-700').textContent;
+            const productPrice = parseInt(productPriceText.replace(' VND', '').replace('.', ''));
+
+            const item = {
+                id: generateProductId(),
+                name: productName,
+                price: productPrice,
+                quantity: parseInt(productContainer.querySelector('.quantity').value)
+            };
             addToCart(item);
             alert('Added to cart!');
         });
