@@ -122,6 +122,7 @@ function currentBestSellerSlide(n) {
 function startAutoBestSellerSlide() {
   autoBestSellerSlideInterval = setInterval(() => {
     plusBestSellerSlides(1);
+
   }, 5000);  // Increase interval duration
 }
 
