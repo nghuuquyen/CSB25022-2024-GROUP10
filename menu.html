@@ -15,33 +15,35 @@
     <!-- Header top -->
     <div class="content header_top py-2">
         <div class="flex-wrap text-sm lg:flex lg:gap-4 lg:items-center lg:justify-between">
-          <div class="address-hotline text-right flex text-start sm:flex-col lg:flex-row gap-3">
-            <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city </p>
-            
-             <p><b>Hotline</b>: 84-905-323-959 | 84-838-446-667</p>
-          </div>
-          <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5 sm:hidden">
-            <div class="dropdown-box">
-              <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
-                <option value="USD">USD</option>
-                <option value="SGD">SGD</option>
-                <option value="EUR">EUR</option>
-                <option value="JPY">JPY</option>
-              </select>
+            <div class="address-hotline text-right flex text-start sm:flex-col lg:flex-row gap-3">
+                <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city </p>
+
+                <p><b>Hotline</b>: 84-905-323-959 | 84-838-446-667</p>
             </div>
-            <div class="dropdown-box">
-              <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
-                <option value="en">English</option>
-                <option value="ja">Japanese</option>
-                <option value="zh">Chinese</option>
-              </select>
+            <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5 sm:hidden">
+                <div class="dropdown-box">
+                    <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
+                        <option value="USD">USD</option>
+                        <option value="SGD">SGD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </div>
+                <div class="dropdown-box">
+                    <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
+                        <option value="en">English</option>
+                        <option value="ja">Japanese</option>
+                        <option value="zh">Chinese</option>
+                    </select>
+                </div>
+                <a id="search-icon" class="search-icon cursor-pointer">
+                    <img class="w-8 h-8"
+                        src="https://cdn1.iconfinder.com/data/icons/seo-and-web-development-6/32/development_search_magnifier_magnifying_glass_loupe-67-512.png"
+                        alt="Search Icon">
+                </a>
             </div>
-            <a id="search-icon" class="search-icon cursor-pointer">
-              <img class="w-8 h-8" src="https://cdn1.iconfinder.com/data/icons/seo-and-web-development-6/32/development_search_magnifier_magnifying_glass_loupe-67-512.png" alt="Search Icon">
-            </a>
-          </div>
         </div>
-      </div>
+    </div>
 
     <!-- Header top end -->
 
@@ -50,30 +52,35 @@
         <!-- Navigate bar -->
         <nav class="bg-seashell bg-opacity-90 border border-dashed border-5 border-black relative py-2 z-10">
             <div class="content mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
-              <div class="flex items-center">
-                <a href="index.html">
-                  <img src="img/Logo.png" alt="Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full" width="80" height="80" loading="lazy">
-                </a>
-              </div>
-              <div class="flex items-center space-x-9 sm:space-x-10 md:space-x-10 lg:space-x-20 xl:space-x-80">
-                <a href="index.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Home</a>
-                <a href="menu.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Menu</a>
-                <a href="checkout.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Checkout</a>
-              </div>
-              <div class="flex items-center">
-                <div class="relative" id="cartContainer">
-                  <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
-                    <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart" class="h-6 w-6" width="24" height="24" loading="lazy">
-                  </a>
-                  <div class="absolute top-8 right-0 w-64 sm:w-72 bg-pink-100 border border-gray-300 shadow-lg hidden" id="cartPopup">
-                    <div id="popup-content">
-                      <!-- Cart popup content will be loaded here -->
-                    </div>
-                  </div>
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="img/Logo.png" alt="Logo"
+                            class="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full" width="80"
+                            height="80" loading="lazy">
+                    </a>
                 </div>
-              </div>
+                <div class="flex items-center space-x-9 sm:space-x-10 md:space-x-10 lg:space-x-20 xl:space-x-80">
+                    <a href="index.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Home</a>
+                    <a href="menu.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Menu</a>
+                    <a href="checkout.html"
+                        class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Checkout</a>
+                </div>
+                <div class="flex items-center">
+                    <div class="relative" id="cartContainer">
+                        <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
+                            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart"
+                                class="h-6 w-6" width="24" height="24" loading="lazy">
+                        </a>
+                        <div class="absolute top-8 right-0 w-64 sm:w-72 bg-pink-100 border border-gray-300 shadow-lg hidden"
+                            id="cartPopup">
+                            <div id="popup-content">
+                                <!-- Cart popup content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </nav>
+        </nav>
         <!-- Poster -->
         <div class="relative banner h-32 md:h-64 flex items-end justify-center text-white">
             <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -100,59 +107,59 @@
                         <select class="w-full custom-select p-3 pr-10 border bg-white shadow-md">
                             <option value="new">New</option>
                             <option value="popular">Most Popular</option>
-                            <option value="price-high">Price from high to low</option>
-                            <option value="price-low">Price from low to high</option>
+                            <option value="price">Price from high to low</option>
+                            <option value="price">Price from low to high</option>
                         </select>
                     </div>
                 </div>
                 <!-- Product grid -->
                 <div class="flex flex-wrap gap-6 product-grid sm:justify-center">
                     <!-- Product items -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
                         <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Chocolate Cupcake</p>
-                        <p class="text-gray-700 mb-5 h-[100px]">A chocolate cupcake is a rich, single-serving chocolate cake topped with creamy chocolate frosting.</p>
+                        <p class="text-gray-700 mb-5 h-[100px]">A chocolate cupcake is a rich, single-serving chocolate
+                            cake topped with creamy chocolate frosting.</p>
 
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-500 line-through">25.000 VND</p>
-                            <p class="text-red-700 text-xl font-bold">20.000 VND</p>
+                            <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
                         </div>
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
-
                         <img src="img/hot_cake_2.png" alt="Blueberry cupcake"
                             class="w-36 h-36 object-cover rounded mx-auto">
                         <p class="text-xl font-bold text-red-500">Blueberry Cupcake</p>
-                        <p class="text-gray-700 mb-5  h-[100px]">A blueberry cupcake is a moist, single-serving cake studded with juicy blueberries and often topped with a sweet, creamy frosting.</p>
+                        <p class="text-gray-700 mb-5  h-[100px]">A blueberry cupcake is a moist, single-serving cake
+                            studded with juicy blueberries and often topped with a sweet, creamy frosting.</p>
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-500 line-through">20.000 VND</p>
-                            <p class="text-red-700 text-xl font-bold">15.000 VND</p>
+                            <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
                         </div>
                         <div class="flex justify-center mt-2 space-x-4">
 
-
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
                         <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Tiramisu</p>
 
                         <p class="text-gray-700 mb-5  h-[100px]">Tiramisu is incredibly delicious, with its rich, creamy
@@ -160,22 +167,21 @@
                             lovers.</p>
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-500 line-through">85.000 VND</p>
-                            <p class="text-red-700 text-xl font-bold">70.000 VND</p>
+                            <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
                         </div>
                         <div class="flex justify-center mt-2 space-x-4">
 
-
-                           <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <div class="absolute top-0 left-0 bg-red-500 text-white text-xs p-1 rounded-br-lg">New</div>
                         <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Macaroon</p>
 
                         <p class="text-gray-700 mb-5  h-[100px]">A macaron is a delicate French pastry featuring two
@@ -183,22 +189,20 @@
                             or jam.</p>
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-500 line-through">100.000 VND</p>
-                            <p class="text-red-700 text-xl font-bold">90.000 VND</p>
+                            <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
                         </div>
                         <div class="flex justify-center mt-2 space-x-4">
+                            <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-<input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
-
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu1.png" alt="Banana Bread" class="w-full h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Banana Bread</p>
 
                         <p class="text-gray-700 mb-5 h-[100px]">Banana bread is a moist, sweet loaf made with ripe
@@ -210,13 +214,14 @@
                         <div class="flex justify-center mt-2 space-x-4">
 
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu2.png" alt="Whole wheat Bread"
                             class="w-full h-36 object-cover rounded mx-auto">
                         <p class="text-xl font-bold text-red-500">Whole wheat Bread</p>
@@ -230,35 +235,34 @@
                         <div class="flex justify-center mt-2 space-x-4">
 
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu3.png" alt="Chocolate cake" class="w-52 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Chocolate cake</p>
 
                         <p class="text-gray-700 mb-5  h-[100px]">Chocolate cake is a rich, moist dessert made with
                             chocolate-flavored sponge layers and creamy chocolate frosting, ideal for celebrations.</p>
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">30.000 VND</p>
-
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu4.png" alt="Strawberry cake" class="w-52 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Strawberry Cake</p>
 
                         <p class="text-gray-700 mb-5  h-[100px]">Strawberry cake is a fruity dessert made with fresh or
@@ -267,18 +271,18 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">30.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu5.png" alt="Chocolate cookies" class="w-52 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Chocolate cookies</p>
                         <p class="text-gray-700 mb-5  h-[100px]">Chocolate cookies are a treat made with
                             chocolate-flavored dough and chocolate chips or chunks, known for their chewy or crispy
@@ -286,18 +290,18 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">45.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu6.png" alt="Orange Cupcake" class="w-36 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Orange Cupcake</p>
 
                         <p class="text-gray-700 mb-5 h-[100px]">Orange cupcakes are light, citrus-flavored treats with a
@@ -306,19 +310,19 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">10.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu7.png" alt="Coffee Cupcake" class="w-36 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Coffee Cupcake</p>
 
                         <p class="text-gray-700 mb-5  h-[100px]">Coffee cupcakes are rich, coffee-infused treats with a
@@ -327,17 +331,18 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu8.png" alt="Blackberry Cupcake"
                             class="w-36 h-36 object-cover rounded mx-auto">
                         <p class="text-xl font-bold text-red-500">Blackberry Cupcake</p>
@@ -348,17 +353,18 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu9.png" alt="Passion Fruit Mousse"
                             class="w-36 h-36 object-cover rounded mx-auto">
                         <p class="text-xl font-bold text-red-500">Passion Fruit Mousse</p>
@@ -368,19 +374,19 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu10.png" alt="Chocolate Mousse" class="w-36 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Chocolate Mousse</p>
 
                         <p class="text-gray-700 mb-5  h-[100px]">Chocolate mousse is a decadent, airy dessert made with
@@ -388,19 +394,19 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu11.png" alt="Peach Mousse" class="w-36 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Peach Mousse</p>
 
                         <p class="text-gray-700 mb-5  h-[100px]">Peach mousse is a light, fruity dessert made with fresh
@@ -408,19 +414,19 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">50.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item  lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu12.png" alt="Fruit Cheesecake" class="w-52 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Fruit Cheesecake</p>
                         <p class="text-gray-700 mb-5  h-[100px]">Fruit cheesecake is a rich, creamy dessert with a
                             graham cracker crust, topped with a variety of fresh fruits, offering a blend of tangy and
@@ -431,15 +437,15 @@
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu13.png" alt="Croissant" class="w-52 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Croissant</p>
                         <p class="text-gray-700 mb-5  h-[100px]">A croissant is a buttery, flaky pastry with a crisp
                             outer layer and a soft, airy interior, perfect for breakfast or snacks, often enjoyed plain
@@ -447,40 +453,39 @@
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
                             </button>
                         </div>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg relative product-item lg:w-[30%] md:w-[45%] sm:w-[90%]">
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-lg relative product-item lg:w-[30%] md:w-[45%] sm:w-[90%]">
                         <img src="img/menu14.png" alt="Donut" class="w-52 h-36 object-cover rounded mx-auto">
-
                         <p class="text-xl font-bold text-red-500">Donut</p>
- 
+
                         <p class="text-gray-700 mb-5  h-[100px]">A donut is a sweet, fried dough treat, typically
                             ring-shaped or filled, available in various flavors and toppings like glaze, sprinkles, or
                             sugar.</p>
                         <div class="flex flex-col h-[50px]">
                             <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
                         </div>
+
                         <div class="flex justify-center mt-2 space-x-4">
                             <input type="number" class="quantity p-2 w-10 h-10 border" min="1" value="1">
 
-
-                            <button class="cart_icon p-2 w-10 h-10">
+                            <button class="cart p-2 w-10 h-10">
                                 <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png"
                                     alt="Add to cart">
- 
                             </button>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Pagination buttons -->
                 <div class="flex justify-center mt-6 space-x-1 pagination">
                     <button class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300 prev-page">&lt;</button>
@@ -490,14 +495,16 @@
                     <button class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300 next-page">&gt;</button>
                 </div>
             </div>
-    
+
             <!-- Sidebar -->
-            <div class="col-span-12 lg:col-span-3 bg-white p-6 rounded-lg shadow-lg order-first lg:order-last flex flex-col">
+            <div
+                class="col-span-12 lg:col-span-3 bg-white p-6 rounded-lg shadow-lg order-first lg:order-last flex flex-col">
                 <div class="mb-6">
-                    <input type="text" placeholder="Search" class="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300">
+                    <input type="text" placeholder="Search"
+                        class="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300">
                     <button class="w-full bg-red-500 text-white p-3 rounded-lg hover:bg-red-900">APPLY</button>
                 </div>
-    
+
                 <div class="mb-6">
                     <h2 class="text-lg font-bold mb-4">TAGS</h2>
                     <div class="flex flex-wrap gap-2">
@@ -510,7 +517,7 @@
                     </div>
                     <button class="w-full bg-red-500 text-white p-3 mt-4 rounded-lg hover:bg-red-900">APPLY</button>
                 </div>
-    
+
                 <div>
                     <h2 class="text-lg font-bold mb-4">SPECIAL OFFERS</h2>
                     <div class="space-y-4">
@@ -550,7 +557,7 @@
             </div>
         </div>
     </div>
-    
+
     <footer>
         <!-- Footer -->
         <div class="footer bg-black text-seashell py-16">
@@ -642,52 +649,64 @@
     </footer>
 
     <!-- Search icon hover-->
-    <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden p-10">
-        <div class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-4/5">
-          <div class="flex justify-between items-center mb-4 sm:mb-6">
-            <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
-            <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
-          </div>
-          <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6" placeholder="Search...">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <!-- Item 1 -->
-            <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-              <img src="img/menu1.png" alt="Banana Bread" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
-              <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Banana Bread</h3>
-              <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">Banana bread is a moist, sweet loaf made with ripe bananas, often including walnuts or chocolate chips. It's perfect for breakfast, snacks, or dessert.</p>
-              <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">50.000 VND</p>
+    <div id="search-overlay"
+        class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden p-10">
+        <div
+            class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-4/5">
+            <div class="flex justify-between items-center mb-4 sm:mb-6">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
+                <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
             </div>
-            <!-- Item 2 -->
-            <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-              <img src="img/menu5.png" alt="Image 2" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
-              <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Chocolate cookies</h3>
-              <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
-                Chocolate cookies are a treat made with chocolate-flavored dough and chocolate chips or chunks, known for their chewy or crispy texture and rich chocolate taste.
-              </p>
-              <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">45.000 VND</p>
+            <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6"
+                placeholder="Search...">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <!-- Item 1 -->
+                <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/menu1.png" alt="Banana Bread"
+                        class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+                    <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Banana Bread</h3>
+                    <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">Banana bread is a moist, sweet
+                        loaf made with ripe bananas, often including walnuts or chocolate chips. It's perfect for
+                        breakfast, snacks, or dessert.</p>
+                    <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">50.000 VND</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/menu5.png" alt="Image 2"
+                        class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+                    <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Chocolate cookies</h3>
+                    <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+                        Chocolate cookies are a treat made with chocolate-flavored dough and chocolate chips or chunks,
+                        known for their chewy or crispy texture and rich chocolate taste.
+                    </p>
+                    <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">45.000 VND</p>
+                </div>
+                <!-- Add more items here -->
+                <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/menu3.png" alt="Image 3"
+                        class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+                    <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Blueberry Muffin</h3>
+                    <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+                        A muffin packed with fresh blueberries, offering a burst of juicy flavor in every bite.
+                    </p>
+                    <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">35.000 VND</p>
+                </div>
+                <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/menu4.png" alt="Image 4"
+                        class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+                    <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Carrot Cake</h3>
+                    <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+                        A moist cake made with grated carrots, topped with creamy frosting and often including nuts.
+                    </p>
+                    <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">60.000 VND</p>
+                </div>
+                <!-- Continue adding more items as needed -->
             </div>
-            <!-- Add more items here -->
-            <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-              <img src="img/menu3.png" alt="Image 3" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
-              <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Blueberry Muffin</h3>
-              <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
-                A muffin packed with fresh blueberries, offering a burst of juicy flavor in every bite.
-              </p>
-              <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">35.000 VND</p>
-            </div>
-            <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-              <img src="img/menu4.png" alt="Image 4" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
-              <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Carrot Cake</h3>
-              <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
-                A moist cake made with grated carrots, topped with creamy frosting and often including nuts.
-              </p>
-              <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">60.000 VND</p>
-            </div>
-            <!-- Continue adding more items as needed -->
-          </div>
-          <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All Results</button>
+            <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All
+                Results</button>
         </div>
-      </div>
+    </div>
+
     <!--Search icon hover ./ -->
 
 
@@ -717,4 +736,3 @@
 </body>
 
 </html>
-
