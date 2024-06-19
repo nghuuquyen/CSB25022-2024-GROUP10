@@ -6,7 +6,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.content {
+.content{
     margin-left: 80px;
     margin-right: 80px;
 }
@@ -41,4 +41,24 @@ html {
 }
 .slide {
     transition: transform 1s ease-in-out;
+    }
+
+.h1, h2{
+    font-family: "Playwrite PL", cursive;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-size: x-large;
+    font-style: normal;
+    }
+
+  @font-face {
+    font-family: 'MyFont';
+    src: url('path-to-font.woff2') format('woff2');
+    font-display: swap;
   }
+  /* Ensure space is reserved for popups */
+  #cartPopup, #popup-content {
+    min-height: 200px;
+  }
+
+

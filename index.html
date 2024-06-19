@@ -3,662 +3,613 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=\, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Worms Bakery</title>
   <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
-<!-- Header -->
-<header class="header bg-seashell">
-  <!-- Header top -->
-  <div class="content header_top py-2 ">
-    <div class="flex-wrap text-sm lg:flex lg:gap-4 lg:items-center lg:justify-between">
-      <div class="address-hotline text-right lg:flex-1 lg:text-left">
-        <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city - <b>Hotline</b>:
-          84-905-323-959 | 84-838-446-667</p>
-      </div>
-      <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5">
-        <div class="dropdown-box">
-          <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
-            <option value="USD">USD</option>
-            <option value="SGD">SGD</option>
-            <option value="EUR">EUR</option>
-            <option value="JPY">JPY</option>
-          </select>
+<body>
+  <!-- Header -->
+  <header class="header bg-seashell">
+    <!-- Header top -->
+    <div class="content header_top py-2">
+      <div class="flex-wrap text-sm lg:flex lg:gap-4 lg:items-center lg:justify-between">
+        <div class="address-hotline text-right lg:flex-1 lg:text-left">
+          <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city - <b>Hotline</b>:
+            84-905-323-959 | 84-838-446-667</p>
         </div>
-        <div class="dropdown-box">
-          <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
-            <option value="en">English</option>
-            <option value="ja">Japanese</option>
-            <option value="zh">Chinese</option>
-          </select>
+        <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5">
+          <div class="dropdown-box">
+            <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
+              <option value="USD">USD</option>
+              <option value="SGD">SGD</option>
+              <option value="EUR">EUR</option>
+              <option value="JPY">JPY</option>
+            </select>
+          </div>
+          <div class="dropdown-box">
+            <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
+              <option value="en">English</option>
+              <option value="ja">Japanese</option>
+              <option value="zh">Chinese</option>
+            </select>
+          </div>
+          <a id="search-icon" class="search-icon cursor-pointer">
+            <img class="w-8 h-8" src="https://cdn1.iconfinder.com/data/icons/seo-and-web-development-6/32/development_search_magnifier_magnifying_glass_loupe-67-512.png" alt="Search Icon">
+          </a>
         </div>
-        <a id="search-icon" class="search-icon cursor-pointer">
-          <img class="w-8 h-8"
-            src="https://cdn1.iconfinder.com/data/icons/seo-and-web-development-6/32/development_search_magnifier_magnifying_glass_loupe-67-512.png"
-            alt="Search Icon">
-        </a>
       </div>
     </div>
-  </div>
+    <!-- Header top end -->
 
-  <!-- Header top end -->
-
-  <!-- Banner -->
-  <div class="Banner relative">
-    <!-- Navigate bar -->
-    <nav class="bg-seashell bg-opacity-90 border border-dashed border-5 border-black relative py-1 z-10">
-      <div class="content flex flex-wrap items-center justify-between">
-        <div class="flex text-center space-x-10 md:space-x-20 lg:space-x-80 flex-1">
-          <a href="index.html" class="text-s md:text-xl font-semibold hover:underline">Home</a>
-          <a href="menu.html" class="text-s md:text-xl font-semibold hover:underline">Menu</a>
-        </div>
-        <div class="flex text-center items-center space-x-10 md:space-x-20 lg:space-x-80 flex-1 justify-end">
-          <a href="checkout.html" class="text-s md:text-xl font-semibold hover:underline">Checkout</a>
-          <div class="relative" id="cartContainer">
-            <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
-              <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart" class="h-6 w-6">
+    <!-- Banner -->
+    <div class="Banner relative">
+      <!-- Navigate bar -->
+      <nav class="bg-seashell bg-opacity-90 border border-dashed border-5 border-black relative py-2 z-10">
+        <div class="content mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center">
+            <a href="index.html">
+              <img src="img/Logo.png" alt="Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full" width="80" height="80" loading="lazy">
             </a>
-            <div class="absolute top-8 right-0 w-72 bg-pink-100 border border-gray-300 shadow-lg hidden" id="cartPopup">
-              <div id="popup-content">
-                <!-- Cart popup content will be loaded here -->
+          </div>
+          <div class="flex items-center space-x-9 sm:space-x-10 md:space-x-10 lg:space-x-20 xl:space-x-80">
+            <a href="index.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Home</a>
+            <a href="menu.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Menu</a>
+            <a href="checkout.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Checkout</a>
+          </div>
+          <div class="flex items-center">
+            <div class="relative" id="cartContainer">
+              <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
+                <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart" class="h-6 w-6" width="24" height="24" loading="lazy">
+              </a>
+              <div class="absolute top-8 right-0 w-64 sm:w-72 bg-pink-100 border border-gray-300 shadow-lg hidden" id="cartPopup">
+                <div id="popup-content">
+                  <!-- Cart popup content will be loaded here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navigate bar end -->
+
+      <!-- Slideshow Container -->
+  <div class="slideshow-container relative w-full mx-auto overflow-hidden group">
+    <!-- Slides container -->
+    <div id="slides" class="slides-container flex transition-transform duration-[1000ms] ease-in-out w-full">
+      <!-- Slide 1 -->
+      <div class="slide w-full h-full flex-shrink-0">
+        <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1" loading="lazy">
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide w-full h-full flex-shrink-0">
+        <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2" loading="lazy">
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide w-full h-full flex-shrink-0">
+        <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3" loading="lazy">
+      </div>
+      <!-- Duplicate Slide 1 for smooth transition -->
+      <div class="slide w-full h-full flex-shrink-0">
+        <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1" loading="lazy">
+      </div>
+    </div>
+    <!-- Next and previous buttons for Slideshow -->
+    <button class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-sm p-2 bg-black bg-opacity-50 rounded-r hidden group-hover:block" onclick="plusSlides(-1)">❮</button>
+    <button class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-sm p-2 bg-black bg-opacity-50 rounded-l hidden group-hover:block" onclick="plusSlides(1)">❯</button>
+    <!-- Dots/bullets/indicators -->
+    <div class="dots absolute bottom-2 w-full flex justify-center space-x-2">
+      <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500" onclick="currentSlide(1)"></span>
+      <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500" onclick="currentSlide(2)"></span>
+      <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+</div>
+<!-- Banner end -->
+  </header>
+  <!-- Header end -->
+
+  <main>
+  <!-- Best seller -->
+  <section class="bg-seashell mx-auto pt-12 px-4">
+    <h2 class="text-center text-red-500 text-xl md:text-2xl font-bold mb-4">Delicious Cake</h2>
+    <h3 class="text-center text-2xl md:text-3xl font-bold mb-8">BEST SELLER</h3>
+    <div class="relative">
+      <!-- Best Seller Slideshow -->
+      <div class="best-seller-slides content flex overflow-hidden relative">
+        <div class="best-seller-slide flex flex-wrap w-full mb-5 slide-down hidden">
+          <div class="relative w-full md:w-1/3 p-2">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
+            <img src="img/best_seller_cake_hp_1.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Strawberry Cupcake" loading="lazy">
+            <div class="text-center mt-2">
+              <p class="text-lg md:text-2xl text-red-900"><b>Strawberry Cupcake</b></p>
+              <p><b>25.000 VND</b> per cake</p>
+            </div>
+            <div class="flex justify-center mt-2 space-x-4">
+              <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png" alt="View detail">
+              </button>
+              <button class="cart_icon p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
+            </div>
+          </div>
+          
+          <div class="relative w-full md:w-1/3 p-2">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-10%</div>
+            <img src="img/best_seller_cake_hp_2.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Banana Bread" loading="lazy">
+            <div class="text-center mt-2">
+              <p class="text-lg md:text-2xl text-red-900"><b>Banana Bread</b></p>
+              <p><b>45.000 VND</b> per loaf</p>
+            </div>
+            <div class="flex justify-center mt-2 space-x-4">
+              <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png" alt="View detail">
+              </button>
+              <button class="cart_icon p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
+            </div>
+          </div>
+          <div class="relative w-full md:w-1/3 p-2">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-50%</div>
+            <img src="img/best_seller_cake_hp_3.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Chocolate Muffin" loading="lazy">
+            <div class="text-center mt-2">
+              <p class="text-lg md:text-2xl text-red-900"><b>Chocolate Muffin</b></p>
+              <p class="text-gray-500 line-through">19.000 VND per cake</p>
+              <p><b>9.500 VND</b> per cake</p>
+            </div>
+            <div class="flex justify-center mt-2 space-x-4">
+              <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png" alt="View detail">
+              </button>
+              <button class="cart_icon p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="best-seller-slide flex flex-wrap w-full mb-5 slide-down hidden">
+          <div class="relative w-full md:w-1/3 p-2">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
+            <img src="img/best_seller_cake_hp_4.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Tiramisu" loading="lazy">
+            <div class="text-center mt-2">
+              <p class="text-lg md:text-2xl text-red-900"><b>Tiramisu</b></p>
+              <p><b>85.000 VND</b> per 250gr box</p>
+            </div>
+            <div class="flex justify-center mt-2 space-x-4">
+              <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png" alt="View detail">
+              </button>
+              <button class="cart_icon p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
+            </div>
+          </div>
+          <div class="relative w-full md:w-1/3 p-2">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
+            <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-10%</div>
+            <img src="img/best_seller_cake_hp_5.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Macaron Cookies" loading="lazy">
+            <div class="text-center mt-2">
+              <p class="text-lg md:text-2xl text-red-900"><b>Macaron Cookies</b></p>
+              <p class="text-gray-500 line-through">100.000 VND box of 10</p>
+              <p><b>90.000 VND</b> per box of 10</p>
+            </div>
+            <div class="flex justify-center mt-2 space-x-4">
+              <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png" alt="View detail">
+              </button>
+              <button class="cart_icon p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
+            </div>
+          </div>
+          <div class="relative w-full md:w-1/3 p-2">
+            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-20%</div>
+            <img src="img/best_seller_cake_hp_6.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Berry Cheesecake" loading="lazy">
+            <div class="text-center mt-2">
+              <p class="text-lg md:text-2xl text-red-900"><b>Berry Cheesecake</b></p>
+              <p class="text-gray-500 line-through">125.000 VND per cake</p>
+              <p><b>100.000 VND</b> per cake</p>
+            </div>
+            <div class="flex justify-center mt-2 space-x-4">
+              <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png" alt="View detail">
+              </button>
+              <button class="cart_icon p-2 w-8 h-8 md:w-10 md:h-10">
+                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Next and previous buttons for Slideshow -->
+      <button class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r" onclick="plusBestSellerSlides(-1)">❮</button>
+      <button class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l" onclick="plusBestSellerSlides(1)">❯</button>
+      <!-- Dots/bullets/indicators -->
+      <div class="best_seller_dots absolute bottom-2 w-full flex items-center justify-center space-x-2">
+        <span class="best_seller_dot h-2 w-2 bg-gray-700 rounded-full inline-block cursor-pointer transition-colors duration-500" onclick="currentBestSellerSlide(0)"></span>
+        <span class="best_seller_dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500" onclick="currentBestSellerSlide(1)"></span>
+      </div>
+    </div>
+  </section>
+
+<!-- Best seller end -->
+
+    <!-- Offer for Today Section -->
+    <section class="bg-melon py-4">
+      <div class="text-center text-red-600 font-bold">Limited</div>
+      <div class="text-center text-3xl font-bold"> --- Offer for TODAY ---</div>
+      <div id="offers-section" class="content mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 mt-4">
+        <div id="offer-1" class="flex items-center justify-center hover-animate">
+          <img src="img/limited-1.png" alt="Buy 1 get 1" loading="lazy" width="600" height="400">
+        </div>
+        <div id="offer-2" class="flex items-center justify-center hover-animate">
+          <img src="img/limited-2.png" alt="Free brownie" loading="lazy" width="600" height="400">
+        </div>
+        <div id="offer-3" class="flex items-center justify-center hover-animate">
+          <img src="img/limited-3.png" alt="Discount for 2nd purchase" loading="lazy" width="600" height="400">
+        </div>
+        <div id="offer-4" class=" flex items-center justify-center hover-animate">
+          <img src="img/limited-4.png" alt="New Tiramisu Recipe" loading="lazy" width="600" height="400">
+        </div>
+      </div>
+    </section>
+    <!-- Offer for Today Section end -->
+
+    <!-- Hot Cakes Section -->
+    <section class="bg-seashell py-16">
+      <div class="content mx-auto px-4">
+        <div class="flex justify-between text-center items-center mb-8">
+          <h2 class="text-3xl font-bold w-1/2 hidden md:block">HOT CAKE</h2>
+          <h2 class="text-3xl font-bold w-1/2 hidden md:block">NEW CAKE</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Left Column: Hot Cakes -->
+          <div class="space-y-20 flex flex-col">
+            <!-- Hot Cake Column Title for small screens -->
+            <h2 class="text-3xl font-bold text-center block md:hidden">HOT CAKE</h2>
+            <!-- Cake Item -->
+            <div class="flex items-start space-x-4 flex-grow">
+              <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover rounded" loading="lazy" width="144" height="144">
+              <div class="flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-red-500">Chocolate cupcake</h3>
+                <p class="text-gray-700 mb-2">A chocolate cupcake is a rich, single-serving chocolate cake topped with
+                  creamy chocolate frosting.</p>
+                <p class="text-gray-500 line-through">25.000 VND</p>
+                <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
+                <button class="order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
+              </div>
+            </div>
+            <!-- Repeat for more cakes... -->
+            <div class="flex items-start space-x-4 flex-grow">
+              <img src="img/hot_cake_2.png" alt="Blueberry cupcake" class="w-36 h-36 object-cover rounded" loading="lazy" width="144" height="144">
+              <div class="flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-red-500">Blueberry cupcake</h3>
+                <p class="text-gray-700 mb-2">A blueberry cupcake is a moist, single-serving cake studded with juicy
+                  blueberries and often topped with a sweet, creamy frosting.</p>
+                <p class="text-gray-500 line-through">20.000 VND</p>
+                <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
+                <button class="order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: New Cakes -->
+          <div class="space-y-20 flex flex-col">
+            <!-- New Cake Column Title for small screens -->
+            <h2 class="text-3xl font-bold text-center block md:hidden">NEW CAKE</h2>
+            <!-- Cake Item -->
+            <div class="flex items-start space-x-4 flex-grow">
+              <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded" loading="lazy" width="144" height="144">
+              <div class="flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-red-500">Tiramisu</h3>
+                <p class="text-gray-700 mb-2">Tiramisu, with its rich, creamy layers and perfect coffee and cocoa balance, is a favorite among dessert lovers.</p>
+                <p class="text-gray-500 line-through">85.000 VND</p>
+                <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
+                <button class="order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
+              </div>
+            </div>
+            <!-- Repeat for more cakes... -->
+            <div class="flex items-start space-x-4 flex-grow">
+              <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded" loading="lazy" width="144" height="144">
+              <div class="flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-red-500">Macaron</h3>
+                <p class="text-gray-700 mb-2">
+                  A macaron is a delicate French pastry featuring two almond meringue cookies sandwiched around a
+                  flavorful filling such as buttercream, ganache, or jam.</p>
+                <p class="text-gray-500 line-through">100.000 VND</p>
+                <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
+                <button class="order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </nav>
-    <!-- Navigate bar end -->
+    </section>
+    <!-- Hot Cakes Section end -->
 
-    <!-- Logo -->
-    <div
-      class="absolute left-1/2 transform -translate-x-1/2 -translate-y-5 md:-translate-y-7 z-50 flex flex-col items-center">
-      <img src="img/Logo.png" alt="Logo" class="w-16 h-16 md:w-28 md:h-28 lg:w-40 lg:h-40 rounded-full">
-    </div>
-
-    <!-- Slideshow Container -->
-    <div class="slideshow-container relative w-full h-[200px] md:h-[300px] lg:h-[400px] mx-auto overflow-hidden">
-      <!-- Slides container -->
-      <div id="slides" class="slides-container flex transition-transform duration-[5000ms] ease-in-out w-full">
-        <!-- Slide 1 -->
-        <div class="slide w-full h-full flex-shrink-0">
-          <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
+    <!-- Our Baker Section -->
+    <section class="bg-gray-50 py-16 flex flex-col lg:flex-row justify-around">
+      <div class="content grid grid-cols-1 lg:grid-cols-3 gap-y-8 lg:gap-x-8 w-5/6">
+        <div class="grid text-start content-between">
+          <h2 class="text-3xl font-bold mb-4">OUR BAKER</h2>
+          <p class="max-w-2xl mx-auto text-gray-700 mb-8 text-justify">
+            In the world of artisanal baking, Two Worms Bakery stands out, led by the visionary duo Nhi Nguyen Van and Thu
+            Huong Duong. As CEOs, they have transformed their bakery into a haven of culinary excellence. Together, Nhi
+            and Thu Huong have created a dynamic and successful partnership at Two Worms Bakery. Their blend of innovation
+            and tradition continues to delight and inspire, making their bakery a beloved destination for all who
+            appreciate exceptional baked goods.
+          </p>
+          <ul class="list-disc list-inside text-left mb-8 space-y-4">
+            <li>Innovative Flavor Combinations</li>
+            <li>Artisanal Craftsmanship</li>
+            <li>Aesthetic Presentation</li>
+          </ul>
+          <a href="about_us.html" class="bg-red-500 text-white py-2 px-2 rounded-full mb-8 flex justify-center items-center">
+            <button class="w-full h-full flex justify-center items-center">READ MORE ></button>
+          </a>
         </div>
-        <!-- Slide 2 -->
-        <div class="slide w-full h-full flex-shrink-0">
-          <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2">
+        <div class="bg-white p-6 rounded-lg shadow-md text-left">
+          <img src="img/baker1.jpeg" alt="Baker 1" class="w-full mx-auto h-[300px] object-cover mx-auto bg-center-lg mb-6" loading="lazy" width="400" height="300">
+          <h3 class="text-xl font-bold">THU HUONG DUONG</h3>
+          <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
+          <p class="text-gray-700 mb-4">
+            Huong brings warmth and nostalgia to her artisanal breads and rustic pastries, inspired by traditional
+            techniques from her grandmother’s kitchen.
+          </p>
         </div>
-        <!-- Slide 3 -->
-        <div class="slide w-full h-full flex-shrink-0">
-          <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3">
-        </div>
-        <!-- Duplicate Slide 1 for smooth transition -->
-        <div class="slide w-full h-full flex-shrink-0">
-          <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1">
+        <div class="bg-white p-6 rounded-lg shadow-md text-left">
+          <img src="img/baker2.jpg" alt="Baker 2" class="w-full h-[300px] object-cover mx-auto bg-top mb-6" loading="lazy" width="400" height="300">
+          <h3 class="text-xl font-bold">VAN NHI NGUYEN</h3>
+          <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
+          <p class="text-gray-700 mb-4">
+            Nhi is renowned for her meticulous approach and innovative flavors, transforming pastries into edible art.
+          </p>
         </div>
       </div>
-      <!-- Next and previous buttons for Slideshow -->
-      <button
-        class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
-        onclick="plusSlides(-1)">❮</button>
-      <button
-        class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
-        onclick="plusSlides(1)">❯</button>
-      <!-- Dots/bullets/indicators -->
-      <div class="dots absolute bottom-2 w-full flex justify-center space-x-2">
-        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
-          onclick="currentSlide(1)"></span>
-        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
-          onclick="currentSlide(2)"></span>
-        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
-          onclick="currentSlide(3)"></span>
+    </section>
+    <!-- Our Baker Section end -->
+
+    <!-- Contact us and map -->
+    <section class="flex flex-col lg:flex-row">
+      <!-- Map section -->
+      <div class="w-full lg:w-1/2 flex items-center justify-center p-4">
+        <iframe class="w-full h-full" style="height: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8932923783746!2d108.21766391168802!3d16.07102618454454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218314984c6bd%3A0xb53a043f246ab8cb!2zMTU4YSBMw6ogTOG7o2ksIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1717721377642!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </div>
-  
-  
-  </div>
-  <!-- Banner end -->
-</header>
-<!-- Header end -->
-
-<body>
-
-  <!--Best seller-->
-  <div class="bg-seashell mx-auto pt-12">
-    <h2 class="text-center text-red-500 text-2xl font-bold mb-4">Delicious Cake</h2>
-    <h3 class="text-center text-3xl font-bold mb-8">BEST SELLER</h3>
-    <div class="relative">
-      <!-- Best Seller Slideshow -->
-      <div class="best-seller-slides content flex overflow-hidden relative">
-        <div class="best-seller-slide flex w-full mb-5">
-          <div class="relative w-1/3 p-2">
-            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
-            <img src="img/best_seller_cake_hp_1.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
-              alt="Strawberry Cupcake">
-            <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Strawberry Cupcake</b></p>
-              <p><b>25.000 VND</b> per cake</p>
+      <!-- Form section -->
+      <div class="w-full lg:w-1/2 flex items-center justify-center p-6 bg-melon bg-opacity-75">
+        <div class="w-full max-w-md">
+          <h2 class="text-2xl font-bold mb-4 text-center text-black">Contact Us</h2>
+          <p class="text-center text-black mb-8">Our Company is the best, meet the creative team that never sleeps. Say something to us, we will answer you.</p>
+          <form action="#" method="POST" id="contactForm">
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2 text-black" for="name">NAME <span class="text-red-500">*</span></label>
+              <input class="w-full p-2 border border-gray-300 rounded" type="text" id="name" name="name" required>
             </div>
-            <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2 w-10 h-10">
-                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                  alt="View detail">
-              </button>
-              <button class="cart_icon p-2 w-10 h-10">
-                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-              </button>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2 text-black" for="email">EMAIL <span class="text-red-500">*</span></label>
+              <input class="w-full p-2 border border-gray-300 rounded" type="email" id="email" name="email" required>
             </div>
-          </div>
-          <div class="relative w-1/3 p-2">
-            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-10%</div>
-            <img src="img/best_seller_cake_hp_2.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
-              alt="Banana Bread">
-            <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Banana Bread</b></p>
-              <p><b>45.000 VND</b> per loaf</p>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2 text-black" for="phone">PHONE NUMBER</label>
+              <input class="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" name="phone">
             </div>
-            <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2 w-10 h-10">
-                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                  alt="View detail">
-              </button>
-              <button class="cart_icon p-2 w-10 h-10">
-                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-              </button>
+            <div class="mb-4">
+              <label class="block text-sm font-medium mb-2 text-black" for="message">YOUR MESSAGE <span class="text-red-500">*</span></label>
+              <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message" required></textarea>
             </div>
-          </div>
-          <div class="relative w-1/3 p-2">
-            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-50%</div>
-            <img src="img/best_seller_cake_hp_3.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
-              alt="Chocolate Muffin">
-            <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Chocolate Muffin</b></p>
-              <p class="text-gray-500 line-through">19.000 VND per cake</p>
-              <p><b>9.500 VND</b> per cake</p>
+            <div class="flex justify-center mt-4">
+              <button onclick="sendThankyouCUEmail(); return false;" class="bg-red-500 text-white p-2 rounded hover:bg-red-600 transition duration-300">SEND MESSAGE</button>
             </div>
-            <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2 w-10 h-10">
-                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                  alt="View detail">
-              </button>
-              <button class="cart_icon p-2 w-10 h-10">
-                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-              </button>
-            </div>
-          </div>
+          </form>
         </div>
-        <div class="best-seller-slide flex w-full mb-5 hidden">
-          <div class="relative w-1/3 p-2">
-            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
-            <img src="img/best_seller_cake_hp_4.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
-              alt="Tiramisu">
-            <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Tiramisu</b></p>
-              <p><b>85.000 VND</b> per 250gr box</p>
-            </div>
-            <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2 w-10 h-10">
-                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                  alt="View detail">
-              </button>
-              <button class="cart_icon p-2 w-10 h-10">
-                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-              </button>
-            </div>
+      </div>
+    </section>
+    <!-- Contact us and map end -->
+
+    <footer>
+      <!-- Footer -->
+      <div class="footer bg-black text-seashell py-16">
+        <div class="content footer-content flex flex-wrap md:flex md:justify-around md:items-start py-5">
+          <div class="lg:w-1/3 mx-4 mb-10">
+            <h2 class="subscribe-title text-2xl font-bold underline mb-2">About us</h2>
+            <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting atmosphere and
+              cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious baked goods,
+              including must-try items like their signature cupcakes and buttery cookies. Though slightly pricier, the
+              taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great destination if
+              you are in need of delicious, freshly baked cakes.</p>
           </div>
-          <div class="relative w-1/3 p-2">
-            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">New</div>
-            <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-10%</div>
-            <img src="img/best_seller_cake_hp_5.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
-              alt="Macaron Cookies">
-            <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Macaron Cookies</b></p>
-              <p class="text-gray-500 line-through">100.000 VND box of 10</p>
-              <p><b>90.000 VND</b> per box of 10</p>
-            </div>
-            <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2 w-10 h-10">
-                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                  alt="View detail">
-              </button>
-              <button class="cart_icon p-2 w-10 h-10">
-                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-              </button>
-            </div>
-          </div>
-          <div class="relative w-1/3 p-2">
-            <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-20%</div>
-            <img src="img/best_seller_cake_hp_6.jpg" class="w-full h-48 bg-gray-300 flex items-center justify-center"
-              alt="Berry Cheesecake">
-            <div class="text-center mt-2">
-              <p class="text-2xl text-red-900"><b>Berry Cheesecake</b></p>
-              <p class="text-gray-500 line-through">125.000 VND per cake</p>
-              <p><b>100.000 VND</b> per cake</p>
-            </div>
-            <div class="flex justify-center mt-2 space-x-4">
-              <button class="view-detail p-2 w-10 h-10">
-                <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
-                  alt="View detail">
-              </button>
-              <button class="cart_icon p-2 w-10 h-10">
-                <img src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Cart-1024.png" alt="Add to cart">
-              </button>
+          <img src="img/Logo.png" alt="Logo" class="w-40 h-40 ml-28 lg:ml-0 md:ml-0 lg:w-52 lg:h-52 my-2" width="160" height="160">
+          <div class="subscribe lg:w-1/3 mx-4 mt-10">
+            <h2 class="subscribe-title text-2xl font-bold underline mb-2">Subscribe email</h2>
+            <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
+            <div class="subscribe-form flex justify-between items-center bg-seashell p-2 rounded">
+              <input type="email" placeholder="Type your email" class="border-none p-2 flex-1 text-gray-800" required>
+              <button class="bg-metalic_bronze border-none text-seashell p-2 ml-2 cursor-pointer">Subscribe</button>
             </div>
           </div>
         </div>
       </div>
-      <!-- Next and previous buttons for Slideshow -->
-      <button
-        class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-r"
-        onclick="plusBestSellerSlides(-1)">❮</button>
-      <button
-        class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-lg p-4 bg-black bg-opacity-50 rounded-l"
-        onclick="plusBestSellerSlides(1)">❯</button>
-      <!-- Dots/bullets/indicators -->
-      <div class="best_seller_dots absolute bottom-2 w-full flex items-center justify-center space-x-2">
-        <span
-          class="best_seller_dot h-2 w-2 bg-gray-700 rounded-full inline-block cursor-pointer transition-colors duration-500"
-          onclick="currentBestSellerSlide(1)"></span>
-        <span
-          class="best_seller_dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
-          onclick="currentBestSellerSlide(2)"></span>
-      </div>
-    </div>
-  </div>
-
-  <!--Best seller ./-->
-
-  <!-- Offer for Today Section -->
-  <div class="bg-melon py-4">
-    <div class="text-center text-red-600 font-bold">Limited</div>
-    <div class="text-center text-3xl font-bold"> --- Offer for TODAY ---</div>
-    <div class="content mx-auto grid grid-cols-2 gap-8 mt-4">
-      <div class="bg-gray-200 flex items-center justify-center shadow-2xl">
-        <img src="img/limited-1.png" alt="Buy 1 get 1">
-      </div>
-      <div class="bg-gray-200 flex items-center justify-center shadow-2xl">
-        <img src="img/limited-2.png" alt="Free brownie">
-      </div>
-      <div class="bg-gray-200 flex items-center justify-center shadow-2xl">
-        <img src="img/limited-3.png" alt="Discount for 2nd purchase">
-      </div>
-      <div class="bg-gray-200 flex items-center justify-center shadow-2xl">
-        <img src="img/limited-4.png" alt="New Tiramisu Recipe">
-      </div>
-    </div>
-  </div>
-
-  <!-- Hot Cakes Section -->
-  <section class="bg-seashell py-16">
-    <div class="content mx-auto px-4">
-      <div class="flex justify-between text-center items-center mb-8">
-        <h2 class="text-3xl font-bold w-1/2">HOT CAKE</h2>
-        <h2 class="text-3xl font-bold w-1/2">NEW CAKE</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Left Column: Hot Cakes -->
-        <div class="space-y-8">
-          <!-- Cake Item -->
-          <div class="flex items-start space-x-4">
-            <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover rounded">
-            <div>
-              <h3 class="text-xl font-bold text-red-500">Chocolate cupcake</h3>
-              <p class="text-gray-700 mb-2">A chocolate cupcake is a rich, single-serving chocolate cake topped with
-                creamy chocolate frosting.</p>
-              <p class="text-gray-500 line-through">25.000 VND</p>
-              <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
-              <button class="order_btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
-            </div>
-          </div>
-          <!-- Repeat for more cakes... -->
-          <div class="flex items-start space-x-4">
-            <img src="img/hot_cake_2.png" alt="Blueberry cupcake" class="w-36 h-36 object-cover rounded">
-            <div>
-              <h3 class="text-xl font-bold text-red-500">Blueberry cupcake</h3>
-              <p class="text-gray-700 mb-2">A blueberry cupcake is a moist, single-serving cake studded with juicy
-                blueberries and often topped with a sweet, creamy frosting.</p>
-              <p class="text-gray-500 line-through">20.000 VND</p>
-              <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
-              <button class="order_btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
-            </div>
+      <div class="footer-links flex flex-wrap lg:flex-nowrap justify-around bg-seashell text-black py-5">
+        <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
+          <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
+          <div class="py-2 flex justify-center items-center">
+            <ul class="flex flex-wrap justify-center space-x-2 lg:space-x-5">
+              <li><img src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg" alt="Cash" class="w-16 h-16 lg:w-20 lg:h-20" width="64" height="64"></li>
+              <li><img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png" alt="MoMo" class="w-16 h-16 lg:w-20 lg:h-20" width="64" height="64"></li>
+              <li><img src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg" alt="Internet Banking" class="w-16 h-16 lg:w-20 lg:h-20" width="64" height="64"></li>
+            </ul>
           </div>
         </div>
-
-        <!-- Right Column: New Cakes -->
-        <div class=" space-y-8">
-          <!-- Cake Item -->
-          <div class="flex items-start space-x-4">
-            <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded">
-            <div>
-              <h3 class="text-xl font-bold text-red-500">Tiramisu</h3>
-              <p class="text-gray-700 mb-2">Tiramisu is incredibly delicious, with its rich, creamy layers and a perfect
-                balance of coffee and cocoa flavors, making it a favorite among dessert lovers.</p>
-              <p class="text-gray-500 line-through">85.000 VND</p>
-              <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
-              <button class="order_btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
-            </div>
-          </div>
-          <!-- Repeat for more cakes... -->
-          <div class="flex items-start space-x-4">
-            <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded">
-            <div>
-              <h3 class="text-xl font-bold text-red-500">Macaron</h3>
-              <p class="text-gray-700 mb-2">
-                A macaron is a delicate French pastry featuring two almond meringue cookies sandwiched around a
-                flavorful filling such as buttercream, ganache, or jam.</p>
-              <p class="text-gray-500 line-through">100.000 VND</p>
-              <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
-              <button class="order_btn bg-red-500 text-white py-2 px-4 rounded mt-2">ORDER NOW ></button>
-            </div>
-          </div>
+        <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
+          <h3 class="footer-links-title text-lg font-bold mb-2">Working time</h3>
+          <p class="font-bold">Monday - Friday</p>
+          <p class="text-gray-500"> 8:00 am - 8:30 pm</p>
+          <p class="font-bold">Saturday - Sunday</p>
+          <p class="text-gray-500">10:00 am - 4:30 pm</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Baker Section -->
-  <section class="bg-gray-50 py-16  flex justify-around">
-
-    <div class="grid grid-cols-3 gap-x-8 w-5/6">
-      <div class="grid text-start content-between">
-        <h2 class="text-3xl font-bold mb-4">OUR BAKER</h2>
-        <p class="max-w-2xl mx-auto text-gray-700 mb-8 text-justify">
-          In the world of artisanal baking, Two Worms Bakery stands out, led by the visionary duo Nhi Nguyen Van and Thu
-          Huong Duong. As CEOs, they have transformed their bakery into a haven of culinary excellence. Together, Nhi
-          and Thu Huong have created a dynamic and successful partnership at Two Worms Bakery. Their blend of innovation
-          and tradition continues to delight and inspire, making their bakery a beloved destination for all who
-          appreciate exceptional baked goods.
-
-        <ul class="list-disc list-inside text-left mb-8 space-y-4">
-          <li>Innovative Flavor Combinations</li>
-          <li>Artisanal Craftsmanship</li>
-          <li>Aesthetic Presentation</li>
-        </ul>
-        <a href="about_us.html"
-          class="bg-red-500 text-white py-2 px-2 rounded-full mb-8 flex justify-center items-center">
-          <button class="w-full h-full flex justify-center items-center">READ MORE ></button>
-        </a>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md text-left">
-        <img src="img/baker1.jpeg" alt="Baker 1"
-          class="w-full mx-auto h-[300px] object-cover mx-auto bg-center-lg mb-6">
-        <h3 class="text-xl font-bold">THU HUONG DUONG</h3>
-        <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
-        <p class="text-gray-700 mb-4">
-          Huong brings warmth and nostalgia to her artisanal breads and rustic pastries, inspired by traditional
-          techniques from her grandmother’s kitchen.
-        </p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md text-left">
-        <img src="img/baker2.jpg" alt="Baker 2" class="w-full h-[300px] object-cover mx-auto bg-top mb-6">
-        <h3 class="text-xl font-bold">VAN NHI NGUYEN</h3>
-        <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
-        <p class="text-gray-700 mb-4">
-          Nhi is renowned for her meticulous approach and innovative flavors, transforming pastries into edible art.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!--Contact us and map-->
-  <div class="relative h-screen flex">
-    <!-- Map section -->
-    <div class="absolute inset-0 z-0 w-full h-full">
-      <iframe class="w-full h-full"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8932923783746!2d108.21766391168802!3d16.07102618454454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218314984c6bd%3A0xb53a043f246ab8cb!2zMTU4YSBMw6ogTOG7o2ksIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1717721377642!5m2!1sen!2s"
-        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <!-- Form section -->
-    <div
-      class="relative z-10 bg-melon bg-opacity-75 p-6 w-1/2 h-1/2+300px ml-auto my-auto mr-6 rounded-lg shadow-lg items-center">
-      <h2 class="text-2xl font-bold mb-4 text-center">Contact us</h2>
-      <form action="#" method="POST" id="contactForm">
-        <div class="mb-4">
-          <label id="name" class="block text-sm font-medium mb-2" for="name">Name <span
-              class="text-red-500">*</span></label>
-          <input class="w-full p-2 border border-gray-300 rounded" type="text" id="name" name="name" required>
-        </div>
-        <div class="mb-4">
-          <label id="email" class="block text-sm font-medium mb-2" for="email">Email <span
-              class="text-red-500">*</span></label>
-          <input class="w-full p-2 border border-gray-300 rounded" type="email" id="email" name="email" required>
-        </div>
-        <div class="mb-4">
-          <label id="phone" class="block text-sm font-medium mb-2" for="phone">Phone</label>
-          <input class="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" name="phone">
-        </div>
-        <div class="mb-4">
-          <label id="message" class="block text-sm font-medium mb-2" for="message">Your message <span
-              class="text-red-500">*</span></label>
-          <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message" required></textarea>
-        </div>
-        <div class="flex justify-center mt-4">
-          <button onclick="sendThankyouCUEmail(); return false;"
-            class="bg-pink-400 text-white p-2 rounded hover:bg-pink-500 transition duration-300">Send message</button>
-        </div>
-      </form>
-    </div>
-  </div>
-  <!--Contact us and map ./-->
-
-  <footer>
-    <!-- Footer -->
-    <div class="footer bg-black text-seashell py-16">
-      <div class="content footer-content flex flex-wrap md:flex md:justify-around md:items-start py-5">
-        <div class="lg:w-1/3 mx-4 mb-10">
-          <h2 class="subscribe-title text-2xl font-bold underline mb-2">About us</h2>
-          <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting
-            atmosphere and
-            cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious
-            baked goods,
-            including must-try items like their signature cupcakes and buttery cookies. Though slightly
-            pricier, the
-            taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great
-            destination if
-            you are in need of delicious, freshly baked cakes.</p>
-        </div>
-        <img src="img/Logo.png" alt="Logo" class="w-40 h-40 ml-28 lg:ml-0 md:ml-0 lg:w-52 lg:h-52 my-2">
-        <div class="subscribe lg:w-1/3 mx-4  mt-10">
-          <h2 class="subscribe-title text-2xl font-bold underline mb-2">Subscribe email</h2>
-          <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
-          <div class="subscribe-form flex justify-between items-center bg-seashell p-2 rounded">
-            <input type="email" placeholder="Type your email" class="border-none p-2 flex-1 text-gray-800" required>
-            <button class="bg-metalic_bronze border-none text-seashell p-2 ml-2 cursor-pointer">Subscribe</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-links flex flex-wrap lg:flex-nowrap justify-around bg-seashell text-black py-5">
-      <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
-        <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
-        <div class="py-2 flex justify-center items-center">
-          <ul class="flex flex-wrap justify-center space-x-2 lg:space-x-5">
-            <li><img
-                src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
-                alt="Cash" class="w-16 h-16 lg:w-20 lg:h-20"></li>
-            <li><img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png"
-                alt="MoMo" class="w-16 h-16 lg:w-20 lg:h-20"></li>
-            <li><img
-                src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
-                alt="Internet Banking" class="w-16 h-16 lg:w-20 lg:h-20"></li>
+        <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
+          <h3 class="footer-links-title text-lg font-bold mb-2">Orders and Returns</h3>
+          <ul class="list-none p-0">
+            <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
+            <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Shipping</a></li>
+            <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Return Policy</a></li>
+            <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Payments</a></li>
           </ul>
         </div>
-      </div>
-      <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
-        <h3 class="footer-links-title text-lg font-bold mb-2">Working time</h3>
-        <p class="font-bold">Monday - Friday</p>
-        <p class="text-gray-500"> 8:00 am - 8:30 pm</p>
-        <p class="font-bold">Saturday - Sunday</p>
-        <p class="text-gray-500">10:00 am - 4:30 pm</p>
-      </div>
-      <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
-        <h3 class="footer-links-title text-lg font-bold mb-2">Orders and Returns</h3>
-        <ul class="list-none p-0">
-          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
-          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Shipping</a></li>
-          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Return Policy</a></li>
-          <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Payments</a></li>
-        </ul>
-      </div>
-      <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
-        <h3 class="footer-links-title text-lg font-bold mb-2">Connect us</h3>
-        <div class="py-2 flex justify-center items-center">
-          <ul class="flex space-x-4">
-            <li class="cursor-pointer transform hover:scale-110">
-              <a href="https://zalo.me/0905323959/" target="_blank">
-                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo">
-              </a>
-            </li>
-            <li class="cursor-pointer transform hover:scale-110">
-              <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
-                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram">
-              </a>
-            </li>
-            <li class="cursor-pointer transform hover:scale-110">
-              <a href="tel:+84905323959">
-                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="/img/phone_logo.png" alt="Phone">
-              </a>
-            </li>
-          </ul>
+        <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
+          <h3 class="footer-links-title text-lg font-bold mb-2">Connect us</h3>
+          <div class="py-2 flex justify-center items-center">
+            <ul class="flex space-x-4">
+              <li class="cursor-pointer transform hover:scale-110">
+                <a href="https://zalo.me/0905323959/" target="_blank">
+                  <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo" width="40" height="40">
+                </a>
+              </li>
+              <li class="cursor-pointer transform hover:scale-110">
+                <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
+                  <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram" width="40" height="40">
+                </a>
+              </li>
+              <li class="cursor-pointer transform hover:scale-110">
+                <a href="tel:+84905323959">
+                  <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/phone_logo.png" alt="Phone" width="40" height="40">
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-
-
-
-
-    <div class="copyright bg-white w-50 text-center pt-5 pb-5 text-sm">
-      &copy; 2024 Two worms Bakery. All rights reserved.
-    </div>
-  </footer>
-
-  <!-- Search icon hover-->
-  <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden">
-    <div
-      class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-full">
-      <div class="flex justify-between items-center mb-4 sm:mb-6">
-        <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
-        <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
+      <div class="copyright bg-white w-50 text-center pt-5 pb-5 text-sm">
+        &copy; 2024 Two worms Bakery. All rights reserved.
       </div>
-      <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6"
-        placeholder="Search...">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg">
-          <img src="image1.jpg" alt="Image 1" class="w-full h-24 sm:h-32 object-cover mb-2 sm:mb-4">
-          <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
-          <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
-            chocolate.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
-          <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
-            Now</button>
-        </div>
-        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg">
-          <img src="image2.jpg" alt="Image 2" class="w-full h-24 sm:h-32 object-cover mb-2 sm:mb-4">
-          <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
-          <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
-            chocolate.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
-          <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
-            Now</button>
-        </div>
-        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg">
-          <img src="image3.jpg" alt="Image 3" class="w-full h-24 sm:h-32 object-cover mb-2 sm:mb-4">
-          <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
-          <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
-            chocolate.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15.00</p>
-          <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
-            Now</button>
-        </div>
-        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg">
-          <img src="image4.jpg" alt="Image 4" class="w-full h-24 sm:h-32 object-cover mb-2 sm:mb-4">
-          <h3 class="text-sm sm:text-lg font-bold">Amazin' Glazin'</h3>
-          <p class="text-gray-600 text-xs sm:text-sm">Lollipop dessert donut marzipan cookie bonbon sesame snaps
-            chocolate.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">£15s.00</p>
-          <button class="bg-red-500 text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded mt-2 sm:mt-4">Order
-            Now</button>
-        </div>
-      </div>
-      <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All
-        Results</button>
-    </div>
-  </div>
-  <!--Search icon hover ./ -->
+    </footer>
 
-  <!-- View cake detail hover -->
-  <div id="cakeDetailOverlay" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-    <div id="cakeDetail" class="bg-white p-8 rounded-lg w-full max-w-4xl relative">
-      <div class="flex justify-center items-center mb-4">
-        <h2 class="text-red-500 text-2xl font-bold">Delicious Cake</h2>
-        <button id="closeButton" class="absolute right-4 top-4">
-          <img src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/cancel_close_delete_remove_reject-512.png"
-            alt="Close" class="w-10 h-10">
-        </button>
-      </div>
-      <div class="flex">
-        <div class="w-1/2 flex flex-col items-center">
-          <div id="cakeImage" class="w-full h-64 bg-gray-300 flex items-center justify-center">Image of cake</div>
+    <!-- Search icon hover-->
+    <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden p-10">
+      <div class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-4/5">
+        <div class="flex justify-between items-center mb-4 sm:mb-6">
+          <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
+          <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
         </div>
-        <div class="w-1/2 pl-4">
-          <div class="mb-2">
-            <strong>
-              <p class="text-xl text-center text-red-900" id="cake_name">
-            </strong>
+        <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6" placeholder="Search...">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <!-- Item 1 -->
+          <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+            <img src="img/menu1.png" alt="Banana Bread" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+            <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Banana Bread</h3>
+            <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">Banana bread is a moist, sweet loaf made with ripe bananas, often including walnuts or chocolate chips. It's perfect for breakfast, snacks, or dessert.</p>
+            <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">50.000 VND</p>
+          </div>
+          <!-- Item 2 -->
+          <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+            <img src="img/menu5.png" alt="Image 2" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+            <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Chocolate cookies</h3>
+            <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+              Chocolate cookies are a treat made with chocolate-flavored dough and chocolate chips or chunks, known for their chewy or crispy texture and rich chocolate taste.
             </p>
-            <div class="grid grid-cols-5 gap-1 justify-center items-center my-2">
-              <!-- Lặp 5 lần ngôi sao -->
-              <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5">
-              <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5">
-              <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5">
-              <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5">
-              <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5">
-            </div>
-
-
-            <p class="my-2" id="cake_availability">Available</p>
-            <p id="cake_category">Category</p>
-            <p class="my-2 text-xl text-center text-red-900" id="cake_price">Price</p>
+            <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">45.000 VND</p>
           </div>
-          <div class="mb-4 flex justify-center">
-            <div class="flex items-center justify-center ml-4">
-              <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(-1)">-</button>
-              <input id="quantity" class="mx-4 text-center w-12 border rounded" value="01">
-              <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(1)">+</button>
-            </div>
+          <!-- Add more items here -->
+          <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+            <img src="img/menu3.png" alt="Image 3" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+            <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Blueberry Muffin</h3>
+            <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+              A muffin packed with fresh blueberries, offering a burst of juicy flavor in every bite.
+            </p>
+            <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">35.000 VND</p>
           </div>
-          <div>
-            <button class="p-2 bg-red-500 text-white rounded w-full" id="purchase_btn">Purchase</button>
+          <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+            <img src="img/menu4.png" alt="Image 4" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+            <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Carrot Cake</h3>
+            <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+              A moist cake made with grated carrots, topped with creamy frosting and often including nuts.
+            </p>
+            <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">60.000 VND</p>
+          </div>
+          <!-- Continue adding more items as needed -->
+        </div>
+        <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All Results</button>
+      </div>
+    </div>
+    
+    
+    
+    <!-- Search icon hover end -->
+
+    <!-- View cake detail hover -->
+    <div id="cakeDetailOverlay" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+      <div id="cakeDetail" class="bg-white p-8 rounded-lg w-full max-w-4xl relative">
+        <div class="flex justify-center items-center mb-4">
+          <h2 class="text-red-500 text-2xl font-bold">Delicious Cake</h2>
+          <button id="closeButton" class="absolute right-4 top-4">
+            <img src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/cancel_close_delete_remove_reject-512.png" alt="Close" class="w-10 h-10">
+          </button>
+        </div>
+        <div class="flex">
+          <div class="w-1/2 flex flex-col items-center">
+            <div id="cakeImage" class="w-full h-64 bg-gray-300 flex items-center justify-center">Image of cake</div>
+          </div>
+          <div class="w-1/2 pl-4">
+            <div class="mb-2">
+              <strong>
+                <p class="text-xl text-center text-red-900" id="cake_name">Cake Name</p>
+              </strong>
+              <div class="grid grid-cols-5 gap-1 justify-center items-center my-2">
+                <!-- Repeat 5 stars -->
+                <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5" alt="Star">
+                <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5" alt="Star">
+                <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5" alt="Star">
+                <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5" alt="Star">
+                <img src="https://cdn1.iconfinder.com/data/icons/christmas-flat-4/58/020_-_Star-1024.png" class="w-5 h-5" alt="Star">
+              </div>
+              <p class="my-2" id="cake_availability">Available</p>
+              <p id="cake_category">Category</p>
+              <p class="my-2 text-xl text-center text-red-900" id="cake_price">Price</p>
+            </div>
+            <div class="mb-4 flex justify-center">
+              <div class="flex items-center justify-center ml-4">
+                <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(-1)">-</button>
+                <input id="quantity" class="mx-4 text-center w-12 border rounded" value="01">
+                <button class="p-2 bg-gray-200 rounded" onclick="changeQuantity(1)">+</button>
+              </div>
+            </div>
+            <div>
+              <button class="p-2 bg-red-500 text-white rounded w-full" id="purchase_btn">Purchase</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- View cake detail hover ./ -->
+    
+    
+    <!-- View cake detail hover end -->
 
-  <div id="thankyou_subscribe_overlay"
-    class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
-    <div class="bg-white p-6 rounded-lg text-center">
-      <p>Thank you for subscribing!</p>
-      <button onclick="closeSubscribeOverlay()" class="mt-4 bg-yellow-800 text-white py-2 px-4 rounded">Close</button>
+    <div id="thankyou_subscribe_overlay" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+      <div class="bg-white p-6 rounded-lg text-center">
+        <p>Thank you for subscribing!</p>
+        <button onclick="closeSubscribeOverlay()" class="mt-4 bg-yellow-800 text-white py-2 px-4 rounded">Close</button>
+      </div>
     </div>
-  </div>
 
-  <div id="thankyou_contact_us_overlay"
-    class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
-    <div class="bg-white p-6 rounded-lg text-center">
-      <p>Thank you for contacting us!</p>
-      <button onclick="closeContactCUOverlay()" class="mt-4 bg-yellow-800 text-white py-2 px-4 rounded">Close</button>
+    <div id="thankyou_contact_us_overlay" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+      <div class="bg-white p-6 rounded-lg text-center">
+        <p>Thank you for contacting us!</p>
+        <button onclick="closeContactCUOverlay()" class="mt-4 bg-yellow-800 text-white py-2 px-4 rounded">Close</button>
+      </div>
     </div>
-  </div>
 
-  <script type="module" src="/src/scripts/application.js"></script>
-  <script src="/src/scripts/carousel.js"></script>
-  <script src="/src/scripts/icon_search_hover.js"></script>
-  <script src="/src/scripts/cake_information_hover.js"></script>
-  <script src="/src/scripts/cart_popup.js"></script>
-  <script src="/src/scripts/add_to_cart.js"></script>
-</body>
+    <script type="module" src="/src/scripts/application.js"></script>
+    <script src="/src/scripts/carousel.js"></script>
+    <script src="/src/scripts/icon_search_hover.js"></script>
+    <script src="/src/scripts/cake_information_hover.js"></script>
+    <script src="/src/scripts/cart_popup.js"></script>
+    <script src="/src/scripts/add_to_cart.js"></script>
+    <script src="/src/scripts/add_animate_for_limited_banner_in_HP.js"></script>
+  </body>
 
 </html>
