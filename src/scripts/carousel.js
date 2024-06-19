@@ -61,16 +61,12 @@ function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     slideIndex++;
     showSlides();
-  }, 5000);
+  }, 6000);
 }
 
 // Initial setup
 showSlides();
 startAutoSlide();
-
-
-
-
 
 let bestSellerIndex = 0;
 let autoBestSellerSlideInterval;
@@ -85,33 +81,48 @@ function showBestSellerSlides(n) {
 
   for (i = 0; i < slides.length; i++) {
     slides[i].classList.add("hidden");
+    slides[i].classList.remove("slide-down", "slide-up");
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].classList.remove("bg-gray-700");
     dots[i].classList.add("bg-gray-400");
   }
 
-  slides[bestSellerIndex].classList.remove("hidden");
+  if (slides[bestSellerIndex].classList.contains("hidden")) {
+    slides[bestSellerIndex].classList.remove("hidden");
+    slides[bestSellerIndex].classList.add("slide-down");
+  }
+
   dots[bestSellerIndex].classList.remove("bg-gray-400");
   dots[bestSellerIndex].classList.add("bg-gray-700");
 }
 
 function plusBestSellerSlides(n) {
+  let slides = document.getElementsByClassName("best-seller-slide");
+  slides[bestSellerIndex].classList.add("slide-up");
+
   clearInterval(autoBestSellerSlideInterval);
-  showBestSellerSlides(bestSellerIndex += n);
-  startAutoBestSellerSlide();
+  setTimeout(() => {
+    showBestSellerSlides(bestSellerIndex += n);
+    startAutoBestSellerSlide();
+  }, 2000);  // Wait for slide-up animation to complete
 }
 
 function currentBestSellerSlide(n) {
+  let slides = document.getElementsByClassName("best-seller-slide");
+  slides[bestSellerIndex].classList.add("slide-up");
+
   clearInterval(autoBestSellerSlideInterval);
-  showBestSellerSlides(bestSellerIndex = n);
-  startAutoBestSellerSlide();
+  setTimeout(() => {
+    showBestSellerSlides(bestSellerIndex = n);
+    startAutoBestSellerSlide();
+  }, 2000);  // Wait for slide-up animation to complete
 }
 
 function startAutoBestSellerSlide() {
   autoBestSellerSlideInterval = setInterval(() => {
-    showBestSellerSlides(bestSellerIndex += 1);
-  }, 3000);
+    plusBestSellerSlides(1);
+  }, 15500);  // Increase interval duration
 }
 
 // Initial setup

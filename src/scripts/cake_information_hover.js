@@ -1,25 +1,52 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+
     // Function to format quantity to two digits
     function formatQuantity(quantity) {
         return quantity.toString().padStart(2, '0');
     }
 
     // Function to show cake detail overlay
-    function showCakeDetail(event) {
+    window.showCakeDetail = function(event) {
+        console.log('View detail clicked');
         const cakeInfo = event.currentTarget.closest('.relative');
-        const cakeName = cakeInfo.querySelector('.text-2xl').innerText;
-        const cakePrice = cakeInfo.querySelector('p + p b').innerText;
-        const cakeImage = cakeInfo.querySelector('img').src;
+        
+        if (!cakeInfo) {
+            console.error('Could not find cakeInfo element');
+            return;
+        }
 
-        document.getElementById('cake_name').innerText = cakeName;
-        document.getElementById('cake_price').innerText = cakePrice;
-        document.getElementById('cakeImage').innerHTML = `<img src="${cakeImage}" alt="${cakeName}" class="w-full h-64 bg-gray-300 flex items-center justify-center">`;
+        const cakeNameElement = cakeInfo.querySelector('.text-center .text-red-900');
+        const cakePriceElement = cakeInfo.querySelector('.text-center p b');
+        const cakeImageElement = cakeInfo.querySelector('img');
+
+        if (!cakeNameElement || !cakePriceElement || !cakeImageElement) {
+            console.error('Could not find one of the elements:', {cakeNameElement, cakePriceElement, cakeImageElement});
+            return;
+        }
+
+        const cakeName = cakeNameElement.innerText;
+        const cakePrice = cakePriceElement.innerText;
+        const cakeImage = cakeImageElement.src;
+
+        const cakeNameTarget = document.getElementById('cake_name');
+        const cakePriceTarget = document.getElementById('cake_price');
+        const cakeImageTarget = document.getElementById('cakeImage');
+
+        if (!cakeNameTarget || !cakePriceTarget || !cakeImageTarget) {
+            console.error('Could not find one of the target elements:', {cakeNameTarget, cakePriceTarget, cakeImageTarget});
+            return;
+        }
+
+        cakeNameTarget.innerText = cakeName;
+        cakePriceTarget.innerText = cakePrice;
+        cakeImageTarget.innerHTML = `<img src="${cakeImage}" alt="${cakeName}" class="w-full h-64 bg-gray-300 flex items-center justify-center">`;
 
         document.getElementById('cakeDetailOverlay').classList.remove('hidden');
     }
-    
+
     // Function to close cake detail overlay
-    function closeCakeDetail() {
+    window.closeCakeDetail = function() {
         document.getElementById('cakeDetailOverlay').classList.add('hidden');
     }
 
