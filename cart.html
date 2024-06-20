@@ -10,69 +10,59 @@
 </head>
 
 <!-- Header -->
-<header class="header">
+<header class="header bg-seashell">
+    <!-- Header top -->
     <div class="content header_top py-2">
-        <div class="flex-wrap text-sm lg:flex lg:gap-4 lg:items-center lg:justify-between">
-
-            <div class="address-hotline text-right flex text-start sm:flex-col lg:flex-row gap-3">
-                <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city </p>
-                
-                 <p><b>Hotline</b>: 84-905-323-959 | 84-838-446-667</p>
-              </div>
-            <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5">
-                <div class="dropdown-box">
-                    <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
-                        <option value="USD">USD</option>
-                        <option value="SGD">SGD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="JPY">JPY</option>
-                    </select>
-                </div>
-                
-                <div class="dropdown-box">
-                    <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
-                        <option value="en">English</option>
-                        <option value="ja">Japanese</option>
-                        <option value="zh">Chinese</option>
-                    </select>
-                </div>
-                <a id="search-icon" class="search-icon cursor-pointer">
-                    <img class="w-8 h-8"
-                        src="https://cdn1.iconfinder.com/data/icons/seo-and-web-development-6/32/development_search_magnifier_magnifying_glass_loupe-67-512.png"
-                        alt="Search Icon">
-                </a>
-          </div>
+      <div class="flex-wrap text-sm lg:flex lg:gap-4 lg:items-center lg:justify-between">
+        <div class="address-hotline flex text-start flex-col lg:flex-row gap-3">
+          <p><b>Address:</b> 158A Le Loi, Hai Chau 1 ward, Hai Chau district, Da Nang city </p>
+          
+           <p><b>Hotline</b>: 84-905-323-959 | 84-838-446-667</p>
         </div>
+        
       </div>
+    </div>
+    <!-- Header top end -->
 
-    <div class="relative bg-seashell h-64">
-
-        <nav class="bg-seashell bg-opacity-90 border border-dashed border-5 border-black relative py-2 z-10">
-            <div class="content mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
-              <div class="flex items-center">
-                <a href="index.html">
-                  <img src="img/Logo.png" alt="Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full" width="80" height="80" loading="lazy">
+    <!-- Banner -->
+    <div class="Banner relative">
+      <!-- Navigate bar -->
+      <nav class="bg-seashell bg-opacity-90 border border-dashed border-5 border-black relative py-2 z-10">
+        <div class="content mx-auto flex items-center justify-between px-0 md:px-4 sm:px-2 lg:px-8">
+          <div class="flex items-center">
+            <a href="index.html">
+              <img src="/img/logo.svg" alt="Logo"
+                class="sm:w-[40px] sm:h-[40px] md:w-[56px] md:h-[56px] lg:w-[80px] lg:h-[80px] w-[40px] rounded-full mx-4" 
+                loading="lazy">
+            </a>
+          </div>
+          <div class="flex items-center space-x-9 sm:space-x-10 md:space-x-10 lg:space-x-20 xl:space-x-80">
+            <a href="index.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline mx-4">Home</a>
+            <a href="menu.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline mx-4">Menu</a>
+            <a href="checkout.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline mx-4">Checkout</a>
+          </div>
+          <div class="flex ">
+            <div class="relative flex flex-row items-center lg:gap-8 gap-2" id="cartContainer">
+              <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
+                <img src="img/cart_icon.svg" alt="Cart"
+                  class="h-6 w-6 mx-4" loading="lazy">
+              </a>
+              <div class="flex justify-end lg:items-center gap-2 lg:gap-5">
+                <a id="search-icon" class="search-icon cursor-pointer">
+                  <img class="h-6 mx-4"
+                    src="img/search_icon.svg" alt="Search Icon">
                 </a>
               </div>
-              <div class="flex items-center space-x-9 sm:space-x-10 md:space-x-10 lg:space-x-20 xl:space-x-80">
-                <a href="index.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Home</a>
-                <a href="menu.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Menu</a>
-                <a href="checkout.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Checkout</a>
-              </div>
-              <div class="flex items-center">
-                <div class="relative" id="cartContainer">
-                  <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
-                    <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart" class="h-6 w-6" width="24" height="24" loading="lazy">
-                  </a>
-                  <div class="absolute top-8 right-0 w-64 sm:w-72 bg-pink-100 border border-gray-300 shadow-lg hidden" id="cartPopup">
-                    <div id="popup-content">
-                      <!-- Cart popup content will be loaded here -->
-                    </div>
-                  </div>
+              <div class="absolute top-8 right-0 w-64 sm:w-72 bg-pink-100 border border-gray-300 shadow-lg hidden"
+                id="cartPopup">
+                <div id="popup-content">
+                  <!-- Cart popup content will be loaded here -->
                 </div>
               </div>
             </div>
-          </nav>
+          </div>
+        </div>
+      </nav>
 
         <div class="relative banner h-32 md:h-64 flex items-end justify-center text-white">
             <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -134,107 +124,88 @@
     
     
     
-    
-    
-    
-    
-    
 
-    <!-- Footer -->
     <footer>
         <!-- Footer -->
         <div class="footer bg-black text-seashell py-16">
-            <div class="content footer-content flex flex-wrap md:flex md:justify-around md:items-start py-5">
-                <div class="lg:w-1/3 mx-4 mb-10">
-                    <h2 class="subscribe-title text-2xl font-bold underline mb-2">About us</h2>
-                    <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting
-                        atmosphere and
-                        cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious
-                        baked goods,
-                        including must-try items like their signature cupcakes and buttery cookies. Though slightly
-                        pricier, the
-                        taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great
-                        destination if
-                        you are in need of delicious, freshly baked cakes.</p>
-                </div>
-                <img src="img/Logo.png" alt="Logo" class="w-40 h-40 ml-28 lg:ml-0 md:ml-0 lg:w-52 lg:h-52 my-2">
-                <div class="subscribe lg:w-1/3 mx-4  mt-10">
-                    <h2 class="subscribe-title text-2xl font-bold underline mb-2">Subscribe email</h2>
-                    <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
-                    <div class="subscribe-form flex justify-between items-center bg-seashell p-2 rounded">
-                        <input type="email" placeholder="Type your email" class="border-none p-2 flex-1 text-gray-800"
-                            required>
-                        <button
-                            class="bg-metalic_bronze border-none text-seashell p-2 ml-2 cursor-pointer">Subscribe</button>
-                    </div>
-                </div>
+          <div class="content footer-content flex flex-wrap md:flex md:justify-around md:items-start py-5">
+            <div class="lg:w-1/3 mx-4 mb-10">
+              <h2 class="subscribe-title text-2xl font-bold underline mb-2">About us</h2>
+              <p class="text-justify">Two worms Bakery offers a delightful experience with its warm, inviting atmosphere
+                and
+                cute decor. The bakery excels in food quality, offering a variety of high-quality, delicious baked goods,
+                including must-try items like their signature cupcakes and buttery cookies. Though slightly pricier, the
+                taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great destination if
+                you are in need of delicious, freshly baked cakes.</p>
             </div>
+            <img src="/img/logo.svg" alt="Logo" class="items-center h-40 ml-28 lg:ml-0 md:ml-0 lg:w-52 lg:h-52 my-2">
+            <div class="subscribe lg:w-1/3 mx-4 mt-10">
+              <h2 class="subscribe-title text-2xl font-bold underline mb-2">Subscribe email</h2>
+              <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
+              <div class="subscribe-form flex justify-between items-center bg-seashell p-2 rounded">
+                <input type="email" placeholder="Type your email" class="border-none p-2 flex-1 text-gray-800" required>
+                <button class="bg-metalic_bronze border-none text-seashell p-2 ml-2 cursor-pointer">Subscribe</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="footer-links flex flex-wrap lg:flex-nowrap justify-around bg-seashell text-black py-5">
-            <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
-                <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
-                <div class="py-2 flex justify-center items-center">
-                    <ul class="flex flex-wrap justify-center space-x-2 lg:space-x-5">
-                        <li><img src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
-                                alt="Cash" class="w-16 h-16 lg:w-20 lg:h-20"></li>
-                        <li><img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png"
-                                alt="MoMo" class="w-16 h-16 lg:w-20 lg:h-20"></li>
-                        <li><img src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
-                                alt="Internet Banking" class="w-16 h-16 lg:w-20 lg:h-20"></li>
-                    </ul>
-                </div>
+          <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
+            <h3 class="footer-links-title text-lg font-bold mb-2">Payment methods</h3>
+            <div class="py-2 flex justify-center items-center">
+              <ul class="flex flex-wrap justify-center space-x-2 lg:space-x-5">
+                <li><img
+                    src="img/cash_icon.svg" alt="Cash" class="h-20 lg:w-30"></li>
+                <li><img src="img/momo_icon.svg" alt="MoMo" class="h-20 lg:w-30"></li>
+                <li><img
+                    src="img/onlinebanking_icon.svg" alt="Internet Banking" class="h-20 lg:w-30"></li>
+              </ul>
             </div>
-            <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
-                <h3 class="footer-links-title text-lg font-bold mb-2">Working time</h3>
-                <p class="font-bold">Monday - Friday</p>
-                <p class="text-gray-500"> 8:00 am - 8:30 pm</p>
-                <p class="font-bold">Saturday - Sunday</p>
-                <p class="text-gray-500">10:00 am - 4:30 pm</p>
+          </div>
+          <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
+            <h3 class="footer-links-title text-lg font-bold mb-2">Working time</h3>
+            <p class="font-bold">Monday - Friday</p>
+            <p class="text-gray-500"> 8:00 am - 8:30 pm</p>
+            <p class="font-bold">Saturday - Sunday</p>
+            <p class="text-gray-500">10:00 am - 4:30 pm</p>
+          </div>
+          <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
+            <h3 class="footer-links-title text-lg font-bold mb-2">Orders and Returns</h3>
+            <ul class="list-none p-0">
+              <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
+              <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Shipping</a></li>
+              <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Return Policy</a></li>
+              <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Payments</a></li>
+            </ul>
+          </div>
+          <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
+            <h3 class="footer-links-title text-lg font-bold mb-2">Connect us</h3>
+            <div class="py-2 flex justify-center items-center">
+              <ul class="flex space-x-4">
+                <li class="cursor-pointer transform hover:scale-110">
+                  <a href="https://zalo.me/0905323959/" target="_blank">
+                    <img class="h-20 lg:w-30 grayscale hover:grayscale-0" src="/img/zalo_logo.svg" alt="Zalo" >
+                  </a>
+                </li>
+                <li class="cursor-pointer transform hover:scale-110">
+                  <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
+                    <img class="h-20 lg:w-30 grayscale hover:grayscale-0" src="/img/ins_logo.svg" alt="Instagram">
+                  </a>
+                </li>
+                <li class="cursor-pointer transform hover:scale-110">
+                  <a href="tel:+84905323959">
+                    <img class="h-20 lg:w-30 grayscale hover:grayscale-0" src="/img/phone_logo.svg" alt="Phone">
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="footer-column w-full sm:w-1/2 md:w-1/2 lg:w-1/5 text-center md:text-left mb-4 lg:mb-0">
-                <h3 class="footer-links-title text-lg font-bold mb-2">Orders and Returns</h3>
-                <ul class="list-none p-0">
-                    <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Order</a></li>
-                    <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Shipping</a></li>
-                    <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Return Policy</a></li>
-                    <li class="mb-1"><a href="#" class="text-black no-underline hover:underline">Payments</a></li>
-                </ul>
-            </div>
-            <div class="footer-column w-full sm:w-1/2 lg:w-1/5 text-center mb-4 lg:mb-0">
-                <h3 class="footer-links-title text-lg font-bold mb-2">Connect us</h3>
-                <div class="py-2 flex justify-center items-center">
-                    <ul class="flex space-x-4">
-                        <li class="cursor-pointer transform hover:scale-110">
-                            <a href="https://zalo.me/0905323959/" target="_blank">
-                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/zalo_logo.png"
-                                    alt="Zalo">
-                            </a>
-                        </li>
-                        <li class="cursor-pointer transform hover:scale-110">
-                            <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
-                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/ins_logo.png"
-                                    alt="Instagram">
-                            </a>
-                        </li>
-                        <li class="cursor-pointer transform hover:scale-110">
-                            <a href="tel:+84905323959">
-                                <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="/img/phone_logo.png"
-                                    alt="Phone">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+          </div>
         </div>
-
-
-
-
-
+  
         <div class="copyright bg-white w-50 text-center pt-5 pb-5 text-sm">
-            &copy; 2024 Two worms Bakery. All rights reserved.
+          &copy; 2024 Two worms Bakery. All rights reserved.
         </div>
-    </footer>
+      </footer>
 
     <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden p-10">
         <div class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-4/5">
