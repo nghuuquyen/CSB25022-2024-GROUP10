@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR07Z9ECY2"></script>
     <title>Document</title>
 </head>
 
 <!-- Header -->
-<header class="header bg-seashell">
+<header class="header bg-seashell">z
     <!-- Header top -->
     <div class="content header_top py-2">
         <div class="flex-wrap text-sm lg:flex lg:gap-4 lg:items-center lg:justify-between">
@@ -112,37 +112,41 @@
                     </thead>
                     <tbody id="cart-items">
                         <!-- Dynamic Rows -->
-                        
+
                     </tbody>
                 </table>
             </div>
             <div class="flex justify-between items-center my-4 md:my-6">
                 <div style="position: relative; display: inline-block;">
-                    <input type="text" placeholder="Promotion code" style="padding-right: 30px; padding: 8px; border: 1px solid #ccc; border-radius: 15px; width: 180px; font-size: 14px;">
-                    <button style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background-color: transparent; border: none; font-size: 16px; cursor: pointer; color: #333;">&gt;</button>
-                </div>              
+                    <input type="text" placeholder="Promotion code"
+                        style="padding-right: 30px; padding: 8px; border: 1px solid #ccc; border-radius: 15px; width: 180px; font-size: 14px;">
+                    <button
+                        style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background-color: transparent; border: none; font-size: 16px; cursor: pointer; color: #333;">&gt;</button>
+                </div>
                 <div class="font-semibold">
                     Total Price: <span id="total-price">0 VND</span>
                 </div>
             </div>
             <div class="flex justify-between items-center mt-4 md:mt-6">
                 <div>
-                    <button class="p-1 md:p-2 shadow-lg bg-seashell hover:bg-gray-300 text-black rounded-md" onclick="continueShopping()">Continue Shopping</button>
+                    <button class="p-1 md:p-2 shadow-lg bg-seashell hover:bg-gray-300 text-black rounded-md"
+                        onclick="continueShopping()">Continue Shopping</button>
                 </div>
                 <div>
-                    <button class="p-1 md:p-2 bg-metalic_bronze text-white rounded-md" onclick="location.href='checkout.html'">Process to Checkout</button>
+                    <button class="p-1 md:p-2 bg-metalic_bronze text-white rounded-md"
+                        onclick="location.href='checkout.html'">Process to Checkout</button>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer>
@@ -240,58 +244,75 @@
         </div>
     </footer>
 
-    <div id="search-overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden p-10">
-        <div class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-4/5">
-          <div class="flex justify-between items-center mb-4 sm:mb-6">
-            <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
-            <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
-          </div>
-          <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6" placeholder="Search...">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            <!-- Item 1 -->
-            <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-              <img src="img/menu1.png" alt="Banana Bread" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
-              <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Banana Bread</h3>
-              <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">Banana bread is a moist, sweet loaf made with ripe bananas, often including walnuts or chocolate chips. It's perfect for breakfast, snacks, or dessert.</p>
-              <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">50.000 VND</p>
+    <div id="search-overlay"
+        class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden p-10">
+        <div
+            class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl overflow-y-auto max-h-4/5">
+            <div class="flex justify-between items-center mb-4 sm:mb-6">
+                <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
+                <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
             </div>
-            <!-- Item 2 -->
-            <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-              <img src="img/menu5.png" alt="Image 2" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
-              <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Chocolate cookies</h3>
-              <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
-                Chocolate cookies are a treat made with chocolate-flavored dough and chocolate chips or chunks, known for their chewy or crispy texture and rich chocolate taste.
-              </p>
-              <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">45.000 VND</p>
+            <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6"
+                placeholder="Search...">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <!-- Item 1 -->
+                <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/menu1.png" alt="Banana Bread"
+                        class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+                    <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Banana Bread</h3>
+                    <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">Banana bread is a moist, sweet
+                        loaf made with ripe bananas, often including walnuts or chocolate chips. It's perfect for
+                        breakfast, snacks, or dessert.</p>
+                    <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">50.000 VND</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/menu5.png" alt="Image 2"
+                        class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+                    <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Chocolate cookies</h3>
+                    <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+                        Chocolate cookies are a treat made with chocolate-flavored dough and chocolate chips or chunks,
+                        known for their chewy or crispy texture and rich chocolate taste.
+                    </p>
+                    <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">45.000 VND</p>
+                </div>
+                <!-- Add more items here -->
+                <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/menu3.png" alt="Image 3"
+                        class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+                    <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Blueberry Muffin</h3>
+                    <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+                        A muffin packed with fresh blueberries, offering a burst of juicy flavor in every bite.
+                    </p>
+                    <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">35.000 VND</p>
+                </div>
+                <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+                    <img src="img/menu4.png" alt="Image 4"
+                        class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
+                    <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Carrot Cake</h3>
+                    <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
+                        A moist cake made with grated carrots, topped with creamy frosting and often including nuts.
+                    </p>
+                    <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">60.000 VND</p>
+                </div>
+                <!-- Continue adding more items as needed -->
             </div>
-            <!-- Add more items here -->
-            <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-              <img src="img/menu3.png" alt="Image 3" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
-              <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Blueberry Muffin</h3>
-              <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
-                A muffin packed with fresh blueberries, offering a burst of juicy flavor in every bite.
-              </p>
-              <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">35.000 VND</p>
-            </div>
-            <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-              <img src="img/menu4.png" alt="Image 4" class="w-full h-full sm:h-32 object-cover mb-2 sm:mb-4 rounded-lg" loading="lazy">
-              <h3 class="product_name text-sm sm:text-lg font-bold mt-2 mb-1">Carrot Cake</h3>
-              <p class="product_description text-gray-600 text-xs sm:text-sm mb-2">
-                A moist cake made with grated carrots, topped with creamy frosting and often including nuts.
-              </p>
-              <p class="product_price text-red-500 font-bold mt-1 sm:mt-2">60.000 VND</p>
-            </div>
-            <!-- Continue adding more items as needed -->
-          </div>
-          <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All Results</button>
+            <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All
+                Results</button>
         </div>
-      </div>
+    </div>
 
     <script type="module" src="/src/scripts/application.js"></script>
     <script src="/src/scripts/add_to_cart.js"></script>
     <script src="/src/scripts/cart_popup.js"></script>
     <script src="/src/scripts/icon_search_hover.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-JR07Z9ECY2');
+    </script>
 
 </body>
 
