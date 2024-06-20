@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
 
         const cakeNameElement = cakeInfo.querySelector('.text-center .text-red-900');
-        const cakePriceElement = cakeInfo.querySelector('.text-center p b');
+        const cakePriceElement = cakeInfo.querySelector('.text-center .cake_price');
         const cakeImageElement = cakeInfo.querySelector('img');
 
         if (!cakeNameElement || !cakePriceElement || !cakeImageElement) {
