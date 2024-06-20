@@ -20,28 +20,7 @@
           
            <p><b>Hotline</b>: 84-905-323-959 | 84-838-446-667</p>
         </div>
-        <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5">
-          <div class="dropdown-box">
-            <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
-              <option value="USD">USD</option>
-              <option value="SGD">SGD</option>
-              <option value="EUR">EUR</option>
-              <option value="JPY">JPY</option>
-            </select>
-          </div>
-          <div class="dropdown-box">
-            <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
-              <option value="en">English</option>
-              <option value="ja">Japanese</option>
-              <option value="zh">Chinese</option>
-            </select>
-          </div>
-          <a id="search-icon" class="search-icon cursor-pointer">
-            <img class="w-8 h-8"
-              src="https://cdn1.iconfinder.com/data/icons/seo-and-web-development-6/32/development_search_magnifier_magnifying_glass_loupe-67-512.png"
-              alt="Search Icon">
-          </a>
-        </div>
+        
       </div>
     </div>
     <!-- Header top end -->
@@ -54,7 +33,7 @@
           <div class="flex items-center">
             <a href="index.html">
               <img src="img/Logo.png" alt="Logo"
-                class="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full" width="80" height="80"
+                class="sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full" width="80" height="80"
                 loading="lazy">
             </a>
           </div>
@@ -63,12 +42,19 @@
             <a href="menu.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Menu</a>
             <a href="checkout.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Checkout</a>
           </div>
-          <div class="flex items-center">
-            <div class="relative" id="cartContainer">
+          <div class="flex items-center justify-center">
+            <div class="relative flex flex-row items-center lg:gap-8 gap-2" id="cartContainer">
               <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
                 <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart"
-                  class="h-6 w-6" width="24" height="24" loading="lazy">
+                  class="h-6 w-6" loading="lazy">
               </a>
+              <div class="flex justify-end lg:items-center gap-2 lg:gap-5">
+                <a id="search-icon" class="search-icon cursor-pointer">
+                  <img class="w-6 h-6"
+                    src="https://cdn1.iconfinder.com/data/icons/seo-and-web-development-6/32/development_search_magnifier_magnifying_glass_loupe-67-512.png"
+                    alt="Search Icon">
+                </a>
+              </div>
               <div class="absolute top-8 right-0 w-64 sm:w-72 bg-pink-100 border border-gray-300 shadow-lg hidden"
                 id="cartPopup">
                 <div id="popup-content">
@@ -88,20 +74,20 @@
         <!-- Slides container -->
         <div id="slides" class="slides-container flex transition-transform duration-[1000ms] ease-in-out w-full">
           <!-- Slide 1 -->
-          <div class="slide w-full h-full flex-shrink-0">
-            <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1" loading="lazy">
+          <div class="slide w-full flex-shrink-0">
+            <img src="img/Banner-1.png" alt="Banner 1" loading="lazy">
           </div>
           <!-- Slide 2 -->
           <div class="slide w-full h-full flex-shrink-0">
-            <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2" loading="lazy">
+            <img src="img/Banner-2.png" alt="Banner 2" loading="lazy">
           </div>
           <!-- Slide 3 -->
           <div class="slide w-full h-full flex-shrink-0">
-            <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3" loading="lazy">
+            <img src="img/Banner-3.png" alt="Banner 3" loading="lazy">
           </div>
           <!-- Duplicate Slide 1 for smooth transition -->
           <div class="slide w-full h-full flex-shrink-0">
-            <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1" loading="lazy">
+            <img src="img/Banner-1.png" class="h-full object-cover" alt="Banner 1" loading="lazy">
           </div>
         </div>
         <!-- Next and previous buttons for Slideshow -->
@@ -141,12 +127,12 @@
               <img src="img/best_seller_cake_hp_1.jpg"
                 class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Strawberry Cupcake"
                 loading="lazy">
-              <div class="text-center mt-2">
-                <p class="text-lg md:text-2xl text-red-900"><b>Strawberry Cupcake</b></p>
+              <div class="text-center mt-2 h-[80px]">
+                <p class="text-lg md:text-2xl text-red-900 py-1"><b>Strawberry Cupcake</b></p>
                 <p><b>25.000 VND</b> per cake</p>
               </div>
               <div class="flex justify-center mt-2 space-x-4">
-                <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <button onclick="deleteSlide()" class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
                   <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                     alt="View detail">
                 </button>
@@ -162,12 +148,12 @@
               <img src="img/best_seller_cake_hp_2.jpg"
                 class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Banana Bread"
                 loading="lazy">
-              <div class="text-center mt-2">
-                <p class="text-lg md:text-2xl text-red-900"><b>Banana Bread</b></p>
+              <div class="text-center mt-2 h-[80px]">
+                <p class="text-lg md:text-2xl text-red-900 py-1"><b>Banana Bread</b></p>
                 <p><b>45.000 VND</b> per loaf</p>
               </div>
               <div class="flex justify-center mt-2 space-x-4">
-                <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <button onclick="deleteSlide()" class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
                   <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                     alt="View detail">
                 </button>
@@ -182,13 +168,13 @@
               <img src="img/best_seller_cake_hp_3.jpg"
                 class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Chocolate Muffin"
                 loading="lazy">
-              <div class="text-center mt-2">
-                <p class="text-lg md:text-2xl text-red-900"><b>Chocolate Muffin</b></p>
+              <div class="text-center mt-2 h-[80px]">
+                <p class="text-lg md:text-2xl text-red-900 py-1"><b>Chocolate Muffin</b></p>
                 <p class="text-gray-500 line-through">19.000 VND per cake</p>
                 <p><b>9.500 VND</b> per cake</p>
               </div>
               <div class="flex justify-center mt-2 space-x-4">
-                <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <button onclick="deleteSlide()" class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
                   <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                     alt="View detail">
                 </button>
@@ -205,12 +191,12 @@
               <img src="img/best_seller_cake_hp_4.jpg"
                 class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Tiramisu"
                 loading="lazy">
-              <div class="text-center mt-2">
-                <p class="text-lg md:text-2xl text-red-900"><b>Tiramisu</b></p>
+              <div class="text-center mt-2 h-[80px]">
+                <p class="text-lg md:text-2xl text-red-900 py-1"><b>Tiramisu</b></p>
                 <p><b>85.000 VND</b> per 250gr box</p>
               </div>
               <div class="flex justify-center mt-2 space-x-4">
-                <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <button onclick="deleteSlide()" class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
                   <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                     alt="View detail">
                 </button>
@@ -226,13 +212,13 @@
               <img src="img/best_seller_cake_hp_5.jpg"
                 class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Macaron Cookies"
                 loading="lazy">
-              <div class="text-center mt-2">
-                <p class="text-lg md:text-2xl text-red-900"><b>Macaron Cookies</b></p>
+              <div class="text-center mt-2 h-[80px]">
+                <p class="text-lg md:text-2xl py-1 text-red-900"><b>Macaron Cookies</b></p>
                 <p class="text-gray-500 line-through">100.000 VND box of 10</p>
                 <p><b>90.000 VND</b> per box of 10</p>
               </div>
               <div class="flex justify-center mt-2 space-x-4">
-                <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <button onclick="deleteSlide()" class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
                   <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                     alt="View detail">
                 </button>
@@ -247,13 +233,13 @@
               <img src="img/best_seller_cake_hp_6.jpg"
                 class="w-full h-48 bg-gray-300 flex items-center justify-center object-cover" alt="Berry Cheesecake"
                 loading="lazy">
-              <div class="text-center mt-2">
-                <p class="text-lg md:text-2xl text-red-900"><b>Berry Cheesecake</b></p>
+              <div class="text-center mt-2 h-[80px]">
+                <p class="py-1 text-lg md:text-2xl text-red-900"><b>Berry Cheesecake</b></p>
                 <p class="text-gray-500 line-through">125.000 VND per cake</p>
                 <p><b>100.000 VND</b> per cake</p>
               </div>
               <div class="flex justify-center mt-2 space-x-4">
-                <button class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
+                <button onclick="deleteSlide()" class="view-detail p-2 w-8 h-8 md:w-10 md:h-10">
                   <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-07-512.png"
                     alt="View detail">
                 </button>
@@ -315,14 +301,14 @@
           <h2 class="text-3xl font-bold w-1/2 hidden md:block">HOT CAKE</h2>
           <h2 class="text-3xl font-bold w-1/2 hidden md:block">NEW CAKE</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mr-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mr-10 px-[40px]">
           <!-- Left Column: Hot Cakes -->
           <div class="space-y-20 flex flex-col">
             <!-- Hot Cake Column Title for small screens -->
             <h2 class="text-3xl font-bold text-center block md:hidden">HOT CAKE</h2>
             <!-- Cake Item -->
             <div class="flex items-center space-x-4 flex-grow">
-              <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover rounded" loading="lazy" width="144" height="144">
+              <img src="img/hot_cake_1.png" alt="Chocolate cupcake" class="w-36 h-36 object-cover rounded" loading="lazy">
               <div class="flex-grow flex flex-col gap-1">
 
                 <h3 class="text-xl font-bold text-red-500">Chocolate cupcake</h3>
@@ -331,19 +317,19 @@
                 <p class="text-gray-500 line-through">25.000 VND</p>
                 <p class="text-gray-800 text-xl font-bold">20.000 VND</p>
 
-                <button class="w-[25%] font-bold order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
+                <button class="w-[35%] font-bold order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
               </div>
             </div>
             <!-- Repeat for more cakes... -->
             <div class="flex items-center space-x-4 flex-grow">
-              <img src="img/hot_cake_2.png" alt="Blueberry cupcake" class="w-36 h-36 object-cover rounded" loading="lazy" width="144" height="144">
+              <img src="img/hot_cake_2.png" alt="Blueberry cupcake" class="w-36 h-36 object-cover rounded" loading="lazy">
               <div class="flex-grow flex flex-col gap-1">
 <h3 class="text-xl font-bold text-red-500">Blueberry cupcake</h3>
                 <p class="text-gray-700 mb-2 h-[50px]">A blueberry cupcake is a moist, single-serving cake studded with juicy
                   blueberries and often topped with a sweet, creamy frosting.</p>
                 <p class="text-gray-500 line-through">20.000 VND</p>
                 <p class="text-gray-800 text-xl font-bold">15.000 VND</p>
-                <button class=" w-[25%] font-bold order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
+                <button class=" w-[35%] font-bold order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
 
               </div>
             </div>
@@ -355,18 +341,18 @@
             <h2 class="text-3xl font-bold text-center block md:hidden">NEW CAKE</h2>
             <!-- Cake Item -->
             <div class="flex items-center space-x-4 flex-grow">
-              <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded" loading="lazy" width="144" height="144">
+              <img src="img/new_cake_1.png" alt="Tiramisu" class="w-36 h-36 object-cover rounded" loading="lazy">
               <div class="flex-grow flex flex-col gap-1">
                 <h3 class="text-xl font-bold text-red-500">Tiramisu</h3>
                 <p class="text-gray-700 mb-2 h-[50px]">Tiramisu, with its rich, creamy layers and perfect coffee and cocoa balance, is a favorite among dessert lovers.</p>
                 <p class="text-gray-500 line-through">85.000 VND</p>
                 <p class="text-gray-800 text-xl font-bold">70.000 VND</p>
-                <button class="w-[25%] font-bold order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
+                <button class="w-[35%] font-bold order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
               </div>
             </div>
             <!-- Repeat for more cakes... -->
             <div class="flex items-center space-x-4 flex-grow">
-              <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded" loading="lazy" width="144" height="144">
+              <img src="img/new_cake_2.png" alt="Macaron" class="w-36 h-36 object-cover rounded" loading="lazy">
               <div class="flex-grow flex flex-col gap-1">
 
                 <h3 class="text-xl font-bold text-red-500">Macaron</h3>
@@ -375,7 +361,7 @@
                   flavorful filling such ...</p>
                 <p class="text-gray-500 line-through">100.000 VND</p>
                 <p class="text-gray-800 text-xl font-bold">90.000 VND</p>
-                <button class="w-[25%] font-bold order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
+                <button class="w-[35%] font-bold order_btn bg-red-500 text-white py-1 px-2 text-sm rounded mt-5 mt-auto">ORDER NOW ></button>
 
               </div>
             </div>
@@ -411,8 +397,7 @@
         </div>
         <div class="bg-white p-6 rounded-lg shadow-md text-left">
           <img src="img/baker1.jpeg" alt="Baker 1"
-            class="w-full mx-auto h-[300px] object-cover mx-auto bg-center-lg mb-6" loading="lazy" width="400"
-            height="300">
+            class="w-full mx-auto h-[300px] object-cover mx-auto bg-center-lg mb-6" loading="lazy" >
           <h3 class="text-xl font-bold">THU HUONG DUONG</h3>
           <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
           <p class="text-gray-700 mb-4">
@@ -422,7 +407,7 @@
         </div>
         <div class="bg-white p-6 rounded-lg shadow-md text-left">
           <img src="img/baker2.jpg" alt="Baker 2" class="w-full h-[300px] object-cover mx-auto bg-top mb-6"
-            loading="lazy" width="400" height="300">
+            loading="lazy">
           <h3 class="text-xl font-bold">VAN NHI NGUYEN</h3>
           <p class="text-red-500 font-semibold mb-4">CEO - Founder</p>
           <p class="text-gray-700 mb-4">
@@ -491,8 +476,7 @@
               taste and portion sizes justify the cost. It can be said that, Two worms bakery is a great destination if
               you are in need of delicious, freshly baked cakes.</p>
           </div>
-          <img src="img/Logo.png" alt="Logo" class="w-40 h-40 ml-28 lg:ml-0 md:ml-0 lg:w-52 lg:h-52 my-2" width="160"
-            height="160">
+          <img src="img/Logo.png" alt="Logo" class="w-40 h-40 ml-28 lg:ml-0 md:ml-0 lg:w-52 lg:h-52 my-2">
           <div class="subscribe lg:w-1/3 mx-4 mt-10">
             <h2 class="subscribe-title text-2xl font-bold underline mb-2">Subscribe email</h2>
             <p>Give us your email, and we shall send regular updates for new stuff and events.</p>
@@ -509,13 +493,13 @@
           <div class="py-2 flex justify-center items-center">
             <ul class="flex flex-wrap justify-center space-x-2 lg:space-x-5">
               <li><img
-                  src="https://static.vecteezy.com/system/resources/previews/006/829/672/original/cash-logo-icon-design-illustration-vector.jpg"
-                  alt="Cash" class="w-16 h-16 lg:w-20 lg:h-20" width="64" height="64"></li>
+                  src="https://i.pinimg.com/originals/e6/36/33/e6363319848f7a0d386d9505e6ac61d2.png"
+                  alt="Cash" class="w-16 h-16 lg:w-20 lg:h-20 bg-white"></li>
               <li><img src="https://developers.momo.vn/v3/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png"
-                  alt="MoMo" class="w-16 h-16 lg:w-20 lg:h-20" width="64" height="64"></li>
+                  alt="MoMo" class="w-16 h-16 lg:w-20 lg:h-20"></li>
               <li><img
                   src="https://st4.depositphotos.com/2498595/30586/v/450/depositphotos_305864302-stock-illustration-online-banking-icon-simple-element.jpg"
-                  alt="Internet Banking" class="w-16 h-16 lg:w-20 lg:h-20" width="64" height="64"></li>
+                  alt="Internet Banking" class="w-16 h-16 lg:w-20 lg:h-20"></li>
             </ul>
           </div>
         </div>
@@ -541,19 +525,19 @@
             <ul class="flex space-x-4">
               <li class="cursor-pointer transform hover:scale-110">
                 <a href="https://zalo.me/0905323959/" target="_blank">
-                  <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo" width="40"
+                  <img class=" lg:w-30 grayscale hover:grayscale-0" src="img/zalo_logo.png" alt="Zalo" width="40"
                     height="40">
                 </a>
               </li>
               <li class="cursor-pointer transform hover:scale-110">
                 <a href="https://www.instagram.com/2ws_bakery/" target="_blank">
-                  <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram"
+                  <img class=" lg:w-30 grayscale hover:grayscale-0" src="img/ins_logo.png" alt="Instagram"
                     width="40" height="40">
                 </a>
               </li>
               <li class="cursor-pointer transform hover:scale-110">
                 <a href="tel:+84905323959">
-                  <img class="w-10 lg:w-30 grayscale hover:grayscale-0" src="img/phone_logo.png" alt="Phone" width="40"
+                  <img class=" lg:w-30 grayscale hover:grayscale-0" src="img/phone_logo.png" alt="Phone" width="40"
                     height="40">
                 </a>
               </li>

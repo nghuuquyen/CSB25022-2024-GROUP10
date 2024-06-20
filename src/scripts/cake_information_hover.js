@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Function to show cake detail overlay
     window.showCakeDetail = function(event) {
-        console.log('View detail clicked');
         const cakeInfo = event.currentTarget.closest('.relative');
         
         if (!cakeInfo) {
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const cakeImageTarget = document.getElementById('cakeImage');
 
         if (!cakeNameTarget || !cakePriceTarget || !cakeImageTarget) {
-            console.error('Could not find one of the target elements:', {cakeNameTarget, cakePriceTarget, cakeImageTarget});
             return;
         }
 
