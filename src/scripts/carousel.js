@@ -14,7 +14,7 @@ function showSlides() {
     setTimeout(() => {
       slidesContainer.style.transition = 'none'; // Disable transition for instant move
       slidesContainer.style.transform = `translateX(0%)`;
-    }, 3000); // Small delay to allow the transition to complete
+    }, 1000); // Small delay to allow the transition to complete
   } else if (slideIndex < 0) {
     slidesContainer.style.transition = 'none'; // Disable transition for instant move
     slidesContainer.style.transform = `translateX(${-totalSlides * 100}%)`;
@@ -61,7 +61,7 @@ function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     slideIndex++;
     showSlides();
-  }, 2500);
+  }, 6000);
 }
 
 // Initial setup
