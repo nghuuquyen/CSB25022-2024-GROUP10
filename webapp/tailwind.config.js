@@ -7,14 +7,13 @@ export default {
                 seashell: '#fff5ec',
                 metalic_bronze: '#A96942',
                 melon: '#FBC4B5',
-
             },
-            fontFamily:{
+            fontFamily: {
                 serif: ['Libre Baskerville', 'serif'],
                 cursive: ['Pacifico', 'cursive'],
-                mono: ["Monaco, mono"],
-                monospace: ["Courier New", "Courier", "monospace"],
-            }
+                mono: ['Monaco, mono'],
+                monospace: ['Courier New', 'Courier', 'monospace'],
+            },
         },
     },
     plugins: [],

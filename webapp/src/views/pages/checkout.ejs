@@ -28,8 +28,8 @@
                         <div class="mb-4">
                             <label for="email" class="block font-medium">Email address <span
                                         class="text-red-500">*</span></label>
-                            <input type="email" id="email" class="w-full mt-1 p-2 border rounded-md" name="email"
-                                   required>
+                            <input type="email" id="email" class="w-full mt-1 p-2 border rounded-md"
+                                   name="email" required>
                         </div>
                         <div class="mb-4">
                             <label for="phone" class="block font-medium">Phone <span
@@ -40,13 +40,14 @@
                         <div class="mb-4">
                             <label for="address" class="block font-medium">Address <span
                                         class="text-red-500">*</span></label>
-                            <input type="text" id="address" class="w-full mt-1 p-2 border rounded-md" name="address"
-                                   required>
+                            <input type="text" id="address" class="w-full mt-1 p-2 border rounded-md"
+                                   name="address" required>
                         </div>
                         <div class="mb-4">
                             <label for="orderNote" class="block font-medium">Order note <span
                                         class="text-red-500">*</span></label>
-                            <textarea id="orderNote" class="w-full mt-1 p-2 border rounded-md" required></textarea>
+                            <textarea id="orderNote" class="w-full mt-1 p-2 border rounded-md"
+                                      required></textarea>
                         </div>
                     </form>
                 </div>
@@ -54,7 +55,7 @@
                     <h2 class="text-xl md:text-2xl font-bold mb-6 text-center">YOUR ORDER</h2>
                     <div class="bg-white shadow-2xl overflow-x-auto">
                         <table class="min-w-full border border-collapse">
-                            <thead class="bg-metalic_bronze text-white">
+                            <thead class="bg-metalic_bronze text-white px-5">
                             <tr>
                                 <th class="py-2 text-center">Product</th>
                                 <th class="py-2 text-center">Quantity</th>
@@ -63,14 +64,14 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td class="py-2 text-center">Strawberry Cupcake</td>
+                                <td class="py-2 text-center pl-5">Strawberry Cupcake</td>
                                 <td class="py-2 text-center">2</td>
-                                <td class="py-2 text-center">50,000 VND</td>
+                                <td class="py-2 text-center pr-5">50,000 VND</td>
                             </tr>
                             <tr>
-                                <td class="py-2 text-center">Tiramisu</td>
+                                <td class="py-2 text-center pl-5">Tiramisu</td>
                                 <td class="py-2 text-center">3</td>
-                                <td class="py-2 text-center">255,000 VND</td>
+                                <td class="py-2 text-center pr-5 ">255,000 VND</td>
                             </tr>
                             </tbody>
                             <tfoot>
@@ -80,22 +81,22 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2" class="py-2 text-right">Order total:</td>
-                                <td class="py-2 text-center total-order"><span>305,000</span> VND</td>
+                                <td colspan="2" class="py-2 text-left pl-5 ">Order total:</td>
+                                <td class="py-2 text-center total-order pr-5"><span>305,000</span> VND</td>
                             </tr>
                             <tr>
-                                <td colspan="2" class="py-2 text-right">Shipping:</td>
-                                <td class="py-2 text-center shipping"><span>15,000</span> VND</td>
+                                <td colspan="2" class="py-2 text-left pl-5">Shipping:</td>
+                                <td class="py-2 text-center shipping pr-5"><span>15,000</span> VND</td>
                             </tr>
                             <tr>
-                                <td colspan="2" class="py-2 text-right">Voucher:</td>
-                                <td class="py-2 text-center voucher"><span>-15,000</span> VND</td>
+                                <td colspan="2" class="py-2 text-left pl-5">Voucher:</td>
+                                <td class="py-2 text-center voucher pr-5 "><span>-15,000</span> VND</td>
                             </tr>
                             <tr>
-                                <td colspan="2" class="py-5 text-xl text-right font-bold underline">Total
+                                <td colspan="2" class="py-5 text-xl text-left pl-5 font-bold underline">Total
                                     amount:
                                 </td>
-                                <td class="py-2 text-center total-amount"><span>305,000</span> VND</td>
+                                <td class="py-2 text-center total-amount pr-5"><span>305,000</span> VND</td>
                             </tr>
                             </tfoot>
                         </table>
@@ -103,7 +104,7 @@
                     <div class="flex justify-center mt-8">
                         <button type="submit" form="billingForm"
                                 class="px-6 py-2 bg-red-500 text-white font-semibold rounded-md hover:bg-blue-600"
-                                onclick="location.href='thank_you'">Place order</button>
+                                onclick="location.href='thank-you'">Place order</button>
                     </div>
                 </div>
             </div>
@@ -111,5 +112,5 @@
     </div>
 </main>
 
-<script src="/src/resources/scripts/icon_search_hover.js"></script>
-<script src="/src/resources/scripts/checkout.js"></script>
+<script src="/src/scripts/icon_search_hover.js"></script>
+<script src="/src/scripts/checkout.js"></script>

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addToCart(item) {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        const existingItem = cartItems.find(cartItem => cartItem.name === item.name);
+        const existingItem = cartItems.find((cartItem) => cartItem.name === item.name);
         if (existingItem) {
             existingItem.quantity += item.quantity;
         } else {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartItemsContainer.innerHTML = '';
         let totalPrice = 0;
 
-        cartItems.forEach(item => {
+        cartItems.forEach((item) => {
             const total = item.price * item.quantity;
             totalPrice += total;
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.updateQuantity = (id, delta) => {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        const itemIndex = cartItems.findIndex(item => item.id === id);
+        const itemIndex = cartItems.findIndex((item) => item.id === id);
         if (itemIndex !== -1) {
             cartItems[itemIndex].quantity += delta;
 
@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.removeItem = (id) => {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        cartItems = cartItems.filter(item => item.id !== id);
+        cartItems = cartItems.filter((item) => item.id !== id);
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         renderCartItems(); // Re-render cart items after removing item
     };
 
     window.continueShopping = () => {
-        window.location.href = 'menu.html';
+        window.location.href = '/menu';
     };
 
     if (purchaseButton) {
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: generateProductId(),
                 name: document.getElementById('cake_name').textContent.trim(),
                 price: parseInt(document.getElementById('cake_price').textContent.replace(' VND', '').replace('.', '')),
-                quantity: parseInt(document.getElementById('quantity').value)
+                quantity: parseInt(document.getElementById('quantity').value),
             };
             addToCart(item);
             cakeDetailOverlay.classList.add('hidden');
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Loop through each cart icon and add an event listener
-    cartIcons.forEach(cartIcon => {
+    cartIcons.forEach((cartIcon) => {
         cartIcon.addEventListener('click', () => {
             // Access product details from corresponding HTML elements
             const productContainer = cartIcon.closest('.relative');
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: generateProductId(), // Generate product ID dynamically
                 name: productName,
                 price: productPrice,
-                quantity: 1
+                quantity: 1,
             };
 
             // Add product to cart
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add event listener to each order button
-    orderButtons.forEach(button => {
+    orderButtons.forEach((button) => {
         button.addEventListener('click', () => {
             const productContainer = button.closest('.cake_hp');
             const productName = productContainer.querySelector('.text-red-500').textContent;
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: generateProductId(),
                 name: productName,
                 price: productPrice,
-                quantity: 1
+                quantity: 1,
             };
 
             // Add product to cart
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    cartButtons.forEach(button => {
+    cartButtons.forEach((button) => {
         button.addEventListener('click', () => {
             const productContainer = button.closest('.product-item');
             const productName = productContainer.querySelector('.menu_product_name .text-red-600').textContent;
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: generateProductId(),
                 name: productName,
                 price: productPrice,
-                quantity: parseInt(productContainer.querySelector('.quantity').value)
+                quantity: parseInt(productContainer.querySelector('.quantity').value),
             };
             addToCart(item);
             alert('Added to cart!');

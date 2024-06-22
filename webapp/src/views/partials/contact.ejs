@@ -1,0 +1,44 @@
+<!-- Contact us and map -->
+<section class="flex flex-col lg:flex-row">
+    <!-- Map section -->
+    <div class="w-full lg:w-1/2 flex items-center justify-center p-4">
+        <iframe class="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8932923783746!2d108.21766391168802!3d16.07102618454454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218314984c6bd%3A0xb53a043f246ab8cb!2zMTU4YSBMw6ogTOG7o2ksIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1717721377642!5m2!1sen!2s"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Form section -->
+    <div class="w-full lg:w-1/2 flex items-center justify-center p-6 bg-melon bg-opacity-75">
+        <div class="w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-4 text-center text-black">Contact Us</h2>
+            <p class="text-center text-black mb-8">Our Company is the best, meet the creative team that never sleeps. Say
+                something to us, we will answer you.</p>
+            <form action="#" method="POST" id="contactForm">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2 text-black" for="name">NAME <span
+                                class="text-red-500">*</span></label>
+                    <input class="w-full p-2 border border-gray-300 rounded" type="text" id="name" name="name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2 text-black" for="email">EMAIL <span
+                                class="text-red-500">*</span></label>
+                    <input class="w-full p-2 border border-gray-300 rounded" type="email" id="email" name="email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2 text-black" for="phone">PHONE NUMBER</label>
+                    <input class="w-full p-2 border border-gray-300 rounded" type="tel" id="phone" name="phone">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2 text-black" for="message">YOUR MESSAGE <span
+                                class="text-red-500">*</span></label>
+                    <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message"
+                              required></textarea>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <button onclick="sendThankyouCUEmail(); return false;"
+                            class="bg-red-500 text-white p-2 rounded hover:bg-red-600 transition duration-300">SEND MESSAGE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Contact us and map end -->
