@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    scroll-behavior: smooth;
-}
+
 
 .content {
     margin-left: 80px;
@@ -34,7 +32,7 @@ html {
 }
 
 .banner {
-    background-image: url(img/banner.png);
+    background-image: url(img/banner.webp);
     background-size: cover;
     background-position: center;
 }
@@ -123,5 +121,3 @@ html {
 #search-overlay.hidden {
     display: none;
 }
-
-

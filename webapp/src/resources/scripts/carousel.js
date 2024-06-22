@@ -123,7 +123,7 @@ function startAutoBestSellerSlide() {
   autoBestSellerSlideInterval = setInterval(() => {
     plusBestSellerSlides(1);
 
-  }, 5000);  // Increase interval duration
+  }, 4000);  // Increase interval duration
 }
 
 function deleteSlide(){
