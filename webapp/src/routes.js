@@ -22,7 +22,7 @@ router.get('/cart', getCart);
 router.get('/checkout', getCheckout);
 
 /** Thank You **/
-router.get('/checkout', getThankYou);
+router.get('/thank_you', getThankYou);
 
 /** Posts **/
 router.get('/posts', getPosts);
