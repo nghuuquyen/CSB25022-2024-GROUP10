@@ -1,34 +1,52 @@
 import { PrismaClient } from '@prisma/client';
+import productsData from './data/products.js';
+
 const prisma = new PrismaClient();
 
 async function main() {
-    await prisma.category.createMany({
-        data: [
-            { name: 'Technology' },
-            { name: 'Lifestyle' },
-            { name: 'Travel' },
-            { name: 'Food' },
-            { name: 'Fashion' },
-        ],
-    });
+    // Remove old data if exists
+    await prisma.orderDetail.deleteMany();
+    await prisma.order.deleteMany();
+    await prisma.product.deleteMany();
+    await prisma.category.deleteMany();
+    await prisma.customer.deleteMany();
+    await prisma.contact.deleteMany();
 
-    await prisma.post.createMany({
-        data: [
-            { title: 'Post 1', content: 'Content for post 1', categoryId: 1 },
-            { title: 'Post 2', content: 'Content for post 2', categoryId: 2 },
-            { title: 'Post 3', content: 'Content for post 3', categoryId: 3 },
-            { title: 'Post 4', content: 'Content for post 4', categoryId: 4 },
-            { title: 'Post 5', content: 'Content for post 5', categoryId: 5 },
-            { title: 'Post 6', content: 'Content for post 6', categoryId: 1 },
-            { title: 'Post 7', content: 'Content for post 7', categoryId: 2 },
-            { title: 'Post 8', content: 'Content for post 8', categoryId: 3 },
-            { title: 'Post 9', content: 'Content for post 9', categoryId: 4 },
-            { title: 'Post 10', content: 'Content for post 10', categoryId: 5 },
-        ],
-    });
+    // Get unique categories from products data
+    const categories = [...new Set(productsData.map((product) => product.category))];
+
+    // Seed data for Categories
+    const categoryMap = {};
+    for (const category of categories) {
+        const createdCategory = await prisma.category.create({
+            data: { name: category },
+        });
+        categoryMap[category] = createdCategory.id;
+    }
+
+    // Seed data for Products
+    for (const product of productsData) {
+        await prisma.product.create({
+            data: {
+                image: product.image,
+                name: product.name,
+                description: product.description,
+                regularPrice: product.regular_price,
+                salePrice: product.sale_price,
+                quantityInStock: 100, // Set default quantity in stock
+                categoryId: categoryMap[product.category],
+            },
+        });
+    }
+
+    console.log('Products and Categories seeding completed!');
 }
 
 main()
-    .then(() => console.log('Data seeded'))
-    .catch((e) => console.error(e))
-    .finally(async () => await prisma.$disconnect());
+    .catch((e) => {
+        console.error(e);
+        process.exit(1);
+    })
+    .finally(async () => {
+        await prisma.$disconnect();
+    });

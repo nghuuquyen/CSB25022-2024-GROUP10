@@ -12,31 +12,86 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Product {
+  id              Int           @id @default(autoincrement())
+  image           String
+  name            String
+  categoryId      Int?          @map("category_id")
+  category        Category?     @relation(fields: [categoryId], references: [id])
+  description     String?
+  regularPrice    Decimal       @map("regular_price")
+  salePrice       Decimal       @map("sale_price")
+  quantityInStock Int?          @map("quantity_in_stock")
+  OrderDetail     OrderDetail[]
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+
+  @@map("products")
+}
+
 model Category {
-  id   Int    @id @default(autoincrement())
-  name String
-  posts Post[]
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[] @relation
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("categories")
 }
 
-model Post {
-  id          Int       @id @default(autoincrement())
-  title       String
-  content     String
-  categoryId  Int       @map("category_id")
-  category    Category  @relation(fields: [categoryId], references: [id])
-  createdAt   DateTime  @map("created_at")  @default(now())
+model Customer {
+  id        Int       @id @default(autoincrement())
+  firstName String    @map("first_name")
+  lastName  String    @map("last_name")
+  email     String
+  phone     String?   @default("")
+  address   String?   @default("")
+  city      String?   @default("")
+  orders    Order[]   @relation("CustomerOrders")
+  contacts  Contact[] @relation("CustomerContacts")
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
 
-  @@map("posts")
+  @@map("customers")
+}
+
+model Order {
+  id           Int           @id @default(autoincrement())
+  orderDate    DateTime      @map("order_date")
+  totalAmount  Decimal?      @map("total_amount")
+  customerId   Int?          @map("customer_id")
+  customer     Customer?     @relation(fields: [customerId], references: [id], name: "CustomerOrders")
+  orderDetails OrderDetail[] @relation("OrderDetails")
+  createdAt    DateTime      @default(now()) @map("created_at")
+  updatedAt    DateTime      @updatedAt @map("updated_at")
+
+  @@map("orders")
+}
+
+model OrderDetail {
+  id        Int      @id @default(autoincrement())
+  quantity  Int
+  price     Decimal
+  orderId   Int?     @map("order_id")
+  productId Int?     @map("product_id")
+  order     Order?   @relation(fields: [orderId], references: [id], name: "OrderDetails")
+  Product   Product? @relation(fields: [productId], references: [id])
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("order_details")
 }
 
 model Contact {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String
-  message   String
-  createdAt DateTime @map("created_at") @default(now())
+  id         Int       @id @default(autoincrement())
+  name       String
+  email      String
+  message    String
+  customerId Int?      @map("customer_id")
+  customer   Customer? @relation(fields: [customerId], references: [id], name: "CustomerContacts")
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @updatedAt @map("updated_at")
 
   @@map("contacts")
 }
