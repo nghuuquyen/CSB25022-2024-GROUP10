@@ -1,6 +1,5 @@
 import express from 'express';
 import { getHomepage } from './controllers/homepage-controller.js';
-import { getPosts, getPostById } from './controllers/post-controller.js';
 import { getContactForm, createContact, contactSuccess } from './controllers/contact-controller.js';
 import { getMenu } from './controllers/menu-controller.js';
 import { getCart } from './controllers/cart-controller.js';
@@ -20,13 +19,7 @@ router.get('/cart', getCart);
 
 /** Checkout **/
 router.get('/checkout', getCheckout);
-
-/** Thank You **/
-router.get('/thank_you', getThankYou);
-
-/** Posts **/
-router.get('/posts', getPosts);
-router.get('/posts/:id', getPostById);
+router.get('/thank-you', getThankYou);
 
 /** Contact **/
 router.get('/contact', getContactForm);
