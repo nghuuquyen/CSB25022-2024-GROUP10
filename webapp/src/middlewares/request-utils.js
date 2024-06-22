@@ -1,3 +1,6 @@
+import config from "../configs/app.js";
+import app from "../app.js";
+
 /**
  * Middleware to set utility function that uses to check if request is an AJAX request
  */
@@ -20,9 +23,22 @@ const setCSRFToken = (req, res, next) => {
     next();
 };
 
+/**
+ * Middleware to set request metadata in response locals to be used in views
+ */
+const setupLocalVariables = (req, res, next) => {
+    app.locals.siteName = config.siteName; // Set site name
+
+    res.locals.requestQuery = req.query;
+    res.locals.requestPath  = req.path;
+    res.locals.pageTitle = 'Page Name';
+    next();
+};
+
 export default {
     isAjax,
     setCSRFToken,
+    setupLocalVariables
 }
 
 

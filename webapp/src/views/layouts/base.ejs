@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= siteName %> <%= requestPath %></title>
+    <title><%= siteName %></title>
     <meta name="csrf-token" content="<%= typeof csrfToken !== 'undefined' ? csrfToken : '' %>">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,19 +16,7 @@
 </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col justify-between min-h-svh">
 
-<% if (typeof requestPath && requestPath !== '/') { %>
-    <%- include('../partials/header'); %>
-<% } else { %>
-    <%- header %>
-<% } %>
-
-<main class="container mx-auto py-8">
-    <%- body %>
-</main>
-
-<%- include('../partials/footer'); %>
-
-<%- include('../partials/overlays'); %>
+<%- body %>
 
 <% scripts.forEach(function(file) { %>
     <script type="<%= file.type %>" src="<%= file.path %>"></script>
