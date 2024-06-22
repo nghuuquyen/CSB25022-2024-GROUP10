@@ -212,59 +212,58 @@
   </footer>
 
   <div id="search-overlay"
-    class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden p-2 sm:p-10 overflow-y-auto">
-    <div
-      class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl max-h-screen sm:max-h-4/5 overflow-y-auto my-5">
-      <div class="flex justify-between items-center mb-4 sm:mb-6">
-        <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
-        <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
-      </div>
-      <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6"
-        placeholder="Search...">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-        <!-- Item 1 -->
-        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-          <img src="img/menu1.png" alt="Banana Bread" class="w-full h-32 object-cover mb-2 sm:mb-4 rounded-lg"
-            loading="lazy">
-          <h3 class="text-sm sm:text-lg font-bold mt-2 mb-1">Banana Bread</h3>
-          <p class="text-gray-600 text-xs sm:text-sm mb-2">Banana bread is a moist, sweet loaf made with ripe
-            bananas, often including walnuts or chocolate chips. It's perfect for breakfast, snacks, or
-            dessert.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">50.000 VND</p>
-        </div>
-        <!-- Item 2 -->
-        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-          <img src="img/menu5.png" alt="Chocolate cookies" class="w-full h-32 object-cover mb-2 sm:mb-4 rounded-lg"
-            loading="lazy">
-          <h3 class="text-sm sm:text-lg font-bold mt-2 mb-1">Chocolate cookies</h3>
-          <p class="text-gray-600 text-xs sm:text-sm mb-2">Chocolate cookies are a treat made with
-            chocolate-flavored dough and chocolate chips or chunks, known for their chewy or crispy texture
-            and rich chocolate taste.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">45.000 VND</p>
-        </div>
-        <!-- Add more items here -->
-        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-          <img src="img/menu3.png" alt="Blueberry Muffin" class="w-full h-32 object-cover mb-2 sm:mb-4 rounded-lg"
-            loading="lazy">
-          <h3 class="text-sm sm:text-lg font-bold mt-2 mb-1">Blueberry Muffin</h3>
-          <p class="text-gray-600 text-xs sm:text-sm mb-2">A muffin packed with fresh blueberries, offering a
-            burst of juicy flavor in every bite.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">35.000 VND</p>
-        </div>
-        <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
-          <img src="img/menu4.png" alt="Carrot Cake" class="w-full h-32 object-cover mb-2 sm:mb-4 rounded-lg"
-            loading="lazy">
-          <h3 class="text-sm sm:text-lg font-bold mt-2 mb-1">Carrot Cake</h3>
-          <p class="text-gray-600 text-xs sm:text-sm mb-2">A moist cake made with grated carrots, topped with
-            creamy frosting and often including nuts.</p>
-          <p class="text-red-500 font-bold mt-1 sm:mt-2">60.000 VND</p>
-        </div>
-        <!-- Continue adding more items as needed -->
-      </div>
-      <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All
-        Results</button>
+  class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 hidden p-2 sm:p-10 overflow-y-auto">
+  <div
+    class="bg-white p-4 sm:p-6 md:p-8 rounded-lg w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl max-h-screen sm:max-h-4/5 overflow-y-auto my-5">
+    <div class="flex justify-between items-center mb-4 sm:mb-6">
+      <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-800">Enter your keywords:</h2>
+      <button id="close-overlay" class="text-gray-800 text-2xl sm:text-3xl">&times;</button>
     </div>
+    <input type="text" class="w-full p-2 sm:p-4 border border-gray-300 rounded-md mb-4 sm:mb-6"
+      placeholder="Search...">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+      <!-- Item 1 -->
+      <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+        <img src="/img/menu1.png" alt="Banana Bread" class="w-50 h-32 object-cover mb-2 sm:mb-4 rounded-lg"
+          loading="lazy">
+        <h3 class="text-sm sm:text-lg font-bold mt-2 mb-1">Banana Bread</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-2">Banana bread is a moist, sweet loaf made with ripe bananas,
+          often including walnuts or chocolate chips. It's perfect for breakfast, snacks, or dessert.</p>
+        <p class="text-red-500 font-bold mt-1 sm:mt-2">50.000 VND</p>
+      </div>
+      <!-- Item 2 -->
+      <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+        <img src="/img/menu5.png" alt="Chocolate cookies" class="w-50 h-32 object-cover mb-2 sm:mb-4 rounded-lg"
+          loading="lazy">
+        <h3 class="text-sm sm:text-lg font-bold mt-2 mb-1">Chocolate cookies</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-2">Chocolate cookies are a treat made with chocolate-flavored
+          dough and chocolate chips or chunks, known for their chewy or crispy texture and rich chocolate taste.</p>
+        <p class="text-red-500 font-bold mt-1 sm:mt-2">45.000 VND</p>
+      </div>
+      <!-- Add more items here -->
+      <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+        <img src="/img/menu3.png" alt="Blueberry Muffin" class="w-50 h-32 object-cover mb-2 sm:mb-4 rounded-lg"
+          loading="lazy">
+        <h3 class="text-sm sm:text-lg font-bold mt-2 mb-1">Blueberry Muffin</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-2">A muffin packed with fresh blueberries, offering a burst of
+          juicy flavor in every bite.</p>
+        <p class="text-red-500 font-bold mt-1 sm:mt-2">35.000 VND</p>
+      </div>
+      <div class="bg-gray-200 p-2 sm:p-4 rounded-lg flex flex-col items-center text-center">
+        <img src="/img/menu4.png" alt="Carrot Cake" class="w-50 h-32 object-cover mb-2 sm:mb-4 rounded-lg"
+          loading="lazy">
+        <h3 class="text-sm sm:text-lg font-bold mt-2 mb-1">Carrot Cake</h3>
+        <p class="text-gray-600 text-xs sm:text-sm mb-2">A moist cake made with grated carrots, topped with creamy
+          frosting and often including nuts.</p>
+        <p class="text-red-500 font-bold mt-1 sm:mt-2">60.000 VND</p>
+      </div>
+      <!-- Continue adding more items as needed -->
+    </div>
+    <button class="bg-gray-800 text-white text-sm sm:text-base px-4 py-2 rounded mt-6 mx-auto block">View All
+      Results</button>
   </div>
+</div>
+
 
 
   <script type="module" src="/src/scripts/application.js"></script>
