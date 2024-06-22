@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.content {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+
+.prev .next {
+    border: 50px;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.banner {
+    background-image: url(img/banner.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.hover-animate:hover {
+    animation: tada 1s;
+}
+
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__tada {
+    animation-name: tada;
+}
+
+.slide {
+    transition: transform 30s ease-in-out;
+}
+
+
+.slide-down {
+    animation: slide-down 2s forwards;
+}
+
+.slide-up {
+    animation: slide-up 2s forwards;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('path-to-font.woff2') format('woff2');
+    font-display: swap;
+}
+/* Ensure space is reserved for popups */
+#cartPopup, #popup-content {
+    min-height: 200px;
+}
+/* Add this to your CSS file */
+.no-scroll {
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#search-overlay {
+    pointer-events: auto; /* Allow interaction with the overlay itself */
+}
+
+/* Ensure the overlay covers the entire page */
+#search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+/* Hide the overlay initially */
+#search-overlay.hidden {
+    display: none;
+}
+
+
