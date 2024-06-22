@@ -1,39 +1,24 @@
 import { PrismaClient } from '@prisma/client';
+import { createPagination } from '../utils/pagination.js';
 
 const prisma = new PrismaClient();
 
 const getMenu = async (req, res) => {
     const { page = 1, category, search, sort } = req.query;
+    const currentPage = parseInt(page);
     const itemsPerPage = 10;
+
     let where = {};
-    let orderBy = {};
 
     if (category) {
         where.categoryId = parseInt(category);
     }
 
     if (search) {
-        where.name = {
-            contains: search,
-        };
+        where.name = { contains: search };
     }
 
-    if (sort) {
-        switch (sort) {
-            case 'new':
-                orderBy = { createdAt: 'desc' };
-                break;
-            case 'popular':
-                orderBy = { views: 'desc' };
-                break;
-            case 'priceDesc':
-                orderBy = { salePrice: 'desc' };
-                break;
-            case 'priceAsc':
-                orderBy = { salePrice: 'asc' };
-                break;
-        }
-    }
+    const orderBy = createOrderByClause(sort);
 
     const totalItems = await prisma.product.count({ where });
 
@@ -42,21 +27,39 @@ const getMenu = async (req, res) => {
     const products = await prisma.product.findMany({
         where,
         orderBy,
-        skip: (page - 1) * itemsPerPage,
+        skip: (currentPage - 1) * itemsPerPage,
         take: itemsPerPage,
     });
 
     const categories = await prisma.category.findMany({});
 
+    const pagination = createPagination(req, totalPages, currentPage);
+
     return res.render('pages/menu', {
         categories,
         products,
-        currentPage: parseInt(page),
+        currentPage,
         totalPages,
         category,
         search,
         sort,
+        pagination,
     });
+};
+
+const createOrderByClause = (sort) => {
+    switch (sort) {
+        case 'new':
+            return { createdAt: 'desc' };
+        case 'popular':
+            return { views: 'desc' };
+        case 'priceDesc':
+            return { salePrice: 'desc' };
+        case 'priceAsc':
+            return { salePrice: 'asc' };
+        default:
+            return {};
+    }
 };
 
 export { getMenu };

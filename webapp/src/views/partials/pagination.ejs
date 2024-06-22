@@ -1,0 +1,22 @@
+<!-- Pagination buttons -->
+<div class="flex justify-center mt-6 space-x-1 pagination">
+    <% if (pagination.prevPageUrl) { %>
+        <a href="<%= pagination.prevPageUrl %>" class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300 prev-page">&lt;</a>
+    <% } else { %>
+        <span class="bg-gray-300 p-3 rounded-lg prev-page">&lt;</span>
+    <% } %>
+
+    <% pagination.paginationUrls.forEach(pagination => { %>
+        <% if (pagination.isCurrent) { %>
+            <a href="<%= pagination.url %>" class="bg-red-500 text-white p-3 rounded-lg"><%= pagination.page %></a>
+        <% } else { %>
+            <a href="<%= pagination.url %>" class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300"><%= pagination.page %></a>
+        <% } %>
+    <% }); %>
+
+    <% if (pagination.nextPageUrl) { %>
+        <a href="<%= pagination.nextPageUrl %>" class="bg-gray-200 p-3 rounded-lg hover:bg-gray-300 next-page">&gt;</a>
+    <% } else { %>
+        <span class="bg-gray-300 p-3 rounded-lg next-page">&gt;</span>
+    <% } %>
+</div>
