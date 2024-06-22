@@ -14,7 +14,7 @@ import rateLimit from 'express-rate-limit';
  *
  * @see https://owasp.org/www-community/attacks/csrf
  */
-const CSRFProtection = csrf({cookie: true});
+const CSRFProtection = csrf({ cookie: true });
 
 /**
  * Limits the number of requests a client can make to the server over a specified period to prevent abuse
@@ -49,7 +49,19 @@ const SecureHTTPHeaders = helmet.contentSecurityPolicy({
         scriptSrcAttr: ["'self'", "'unsafe-inline'"],
         connectSrc: ["'self'", 'https://www.google-analytics.com'],
         imgSrc: ["'self'", 'data:', '*'], // TODO: Allow images from any domain (less secure)
-        styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com', 'https://cdnjs.cloudflare.com'], // TODO: This is the least secure method because it allows all inline scripts to run, which can expose your site to XSS attacks. Use this only if absolutely necessary
+
+        /**
+         * TODO: This is the least secure method because it allows all inline scripts to run,
+         * which can expose your site to XSS attacks.
+         * Use this only if absolutely necessary
+         */
+        styleSrc: [
+            "'self'",
+            "'unsafe-inline'",
+            'https://fonts.googleapis.com',
+            'https://cdnjs.cloudflare.com',
+            'https://unpkg.com',
+        ],
         frameSrc: ["'self'", 'https://www.googletagmanager.com', 'https://www.google.com'],
     },
 });

@@ -1,7 +1,5 @@
 # Simple Express Starter
 
-![homepage](homepage.png)
-
 This project setup is a simple Express.js starter template with the following features:
 - EJS templates for rendering HTML pages.
 - Prisma ORM for database access.
@@ -39,15 +37,7 @@ Here is an overview of the main directories and files in the project:
 
 ## Setup Instructions
 
-1. **Clone the Repository**
-
-```bash
-git clone https://github.com/nghuuquyen/express-starter.git
-
-cd express-starter
-```
-
-2. **Install Dependencies**
+1. **Install Dependencies**
 
 Install all required dependencies using npm:
 

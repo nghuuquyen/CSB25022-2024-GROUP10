@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Function to fetch and render cart data
     function fetchCartData() {
-        fetch('/path/to/your/cart.json')  // Ensure the path is correct and points to a JSON endpoint
-            .then(response => {
+        fetch('/path/to/your/cart.json') // Ensure the path is correct and points to a JSON endpoint
+            .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
                 }
                 return response.json();
             })
-            .then(cartData => {
+            .then((cartData) => {
                 renderCart(cartData);
             })
-            .catch(error => {
+            .catch((error) => {
                 console.error('Error fetching cart data:', error);
             });
     }
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         orderTableBody.innerHTML = ''; // Clear existing items
 
-        cartData.items.forEach(item => {
+        cartData.items.forEach((item) => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td class="py-2 border text-center">${item.name}</td>
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener for the "Place order" button
     const placeOrderButton = document.querySelector('button[type="submit"]');
-    placeOrderButton.addEventListener('click', function(event) {
+    placeOrderButton.addEventListener('click', function (event) {
         event.preventDefault();
         const billingData = collectBillingFormData();
         console.log('Billing Data:', billingData);
