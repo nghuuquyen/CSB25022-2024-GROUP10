@@ -4,7 +4,9 @@ import { validationResult } from 'express-validator';
 const prisma = new PrismaClient();
 
 const getContactForm = (req, res) => {
-    return res.render('pages/contact', { errors: null, oldData: null });
+    const pageTitle = 'Contact Us';
+
+    return res.render('pages/contact', { errors: null, oldData: null, pageTitle });
 };
 
 const createContact = async (req, res) => {
@@ -42,7 +44,9 @@ const createContact = async (req, res) => {
 };
 
 const contactSuccess = (req, res) => {
-    return res.render('pages/contact-success');
+    const pageTitle = 'Contact Success';
+
+    return res.render('pages/contact-success', { pageTitle });
 };
 
 export { getContactForm, createContact, contactSuccess };

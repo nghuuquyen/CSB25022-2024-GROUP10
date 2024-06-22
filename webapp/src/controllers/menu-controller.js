@@ -4,6 +4,8 @@ import { createPagination } from '../utils/pagination.js';
 const prisma = new PrismaClient();
 
 const getMenu = async (req, res) => {
+    const pageTitle = 'Menu';
+
     const { page = 1, category, search, sort } = req.query;
     const currentPage = parseInt(page);
     const itemsPerPage = 10;
@@ -44,6 +46,7 @@ const getMenu = async (req, res) => {
         search,
         sort,
         pagination,
+        pageTitle,
     });
 };
 

@@ -1,9 +1,13 @@
 const getCheckout = async (req, res) => {
-    return res.render('pages/checkout');
+    const pageTitle = 'Checkout';
+
+    return res.render('pages/checkout', { pageTitle });
 };
 
 const getThankYou = async (req, res) => {
-    return res.render('pages/thank-you');
+    const pageTitle = 'Thank You';
+
+    return res.render('pages/thank-you', { pageTitle });
 };
 
 export { getCheckout, getThankYou };
