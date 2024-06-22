@@ -3,7 +3,7 @@ const getCheckout = async (req, res) => {
 };
 
 const getThankYou = async (req, res) => {
-    return res.render('pages/thank_you');
+    return res.render('pages/thank-you');
 };
 
 export { getCheckout, getThankYou };
