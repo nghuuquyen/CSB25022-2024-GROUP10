@@ -52,7 +52,7 @@ const createOrderByClause = (sort) => {
         case 'new':
             return { createdAt: 'desc' };
         case 'popular':
-            return { views: 'desc' };
+            return { OrderDetail: { _count: 'desc' } }; // Order by purchase count
         case 'priceDesc':
             return { salePrice: 'desc' };
         case 'priceAsc':
