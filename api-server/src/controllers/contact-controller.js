@@ -12,13 +12,14 @@ const createContact = async (req, res) => {
         return res.status(400).json({ errors: errorMessages });
     }
 
-    const { name, email, message } = req.body;
+    const { name, email, message, phone_number } = req.body;
 
     const contact = await prisma.contact.create({
         data: {
             name,
             email,
             message,
+            phone_number,
         },
     });
 

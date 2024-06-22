@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 const getProducts = async (req, res) => {
-    const posts = await prisma.product.findMany({ include: { category: true } });
+    const posts = await prisma.product.findMany();
 
     return res.json(posts);
 };
