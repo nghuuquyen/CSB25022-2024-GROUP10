@@ -8,7 +8,7 @@
 
                 <p><b>Hotline</b>: 84-905-323-959 | 84-838-446-667</p>
             </div>
-            <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5">
+            <div class="flex pt-3 justify-end lg:items-center gap-2 lg:gap-5 sm:hidden">
                 <div class="dropdown-box">
                     <select class="form-control border-gray-300 bg-seashell rounded-md w-full text-center">
                         <option value="USD">USD</option>
@@ -32,30 +32,32 @@
             </div>
         </div>
     </div>
+
     <!-- Header top end -->
 
     <!-- Banner -->
     <div class="Banner relative">
         <!-- Navigate bar -->
         <nav class="bg-seashell bg-opacity-90 border border-dashed border-5 border-black relative py-2 z-10">
-            <div class="content mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
+            <div class="content mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-10">
                 <div class="flex items-center">
-                    <a href="index.html">
-                        <img src="img/Logo.png" alt="Logo"
-                             class="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full" width="80" height="80"
-                             loading="lazy">
+                    <a href="/">
+                        <img src="/img/Logo.png" alt="Logo"
+                             class="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 lg:w-20 lg:h-20 rounded-full" width="80"
+                             height="80" loading="lazy">
                     </a>
                 </div>
                 <div class="flex items-center space-x-9 sm:space-x-10 md:space-x-10 lg:space-x-20 xl:space-x-80">
-                    <a href="index.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Home</a>
-                    <a href="menu.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Menu</a>
-                    <a href="checkout.html" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Checkout</a>
+                    <a href="/" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Home</a>
+                    <a href="/menu" class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Menu</a>
+                    <a href="/checkout"
+                       class="text-xs sm:text-sm md:text-lg font-semibold hover:underline">Checkout</a>
                 </div>
                 <div class="flex items-center">
                     <div class="relative" id="cartContainer">
-                        <a href="cart.html" class="text-lg font-semibold relative" id="cartIcon">
-                            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart" class="h-6 w-6"
-                                 width="24" height="24" loading="lazy">
+                        <a href="/cart" class="text-lg font-semibold relative" id="cartIcon">
+                            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_cart-512.png" alt="Cart"
+                                 class="h-6 w-6" width="24" height="24" loading="lazy">
                         </a>
                         <div class="absolute top-8 right-0 w-64 sm:w-72 bg-pink-100 border border-gray-300 shadow-lg hidden"
                              id="cartPopup">
@@ -67,50 +69,16 @@
                 </div>
             </div>
         </nav>
-
-        <!-- Navigate bar end -->
-
-        <!-- Slideshow Container -->
-
-        <div class="slideshow-container relative w-full mx-auto overflow-hidden group">
-            <!-- Slides container -->
-            <div id="slides" class="slides-container flex transition-transform duration-[1000ms] ease-in-out w-full">
-                <!-- Slide 1 -->
-                <div class="slide w-full h-full flex-shrink-0">
-                    <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1" loading="lazy">
-                </div>
-                <!-- Slide 2 -->
-                <div class="slide w-full h-full flex-shrink-0">
-                    <img src="img/Banner-2.png" class="w-full h-full object-cover" alt="Banner 2" loading="lazy">
-                </div>
-                <!-- Slide 3 -->
-                <div class="slide w-full h-full flex-shrink-0">
-                    <img src="img/Banner-3.png" class="w-full h-full object-cover" alt="Banner 3" loading="lazy">
-                </div>
-                <!-- Duplicate Slide 1 for smooth transition -->
-                <div class="slide w-full h-full flex-shrink-0">
-                    <img src="img/Banner-1.png" class="w-full h-full object-cover" alt="Banner 1" loading="lazy">
-                </div>
+        <!-- Poster -->
+        <div class="relative banner h-60 md:h-64 flex items-end justify-center text-white">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 text-center lg:pb-5">
+                <h1 class="text-l pt-5 md:text-xl lg:text-4xl font-bold font-serif">MENU</h1>
+                <nav class="lg:mt-2 mb-2">
+                    <a href="/" class="text-gray-400">Home</a> /
+                    <span class="text-red-500"><%= typeof pageTitle !== 'undefined' ? pageTitle : '' %></span>
+                </nav>
             </div>
-            <!-- Next and previous buttons for Slideshow -->
-            <button
-                    class="prev absolute top-1/2 left-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-sm p-2 bg-black bg-opacity-50 rounded-r hidden group-hover:block"
-                    onclick="plusSlides(-1)">❮</button>
-            <button
-                    class="next absolute top-1/2 right-0 transform -translate-y-1/2 cursor-pointer text-white font-bold text-sm p-2 bg-black bg-opacity-50 rounded-l hidden group-hover:block"
-                    onclick="plusSlides(1)">❯</button>
-            <!-- Dots/bullets/indicators -->
-            <div class="dots absolute bottom-2 w-full flex justify-center space-x-2">
-        <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
-              onclick="currentSlide(1)"></span>
-                <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
-                      onclick="currentSlide(2)"></span>
-                <span class="dot h-2 w-2 bg-gray-400 rounded-full inline-block cursor-pointer transition-colors duration-500"
-                      onclick="currentSlide(3)"></span>
-            </div>
-
         </div>
-    </div>
-    <!-- Banner end -->
+        <!-- Poster end -->
 </header>
-<!-- Header end -->

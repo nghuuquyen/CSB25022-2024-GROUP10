@@ -1,6 +1,5 @@
 import 'express-async-errors';
 import express from 'express';
-import config from './configs/app.js';
 import routes from './routes.js';
 import cookieParser from 'cookie-parser';
 import security from './configs/security.js';
@@ -13,7 +12,7 @@ import setupHttpRequestLogs from './configs/request-logs.js';
 const app = express();
 
 /** Setup Local Variables */
-app.locals.siteName = config.siteName; // Set site name
+app.use(requestUtils.setupLocalVariables);
 
 /** Setup Requests Logs */
 setupHttpRequestLogs(app);
