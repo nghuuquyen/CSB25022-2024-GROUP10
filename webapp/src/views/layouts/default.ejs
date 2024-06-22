@@ -14,12 +14,12 @@
         <link rel="stylesheet" href="<%= file.path %>">
     <% }); %>
 </head>
-<body class="bg-gray-100 text-gray-900 flex flex-col justify-between min-h-svh">
+<body class="bg-seashell">
 
-<% if (typeof requestPath && requestPath !== '/') { %>
-    <%- include('../partials/header'); %>
-<% } else { %>
+<% if (isHomePage) { %>
     <%- header %>
+<% } else { %>
+    <%- include('../partials/header'); %>
 <% } %>
 
 <main class="container mx-auto py-8">

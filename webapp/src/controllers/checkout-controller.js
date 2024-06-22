@@ -1,5 +1,5 @@
 const getCheckout = async (req, res) => {
-    return res.render('pages/menu');
+    return res.render('pages/checkout');
 };
 
 const getThankYou = async (req, res) => {

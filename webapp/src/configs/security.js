@@ -46,6 +46,7 @@ const SecureHTTPHeaders = helmet.contentSecurityPolicy({
             'https://www.google-analytics.com',
             "'unsafe-inline'",
         ],
+        scriptSrcAttr: ["'self'", "'unsafe-inline'"],
         connectSrc: ["'self'", 'https://www.google-analytics.com'],
         imgSrc: ["'self'", 'data:', '*'], // TODO: Allow images from any domain (less secure)
         styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com', 'https://cdnjs.cloudflare.com'], // TODO: This is the least secure method because it allows all inline scripts to run, which can expose your site to XSS attacks. Use this only if absolutely necessary

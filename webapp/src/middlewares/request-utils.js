@@ -32,6 +32,8 @@ const setupLocalVariables = (req, res, next) => {
     res.locals.requestQuery = req.query;
     res.locals.requestPath  = req.path;
     res.locals.pageTitle = 'Page Name';
+    res.locals.isHomePage = req.path === '/';
+
     next();
 };
 
