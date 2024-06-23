@@ -32,7 +32,7 @@
 }
 
 .banner {
-    background-image: url(img/banner.webp);
+    background-image: url('../../img/banner.webp');
     background-size: cover;
     background-position: center;
 }
@@ -87,11 +87,11 @@
 
   }
 
-  @font-face {
-    font-family: 'MyFont';
-    src: url('path-to-font.woff2') format('woff2');
-    font-display: swap;
-  }
+  /*@font-face {*/
+  /*  font-family: 'MyFont';*/
+  /*  src: url('path-to-font.woff2') format('woff2');*/
+  /*  font-display: swap;*/
+  /*}*/
   /* Ensure space is reserved for popups */
   #cartPopup, #popup-content {
     min-height: 200px;
