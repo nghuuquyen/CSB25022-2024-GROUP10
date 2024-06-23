@@ -65,8 +65,10 @@ function startAutoSlide() {
 }
 
 // Initial setup
-showSlides();
-startAutoSlide();
+document.addEventListener('DOMContentLoaded', () => {
+    showSlides();
+    startAutoSlide();
+});
 
 let bestSellerIndex = 0;
 let autoBestSellerSlideInterval;
@@ -134,5 +136,7 @@ function deleteSlide() {
 }
 
 // Initial setup
-showBestSellerSlides(bestSellerIndex);
-startAutoBestSellerSlide();
+document.addEventListener('DOMContentLoaded', () => {
+    showBestSellerSlides(bestSellerIndex);
+    startAutoBestSellerSlide();
+});
