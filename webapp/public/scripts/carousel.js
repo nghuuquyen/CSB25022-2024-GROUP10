@@ -66,8 +66,10 @@ function startAutoSlide() {
 }
 
 // Initial setup
-showSlides();
-startAutoSlide();
+document.addEventListener('DOMContentLoaded', () => {
+    showSlides();
+    startAutoSlide();
+});
 
 let bestSellerIndex = 0;
 let autoBestSellerSlideInterval;
