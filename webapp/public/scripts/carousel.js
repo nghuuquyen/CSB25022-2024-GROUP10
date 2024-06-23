@@ -1,3 +1,4 @@
+
 let slideIndex = 0;
 let autoSlideInterval;
 const slidesContainer = document.querySelector('.slides-container');
@@ -9,23 +10,23 @@ function showSlides() {
 
     if (slideIndex >= totalSlides) {
         slidesContainer.style.transition = 'transform 1s ease-in-out'; // Enable transition for smooth slide
-        slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+        slidesContainer.style.transform = translateX(${-slideIndex * 100}%);
         slideIndex = 0;
         setTimeout(() => {
             slidesContainer.style.transition = 'none'; // Disable transition for instant move
-            slidesContainer.style.transform = `translateX(0%)`;
+            slidesContainer.style.transform = translateX(0%);
         }, 1000); // Small delay to allow the transition to complete
     } else if (slideIndex < 0) {
         slidesContainer.style.transition = 'none'; // Disable transition for instant move
-        slidesContainer.style.transform = `translateX(${-totalSlides * 100}%)`;
+        slidesContainer.style.transform = translateX(${-totalSlides * 100}%);
         slideIndex = totalSlides - 1;
         setTimeout(() => {
             slidesContainer.style.transition = 'transform 1s ease-in-out'; // Re-enable transition
-            slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+            slidesContainer.style.transform = translateX(${-slideIndex * 100}%);
         }, 50); // Small delay to allow the DOM to update
     } else {
         slidesContainer.style.transition = 'transform 1s ease-in-out'; // Enable transition for smooth slide
-        slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+        slidesContainer.style.transform = translateX(${-slideIndex * 100}%);
     }
 
     // Update dots
