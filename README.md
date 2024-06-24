@@ -7,6 +7,9 @@
 
 ## Wireframe: 
 
+<<<<<<< HEAD
+- Detail wireframe summary: 
+=======
 We will have 6 main pages:
 
 - **Homepage:** Include all basic information about the bakery
@@ -50,6 +53,7 @@ We will have 6 main pages:
     + Form to send customer's ideas
       
   <img src="img_for_Readme/General_wireframe/Contact.png" alt="Contact us" height="745"/>
+>>>>>>> 06b6a84 (update img for readme)
 
 ## Planning
 <div class="container mx-auto p-4">
