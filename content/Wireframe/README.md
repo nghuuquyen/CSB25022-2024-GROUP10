@@ -18,6 +18,7 @@ We will have 6 main pages:
     + Have sort by price and name
       
   <img src="/content/Wireframe/wireframe_img/Menu.png" alt="Menu" height="745"/>
+
   
 - **Cart:**
   
@@ -27,6 +28,7 @@ We will have 6 main pages:
 
       
   <img src="/content/Wireframe/wireframe_img/Cart.png" alt="Cart" height="745"/>
+
   
 - **Checkout:**
     + Have bill part for better vision to order
@@ -35,6 +37,7 @@ We will have 6 main pages:
       
   <img src="/content/Wireframe/wireframe_img/Checkout.png" alt="Checkout" height="745"/>
 <img src="/content/Wireframe/wireframe_img/Thank_you.png" alt="Thank you" height="745"/>
+
   
 - **Contact us**
     + Embaded map
