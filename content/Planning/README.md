@@ -57,7 +57,7 @@
     </table>
 </div>
 
-### Sprint 3: Mockup Homepage Design (June 04 - June 11)
+### Sprint 3: Mockup Design (June 04 - June 11)
 
 <div class="container mx-auto p-4">
     <table class="min-w-full border-collapse border border-gray-400">
@@ -83,6 +83,205 @@
                 <td class="border border-gray-400 px-4 py-2">03/06/2024</td>
                 <td class="border border-gray-400 px-4 py-2">Done</td>
             </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Design Footer</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+                <td class="border border-gray-400 px-4 py-2">Design UI for Footer</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/footer.png'>Footer</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">04/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Design Nav bar</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">Design UI for navigation bar</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/.png'>Nav-bar</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">03/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Design slide banner</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">Design UI and javscript for slide banner</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/slide_banner.png'>Nav-bar</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">07/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Design slide banner</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">Design UI for slide banner</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/slide_banner.png'>Nav-bar</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">07/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Map-Contact us form and Best Seller part</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Design UI for Map-Contact us form and Best Seller part
+                - Make Javascript for Best Seller</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/contact_and_map.png'>Map-Contact us form</a>
+                <a href='/content/Planning/Detail_homepage/slide_best_seller.png.png'>Best Seller</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">08/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Cake information hover in best seller</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Design UI and Javascript for cake information hover in best seller</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/hover_cake_infor.png'>Cake information hover in best seller</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">10/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">About us</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Design UI for About us (**Delelted!!**) </td>
+                <td class="border border-gray-400 px-4 py-2">
+                </td>
+                <td class="border border-gray-400 px-4 py-2">11/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Our baker part</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Design UI for Our baker part </td>
+                <td class="border border-gray-400 px-4 py-2">
+                </td>
+                <td class="border border-gray-400 px-4 py-2">11/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
     </table>
 </div>
+
+### Sprint 3: Mockup Design (June 12 - June 18)
+
+<div class="container mx-auto p-4">
+    <table class="min-w-full border-collapse border border-gray-400">
+        <thead>
+            <tr>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Task</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Assigned To</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Detail</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>External link</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Deadline</b></th>
+                <th class="border border-gray-400 bg-purple-200 px-4 py-2"><b>Status<b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Design Thank you page</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+                <td class="border border-gray-400 px-4 py-2">Design UI for Thank you page</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Wireframe/wireframe_img/Thank_you.png'>Thank you page</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">14/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Make add_to_cart.js and fix cake information hover</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Make add_to_cart.js
+                - Fix cake information hover to have better UI </td>
+                <td class="border border-gray-400 px-4 py-2">
+                </td>
+                <td class="border border-gray-400 px-4 py-2">13/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Design Nav bar</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">Design UI for navigation bar</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/.png'>Nav-bar</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">03/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Design slide banner</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">Design UI and javscript for slide banner</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/slide_banner.png'>Nav-bar</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">07/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Design slide banner</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">Design UI for slide banner</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/slide_banner.png'>Nav-bar</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">07/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Map-Contact us form and Best Seller part</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Design UI for Map-Contact us form and Best Seller part
+                - Make Javascript for Best Seller</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/contact_and_map.png'>Map-Contact us form</a>
+                <a href='/content/Planning/Detail_homepage/slide_best_seller.png.png'>Best Seller</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">08/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Cake information hover in best seller</td>
+                <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Design UI and Javascript for cake information hover in best seller</td>
+                <td class="border border-gray-400 px-4 py-2">
+                <a href='/content/Planning/Detail_homepage/hover_cake_infor.png'>Cake information hover in best seller</a>
+                </td>
+                <td class="border border-gray-400 px-4 py-2">10/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">About us</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Design UI for About us (**Delelted!!**) </td>
+                <td class="border border-gray-400 px-4 py-2">
+                </td>
+                <td class="border border-gray-400 px-4 py-2">11/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+            <tr>
+                <td class="border border-gray-400 px-4 py-2">Our baker part</td>
+                <td class="border border-gray-400 px-4 py-2">Van Nhi</td>
+                <td class="border border-gray-400 px-4 py-2">
+                - Design UI for Our baker part </td>
+                <td class="border border-gray-400 px-4 py-2">
+                </td>
+                <td class="border border-gray-400 px-4 py-2">11/06/2024</td>
+                <td class="border border-gray-400 px-4 py-2">Done</td>
+            </tr>
+    </table>
+</div>
+
+
 
