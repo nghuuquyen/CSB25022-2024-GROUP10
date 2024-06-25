@@ -220,7 +220,7 @@
                 <td class="border border-gray-400 px-4 py-2">Create basic structure of menu.html</td>
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
                 <td class="border border-gray-400 px-4 py-2">Design UI template for Menu</td>
-                <td class="border border-gray-400 px-4 py-2">>
+                <td class="border border-gray-400 px-4 py-2">
                 </td>
                 <td class="border border-gray-400 px-4 py-2">14/06/2024</td>
                 <td class="border border-gray-400 px-4 py-2">Done</td>
@@ -241,8 +241,6 @@
                 - Update content menu, font and edit layout
                 - Change price </td>
                 <td class="border border-gray-400 px-4 py-2">
-                <a href='/content/Planning/Detail_homepage/contact_and_map.png'>Map-Contact us form</a>
-                <a href='/content/Planning/Detail_homepage/slide_best_seller.png.png'>Best Seller</a>
                 </td>
                 <td class="border border-gray-400 px-4 py-2">18/06/2024</td>
                 <td class="border border-gray-400 px-4 py-2">Done</td>
@@ -301,7 +299,7 @@
                 <td class="border border-gray-400 px-4 py-2">Setup backend</td>
                 <td class="border border-gray-400 px-4 py-2">Teacher Nguyen Huu Quyen</td>
                 <td class="border border-gray-400 px-4 py-2"></td>
-                <td class="border border-gray-400 px-4 py-2">>
+                <td class="border border-gray-400 px-4 py-2">
                 </td>
                 <td class="border border-gray-400 px-4 py-2">23/06/2024</td>
                 <td class="border border-gray-400 px-4 py-2">Done</td>
