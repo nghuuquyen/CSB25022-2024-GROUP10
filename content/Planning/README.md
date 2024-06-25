@@ -220,7 +220,6 @@
                 <td class="border border-gray-400 px-4 py-2">Create basic structure of menu.html</td>
                 <td class="border border-gray-400 px-4 py-2">Thu Huong</td>
                 <td class="border border-gray-400 px-4 py-2">Design UI template for Menu</td>
-
                 <td class="border border-gray-400 px-4 py-2">
                 </td>
                 <td class="border border-gray-400 px-4 py-2">14/06/2024</td>
@@ -269,7 +268,6 @@
             <tr>
                 <td class="border border-gray-400 px-4 py-2">Fix all UI and update all javascript</td>
                 <td class="border border-gray-400 px-4 py-2">All team members</td>
-
                 <td class="border border-gray-400 px-4 py-2">
                 - Fix all UI to improve performance in Lighthouse
                 - Update all file javascript to make sure neccessary fucntions are working</td>
@@ -325,6 +323,3 @@
             </tr>
     </table>
 </div>
-
-
-
