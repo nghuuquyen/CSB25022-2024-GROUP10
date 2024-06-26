@@ -35,10 +35,10 @@
                                 </div>
                                 <div class="menu_product_price text-center mb-4">
                                     <p class="text-gray-500 line-through">
-                                        <%= item.regularPrice.toString().trim().replace(/\B(?=(\d{3})+(?!\d))/g, ',') %> VND
+                                        <%= item.regularPrice.toString().trim().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %> VND
                                     </p>
                                     <p class="text-red-700 text-xl font-bold">
-                                        <%= item.salePrice.toString().trim().replace(/\B(?=(\d{3})+(?!\d))/g, ',') %> VND
+                                        <%= item.salePrice.toString().trim().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %> VND
                                     </p>
                                 </div>
                                 <div class="flex justify-center mt-2 space-x-4">
