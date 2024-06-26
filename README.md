@@ -17,7 +17,6 @@ This project is built with robust and modern technologies to ensure high perform
 + Nodemon for auto-reloading the server during development.
 + Winston for logging.
 + Express-validator for request validation.
-+ Helmet for securing the app by setting various HTTP headers.
 + Compression for compressing the response data.
 + Vite for building the frontend assets. 
 + Build the frontend assets with npm run build.
