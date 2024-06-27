@@ -13,7 +13,7 @@ const postCheckout = async (req, res) => {
 
 const getThankYou = async (req, res) => {
     const pageTitle = 'Thank You';
-
+    req.session.cartItems = []; // Xóa giỏ hàng từ session
     return res.render('pages/thank-you', { pageTitle });
 };
 

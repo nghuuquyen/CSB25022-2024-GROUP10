@@ -167,4 +167,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     renderCartItems(); // Initial render of cart items
+
 });
