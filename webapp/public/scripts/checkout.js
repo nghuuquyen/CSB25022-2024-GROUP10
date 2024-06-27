@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.removeItem('cartItems'); // Xóa giỏ hàng từ localStorage
     });
 
+
     // Collect billing form data
     function collectBillingFormData() {
         const billingForm = document.getElementById('billingForm');
