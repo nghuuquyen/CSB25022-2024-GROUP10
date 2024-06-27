@@ -5,16 +5,16 @@
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white text-center w-full">
                     <thead>
-                    <tr class="bg-metalic_bronze">
-                        <th class="py-2 px-2 md:px-4 border-b border-gray-300">Product</th>
-                        <th class="py-2 px-2 md:px-4 border-b border-gray-300">Price</th>
-                        <th class="py-2 px-2 md:px-4 border-b border-gray-300">Quantity</th>
-                        <th class="py-2 px-2 md:px-4 border-b border-gray-300">Total</th>
-                        <th class="py-2 px-2 md:px-4 border-b border-gray-300">Remove</th>
-                    </tr>
+                        <tr class="bg-metalic_bronze">
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Product</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Price</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Quantity</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Total</th>
+                            <th class="py-2 px-2 md:px-4 border-b border-gray-300">Remove</th>
+                        </tr>
                     </thead>
                     <tbody id="cart-items">
-                    <!-- Dynamic Rows -->
+                        <!-- Dynamic Rows -->
 
                     </tbody>
                 </table>
@@ -22,9 +22,9 @@
             <div class="flex justify-between items-center my-4 md:my-6">
                 <div style="position: relative; display: inline-block;">
                     <input type="text" placeholder="Promotion code"
-                           style="padding-right: 30px; padding: 8px; border: 1px solid #ccc; border-radius: 15px; width: 180px; font-size: 14px;">
+                        style="padding-right: 30px; padding: 8px; border: 1px solid #ccc; border-radius: 15px; width: 180px; font-size: 14px;">
                     <button
-                            style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background-color: transparent; border: none; font-size: 16px; cursor: pointer; color: #333;">&gt;</button>
+                        style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); background-color: transparent; border: none; font-size: 16px; cursor: pointer; color: #333;">&gt;</button>
                 </div>
                 <div class="font-semibold">
                     Total Price: <span id="total-price">0 VND</span>
@@ -33,11 +33,14 @@
             <div class="flex justify-between items-center mt-4 md:mt-6">
                 <div>
                     <button class="p-1 md:p-2 shadow-lg bg-seashell hover:bg-gray-300 text-black rounded-md"
-                            onclick="continueShopping()">Continue Shopping</button>
+                        onclick="continueShopping()">Continue Shopping</button>
                 </div>
                 <div>
-                    <button class="p-1 md:p-2 bg-metalic_bronze text-white rounded-md"
-                            onclick="location.href='/checkout'">Process to Checkout</button>
+                    <form id="checkoutForm" action="/checkout" method="POST">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                        <button class="p-1 md:p-2 bg-metalic_bronze text-white rounded-md items-center" type="button"
+                            id="checkoutButton">Process to Checkout</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -46,3 +49,4 @@
 <script src="/scripts/add_to_cart.js"></script>
 <script src="/scripts/cart_popup.js"></script>
 <script src="/scripts/icon_search_hover.js"></script>
+<script src="/scripts/checkout.js"></script>
