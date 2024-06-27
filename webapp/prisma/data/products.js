@@ -42,7 +42,7 @@ export default [
             "Banana bread is a moist, sweet loaf made with ripe bananas, often including walnuts or chocolate chips. It's perfect for breakfast, snacks, or dessert.",
         regular_price: '60000',
         sale_price: '50000',
-        category: 'Banana cake',
+        category: 'Bread',
     },
     {
         image: '/img/menu2.png',
@@ -51,7 +51,7 @@ export default [
             "Whole wheat bread is a nutritious loaf made from whole wheat flour, known for its hearty texture and nutty flavor. It's a healthy alternative to white bread.",
         regular_price: '55000',
         sale_price: '50000',
-        category: 'Banana cake',
+        category: 'Bread',
     },
     {
         image: '/img/menu3.png',
@@ -60,7 +60,7 @@ export default [
             'Chocolate cake is a rich, moist dessert made with chocolate-flavored sponge layers and creamy chocolate frosting, ideal for celebrations.',
         regular_price: '35000',
         sale_price: '30000',
-        category: 'Banana cake',
+        category: 'Cake',
     },
     {
         image: '/img/menu4.png',
@@ -69,7 +69,7 @@ export default [
             'Strawberry cake is a fruity dessert made with fresh or pureed strawberries, offering a light and refreshing taste, often topped with strawberry frosting.',
         regular_price: '35000',
         sale_price: '30000',
-        category: 'Cupcake',
+        category: 'Cake',
     },
     {
         image: '/img/menu5.png',
@@ -78,7 +78,7 @@ export default [
             'Chocolate cookies are a treat made with chocolate-flavored dough and chocolate chips or chunks, known for their chewy or crispy texture and rich chocolate taste.',
         regular_price: '50000',
         sale_price: '45000',
-        category: 'Cupcake',
+        category: 'Cookies',
     },
     {
         image: '/img/menu6.png',
@@ -150,7 +150,7 @@ export default [
             'A croissant is a buttery, flaky pastry with a crisp outer layer and a soft, airy interior, perfect for breakfast or snacks, often enjoyed plain or with fillings.',
         regular_price: '25000',
         sale_price: '20000',
-        category: 'Banana cake',
+        category: 'Croissant',
     },
     {
         image: '/img/menu14.png',
@@ -159,6 +159,6 @@ export default [
             'A donut is a sweet, fried dough treat, typically ring-shaped or filled, available in various flavors and toppings like glaze, sprinkles, or sugar.',
         regular_price: '25000',
         sale_price: '20000',
-        category: 'Banana cake',
+        category: 'Donut',
     },
 ];

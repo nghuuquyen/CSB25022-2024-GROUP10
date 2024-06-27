@@ -43,6 +43,7 @@ Install all required dependencies using npm:
 
 ```bash
 npm install
+npm install express-session
 ```
 
 3. **Database Setup**
