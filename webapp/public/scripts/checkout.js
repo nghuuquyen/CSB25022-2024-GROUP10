@@ -1,46 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Function to fetch and render cart data
-    function fetchCartData() {
-        fetch('/path/to/your/cart.json') // Ensure the path is correct and points to a JSON endpoint
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then((cartData) => {
-                renderCart(cartData);
-            })
-            .catch((error) => {
-                console.error('Error fetching cart data:', error);
-            });
-    }
-
-    // Function to render cart data in the order section
-    function renderCart(cartData) {
-        const orderTableBody = document.querySelector('.order-section tbody');
-        const totalOrder = document.querySelector('.total-order span');
-        const shipping = document.querySelector('.shipping span');
-        const voucher = document.querySelector('.voucher span');
-        const totalAmount = document.querySelector('.total-amount span');
-
-        orderTableBody.innerHTML = ''; // Clear existing items
-
-        cartData.items.forEach((item) => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td class="py-2 border text-center">${item.name}</td>
-                <td class="py-2 border text-center">${item.quantity}</td>
-                <td class="py-2 border text-center">${item.total} VND</td>
-            `;
-            orderTableBody.appendChild(row);
-        });
-
-        totalOrder.textContent = cartData.totalOrder;
-        shipping.textContent = cartData.shipping;
-        voucher.textContent = cartData.voucher;
-        totalAmount.textContent = cartData.totalAmount;
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('checkoutButton').addEventListener('click', function() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        fetch('/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'CSRF-Token': document.querySelector('input[name="_csrf"]').value // Thêm mã thông báo CSRF vào tiêu đề
+            },
+            body: JSON.stringify({ cartItems: cartItems })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = '/checkout';
+            } else {
+                alert('Error during checkout');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
 
     // Collect billing form data
     function collectBillingFormData() {
