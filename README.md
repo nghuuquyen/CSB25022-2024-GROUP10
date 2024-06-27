@@ -5,6 +5,22 @@
 + Dương Thu Hương - 22040003
 + Nguyễn Vân Nhi - 22040006
 
+## Technologies
+This project is built with robust and modern technologies to ensure high performance and scalability:
+
++ EJS templates for rendering HTML pages.
++ Prisma ORM for database access.
++ MySQL database.
++ Environment variables using dotenv.
++ Tailwind CSS for styling.
++ ESLint and Prettier for code linting and formatting.
++ Nodemon for auto-reloading the server during development.
++ Winston for logging.
++ Express-validator for request validation.
++ Compression for compressing the response data.
++ Vite for building the frontend assets. 
++ Build the frontend assets with npm run build.
+
 ## Wireframe: 
 
 We will have 3 main pages: Homepage, Menu, Cart-Checkout
