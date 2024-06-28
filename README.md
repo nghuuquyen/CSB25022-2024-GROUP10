@@ -64,3 +64,6 @@ More detail: <a href='/content/Planning/README.md'>Planning</a>
 - Order Details ↔ Products: product_id
 - Products ↔ Categories: category_id
 
+## Video demo
+
+<a href="/webapp/public/2wb_webfinal.mp4"> Video demo </a>
